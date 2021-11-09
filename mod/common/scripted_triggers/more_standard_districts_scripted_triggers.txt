@@ -1,0 +1,26 @@
+# tests whether the current planet produces
+# at least the THRESHOLD for at least one of:
+# * physics_research
+# * society_research
+# * engineering_research
+# this = planet
+# THRESHOLD = integer
+has_research_exceeding = {
+	OR = {
+		planet_resource_compare = {
+			resource = physics_research
+			value >= $THRESHOLD$
+			type = produces
+		}
+		planet_resource_compare = {
+			resource = society_research
+			value >= $THRESHOLD$
+			type = produces
+		}
+		planet_resource_compare = {
+			resource = engineering_research
+			value >= $THRESHOLD$
+			type = produces
+		}
+	}
+}
