@@ -1,8 +1,12 @@
+@base_build_time = 240
+@city_build_time = 480
 @base_cost = 300
 @city_cost = 500
+@base_upkeep = 1
+@city_upkeep = 2
 
 district_standard_cm_commercial = {
-	base_buildtime = 240
+	base_buildtime = @city_build_time
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
 		exists = from
@@ -25,10 +29,10 @@ district_standard_cm_commercial = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = @base_cost
+			minerals = @city_cost
 		}
 		upkeep = {
-			energy = 1
+			energy = @city_upkeep
 		}
 	}
 	planet_modifier = {
@@ -171,7 +175,7 @@ district_standard_cm_commercial = {
 				owner = { is_fallen_empire_spiritualist = no }
 			}
 			OR = {
-				prev = { NOT = { colony_type = col_standard_cm_trade } }
+				NOT = { colony_type = col_standard_cm_trade }
 				owner = {
 					has_active_tradition = tr_prosperity_interstellar_franchising
 					NOT = { has_active_tradition = tr_mercantile_commercial_enterprise }
@@ -225,7 +229,7 @@ district_standard_cm_commercial = {
 }
 
 district_standard_cm_leisure = {
-	base_buildtime = 240
+	base_buildtime = @city_build_time
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
 		uses_district_set = standard
@@ -255,10 +259,10 @@ district_standard_cm_leisure = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = @base_cost
+			minerals = @city_cost
 		}
 		upkeep = {
-			energy = 1
+			energy = @city_upkeep
 		}
 	}
 	triggered_planet_modifier = {
@@ -526,7 +530,7 @@ district_standard_cm_leisure = {
 }
 
 district_standard_cm_science = {
-	base_buildtime = 240
+	base_buildtime = @city_build_time
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
 		uses_district_set = standard
@@ -537,10 +541,10 @@ district_standard_cm_science = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = @base_cost
+			minerals = @city_cost
 		}
 		upkeep = {
-			energy = 1
+			energy = @city_upkeep
 		}
 	}
 	planet_modifier = {
