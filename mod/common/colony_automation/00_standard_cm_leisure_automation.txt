@@ -1,0 +1,380 @@
+automate_standard_cm_leisure_planet = {
+	available = {
+		has_designation = col_standard_cm_leisure
+		owner = {
+			is_hive_empire = no
+			is_machine_empire = no
+		}
+	}
+
+	prio_districts = {
+		district_standard_cm_leisure
+		district_city
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = { always = yes }
+		}
+
+		2 = {
+			building = building_clone_vats
+			available = { owner = { has_ascension_perk = ap_engineered_evolution } }
+		}
+
+		3 = {
+			building = building_robot_assembly_plant
+			available = {
+				owner = {
+					robot_assembly_plant_upkeep_affordable = yes
+					NOR = {
+						has_policy_flag = robots_outlawed
+						has_ascension_perk = ap_engineered_evolution
+					}
+				}
+			}
+		}
+
+		4 = {
+			building = building_clinic
+			available = {
+				owner = { clinic_upkeep_affordable = yes }
+				any_owned_pop = { is_organic_species = yes }
+			}
+		}
+
+		5 = {
+			building = building_artist_patron
+			available = {
+				owner = {
+					has_country_flag = artist_building_patron
+					NOT = { has_country_flag = built_one_ministry }
+				}
+			}
+		}
+
+		6 = {
+			building = building_necrophage_elevation_chamber
+			available = {
+				owner = {
+					has_origin = origin_necrophage
+					has_trait = trait_necrophage
+					NOT = { has_valid_civic = civic_fanatic_purifiers }
+				}
+			}
+		}
+
+		7 = {
+			building = building_autocurating_vault
+			available = {
+				owner = {
+					is_megacorp = no
+					is_spiritualist = no
+				}
+			}
+		}
+
+		8 = {
+			building = building_corporate_vault
+			available = {
+				owner = {
+					is_megacorp = yes
+					is_spiritualist = no
+				}
+			}
+		}
+
+		9 = {
+			building = building_citadel_of_faith
+			available = { owner = { is_spiritualist = yes } }
+		}
+
+		10 = {
+			building = building_galactic_memorial_1
+			available = {
+				owner = { has_valid_civic = civic_memorialist }
+				NOR = {
+					has_building = building_galactic_memorial_1
+					has_building = building_galactic_memorial_2
+					has_building = building_galactic_memorial_3
+				}
+			}
+		}
+
+		11 = {
+			building = building_holo_theatres
+			available = {
+				owner = { holo_theatres_upkeep_affordable = yes }
+				NOR = {
+					has_building = building_holo_theatres
+					has_building = building_hyper_entertainment_forum
+				}
+			}
+		}
+
+		12 = {
+			building = building_autochthon_monument
+			available = {
+				NOR = {
+					has_building = building_autochthon_monument
+					has_building = building_heritage_site
+					has_building = building_hypercomms_forum
+				}
+				owner = {
+					is_spiritualist = no
+					is_megacorp = no
+					autochthon_monument_upkeep_affordable = yes
+				}
+			}
+		}
+
+		13 = {
+			building = building_temple
+			available = {
+				NOR = {
+					has_building = building_temple
+					has_building = building_holotemple
+					has_building = building_sacred_nexus
+				}
+				owner = {
+					is_spiritualist = yes
+					NOR = {
+						has_valid_civic = civic_death_cult
+						has_valid_civic = civic_death_cult_corporate
+					}
+					temple_upkeep_affordable = yes
+				}
+			}
+		}
+
+		14 = {
+			building = building_corporate_monument
+			available = {
+				NOR = {
+					has_building = building_corporate_monument
+					has_building = building_corporate_site
+					has_building = building_corporate_forum
+				}
+				owner = {
+					is_megacorp = yes
+					is_spiritualist = no
+					NOT = { has_valid_civic = civic_death_cult_corporate }
+				}
+			}
+		}
+
+		15 = {
+			building = building_sacrificial_temple_1
+			available = {
+				NOR = {
+					has_building = building_sacrificial_temple_1
+					has_building = building_sacrificial_temple_2
+					has_building = building_sacrificial_temple_3
+				}
+				owner = {
+					OR = {
+						has_valid_civic = civic_death_cult
+						has_valid_civic = civic_death_cult_corporate
+					}
+				}
+			}
+		}
+
+		16 = {
+			building = building_galactic_stock_exchange
+			available = { owner = { galactic_stock_exchange_upkeep_affordable = yes } }
+		}
+
+		17 = {
+			building = building_nuumismatic_shrine
+			available = { owner = { has_country_flag = nuumismatic_shrine } }
+		}
+
+		18 = {
+			building = building_gas_extractors
+			available = { always = yes }
+		}
+
+		19 = {
+			building = building_crystal_mines
+			available = { always = yes }
+		}
+
+		20 = {
+			building = building_mote_harvesters
+			available = { always = yes }
+		}
+
+		21 = {
+			building = building_psi_corps
+			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
+		}
+
+		22 = {
+			building = building_dread_encampment
+			available = { owner = { has_valid_civic = civic_reanimated_armies } }
+		}
+
+		23 = {
+			building = building_military_academy
+			available = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
+		}
+
+		24 = {
+			building = building_holo_theatres
+			available = {
+				owner = { holo_theatres_upkeep_affordable = yes }
+				num_buildings = {
+					type = building_holo_theatres
+					value < 3
+				}
+				num_buildings = {
+					type = building_hyper_entertainment_forum
+					value < 3
+				}
+			}
+		}
+
+		25 = {
+			building = building_refinery
+			available = {
+				owner = {
+					refinery_upkeep_affordable = yes
+					has_monthly_income = {
+						resource = exotic_gases
+						value < 2
+					}
+				}
+			}
+		}
+	}
+}
+
+automate_machine_standard_cm_leisure_planet = {
+	available = {
+		has_designation = col_standard_cm_leisure
+		owner = { is_machine_empire = yes }
+	}
+
+	prio_districts = {
+		district_standard_cm_leisure
+		district_nexus
+	}
+
+	buildings = {
+		1 = {
+			building = building_machine_capital
+			available = { always = yes }
+		}
+
+		2 = {
+			building = building_machine_assembly_plant
+			available = { owner = { machine_assembly_plant_upkeep_affordable = yes } }
+		}
+
+		3 = {
+			building = building_organic_sanctuary
+			available = {
+				owner = { organic_sanctuary_upkeep_affordable = yes }
+				num_buildings = {
+					type = building_organic_sanctuary
+					value = 0
+				}
+			}
+		}
+
+		4 = {
+			building = building_artist_patron
+			available = {
+				owner = {
+					has_country_flag = artist_building_patron
+					NOT = { has_country_flag = built_one_ministry }
+				}
+			}
+		}
+
+		5 = {
+			building = building_production_center
+			available = { owner = { production_center_upkeep_affordable = yes } }
+		}
+
+		6 = {
+			building = building_factory_1
+			available = { owner = { factory_1_upkeep_affordable = yes } }
+		}
+
+		7 = {
+			building = building_alpha_hub
+			available = { always = yes }
+		}
+
+		8 = {
+			building = building_galactic_memorial_1
+			available = {
+				owner = { has_valid_civic = civic_machine_memorialist }
+				NOR = {
+					has_building = building_galactic_memorial_1
+					has_building = building_galactic_memorial_2
+					has_building = building_galactic_memorial_3
+				}
+			}
+		}
+
+		9 = {
+			building = building_simulation_1
+			available = {
+				owner = { simulation_1_upkeep_affordable = yes }
+				NOR = {
+					has_building = building_simulation_1
+					has_building = building_simulation_2
+					has_building = building_simulation_3
+				}
+			}
+		}
+
+		10 = {
+			building = building_organic_sanctuary
+			available = {
+				owner = { organic_sanctuary_upkeep_affordable = yes }
+				num_buildings = {
+					type = building_organic_sanctuary
+					value < 2
+				}
+			}
+		}
+
+		11 = {
+			building = building_gas_extractors
+			available = { always = yes }
+		}
+
+		12 = {
+			building = building_crystal_mines
+			available = { always = yes }
+		}
+
+		13 = {
+			building = building_mote_harvesters
+			available = { always = yes }
+		}
+
+		14 = {
+			building = building_military_academy
+			available = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
+		}
+
+		15 = {
+			building = building_refinery
+			available = {
+				owner = {
+					refinery_upkeep_affordable = yes
+					has_monthly_income = {
+						resource = exotic_gases
+						value < 2
+					}
+				}
+			}
+		}
+	}
+}

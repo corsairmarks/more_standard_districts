@@ -35,11 +35,15 @@ col_standard_cm_trade = {
 			num_free_districts = { type = district_standard_cm_commercial value >= @free_districts_medium_threshold }
 		}
 		modifier = {
-			add = 2
+			add = 3
 			has_designation = col_standard_cm_trade
 		}
 		modifier = {
-			add = 2
+			factor = 1.25
+			has_designation = col_city
+		}
+		modifier = {
+			add = 3
 			OR = {
 				num_buildings = {
 					type = building_commercial_zone
@@ -52,7 +56,7 @@ col_standard_cm_trade = {
 			}
 		}
 		modifier = {
-			add = 2
+			add = 3
 			exists = owner
 			owner = {
 				OR = {
@@ -63,7 +67,7 @@ col_standard_cm_trade = {
 			}
 		}
 		modifier = {
-			add = 4
+			add = 5
 			OR = {
 				num_buildings = {
 					type = building_commercial_zone
@@ -76,28 +80,21 @@ col_standard_cm_trade = {
 			}
 		}
 		modifier = {
-			add = 4
+			add = 5
 			has_building = building_galactic_stock_exchange
 		}
 		modifier = {
-			add = 2
+			add = 3
 			num_districts = {
 				type = district_standard_cm_commercial
 				value >= @built_districts_low_threshold
 			}
 		}
 		modifier = {
-			add = 5
+			add = 6
 			num_districts = {
 				type = district_standard_cm_commercial
 				value >= @built_districts_medium_threshold
-			}
-		}
-		modifier = {
-			factor = 0.1
-			num_districts = {
-				type = district_city
-				value < @built_districts_low_threshold
 			}
 		}
 	}
@@ -142,8 +139,12 @@ col_standard_cm_leisure = {
 			has_designation = col_standard_cm_leisure
 		}
 		modifier = {
-			factor = 3
-			num_districts = { type = district_standard_cm_leisure value >= 3 }
+			add = 2
+			num_districts = { type = district_standard_cm_leisure value >= @built_districts_low_threshold }
+		}
+		modifier = {
+			add = 5
+			num_districts = { type = district_standard_cm_leisure value >= @built_districts_medium_threshold }
 		}
 	}
 }
