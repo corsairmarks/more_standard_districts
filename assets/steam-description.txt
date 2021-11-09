@@ -1,3 +1,53 @@
+[h1]Overview[/h1]
 
+Would you like more basic districts for your colonies?  Perhaps you're tired of being limited by building slots?  Then this mods is for you!  Adds a Research District, Commercial District, and Leisure District for construction on normal colonies.  All gestalt empires can use Research Districts, but Leisure Districts are only available for Rogue Servitors.
+
+Due to the addition of Research Districts, Research Labs have been adjusted to function similarly to the Alloy Foundries or Civilian Industries buildings.
+
+Requested by [url=https://steamcommunity.com/profiles/76561197969740903]Mad Cow[/url].
+
+[h1]Changes[/h1]
+
+Research, Commercial, and Leisure districts are now available for regular colonies.  These new districts are considered "city" districts similar to Industrial Districts.  The automation plan for Tech-Worlds is also adjusted to use the new Research District and updated Research Lab.  This mod updates Research Labs to function similarly to how Industrial Districts (their jobs, really) are enhanced by Alloy Foundries or Civilian Industries buildings:
+[list]
+[*]maximum one per planet
+[*]all tiers provide exactly 2 jobs
+[*]tier 2 increases research output by 1 point (per field) and increases researcher upkeep
+[*]tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
+[/list]
+
+Additionally, this mod adds new colony designations for Trade Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts).  Rogue Servitors also have an automation plan for Leisure Worlds.
+
+[h2]Compatibility[/h2]
+
+Although the districts added by this mod seem similar to existing districts, they are created as new districts so as to not present a compatibility challenge by overwriting many of the district files.  The district changes should work with other mods that add or alter districts.
+
+Overwrites [b]common/buildings/05_research_buildings.txt[/b] to alter the Research Labs, and thus is not compatible with other mods that want to make changes to Research Labs, the Research Institute, or the Planetary Supercomputer.  To implement the desired effect from the new Research Lab, this mod overwrites the economic category for researchers ([b]planet_researchers[/b]) in order to generate the [b]_add[/b] modifiers for research production (previously only [b]_mult[/b] was available).
+
+Also overwrites all three flavors of Tech-World build automation ([b]common/colony_types/00_research_automation.txt[/b], [b]common/colony_types/00_research_hive_automation.txt[/b], [b]common/colony_types/00_research_machine_automation.txt[/b]) to use the new Research Districts and enabling the AI to understand the Research Lab building changes.  Thus is incompatible with other mods that also update these build plans.  Commonly this is AI mods - whichever mod loads _last_ will use its version of these three files.
+
+This mod adds a Commercial District which also has been build with compatibility for my mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2641081470]Enhanced Trade Districts and Designations[/url].  Enjoy building commercial enterprises on practically any world.
+
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+
+[h3]Required Dependency Mods[/h3]
+
+In order to see and interact with the new district types, it is necessary to use a UI mod that allows more districts to be visible.  [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360]UI Overhaul Dynamic[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1587178040]Bigger Planet View[/url], or [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2560839396]Bigger Planets[/url] are a few of the available options.
+
+[h2]Known Issues[/h2]
+
+Overriding an economic category causes the game to log an error like this:
+
+[code]
+[16:04:53][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists
+[/code]
+
+[h2]Changelog[/h2]
+
+See [url=]Change Notes[/url]
+
+[h2]Source Code[/h2]
+
+Hosted on [url=https://github.com/corsairmarks/more_standard_districts]GitHub[/url]
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
