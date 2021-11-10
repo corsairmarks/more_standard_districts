@@ -35,10 +35,11 @@ In order to see and interact with the new district types, it is necessary to use
 
 ## Known Issues
 
-Overriding an economic category causes the game to log an error like this:
+Overriding an economic category and a colony designation causes the game to log two error like these:
 
 ```
-[16:04:53][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists
+[20:58:16][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists
+[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_research already exists
 ```
 
 ## Changelog
