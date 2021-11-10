@@ -22,29 +22,6 @@ col_research = {
 	}
 	weight_modifier = {
 		modifier = {
-			add = 1
-			OR = {
-				AND = {
-					num_free_districts = { type = district_city value >= @free_districts_high_threshold }
-					num_free_districts = { type = district_mining value <= @free_districts_verylow_threshold }
-					num_free_districts = { type = district_farming value <= @free_districts_verylow_threshold }
-					num_free_districts = { type = district_generator value <= @free_districts_verylow_threshold }
-				}
-				AND = {
-					num_free_districts = { type = district_hive value >= @free_districts_high_threshold }
-					num_free_districts = { type = district_mining value <= @free_districts_verylow_threshold }
-					num_free_districts = { type = district_farming value <= @free_districts_verylow_threshold }
-					num_free_districts = { type = district_generator value <= @free_districts_verylow_threshold }
-				}
-				AND = {
-					num_free_districts = { type = district_nexus value >= @free_districts_high_threshold }
-					num_free_districts = { type = district_mining value <= @free_districts_verylow_threshold }
-					num_free_districts = { type = district_farming value <= @free_districts_verylow_threshold }
-					num_free_districts = { type = district_generator value <= @free_districts_verylow_threshold }
-				}
-			}
-		}
-		modifier = {
 			add = 5
 			has_designation = col_research
 		}
@@ -60,32 +37,51 @@ col_research = {
 			}
 		}
 		modifier = {
-			add = 2
-			num_buildings = { type = building_research_lab_1 value >= 2 }
-		}
-		modifier = {
-			add = 3
-			num_buildings = { type = building_research_lab_1 value >= 3 }
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_research_lab_1 value >= 4 }
-		}
-		modifier = {
 			add = 5
-			num_buildings = { type = building_research_lab_1 value >= 5 }
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_research_lab_2 value >= 1 }
-		}
-		modifier = {
-			add = 5
-			num_buildings = { type = building_research_lab_2 value >= 2 }
+			has_building = building_research_lab_1
 		}
 		modifier = {
 			add = 10
-			num_buildings = { type = building_research_lab_3 value >= 1 }
+			has_building = building_research_lab_2
+		}
+		modifier = {
+			add = 15
+			has_building = building_research_lab_3
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_institute
+				has_building = building_supercomputer
+			}
+		}
+		modifier = {
+			add = 2
+			num_districts = {
+				type = district_standard_cm_science
+				value >= 2
+			}
+		}
+		modifier = {
+			add = 3
+			num_districts = {
+				type = district_standard_cm_science
+				value >= 3
+			}
+		}
+		modifier = {
+			add = 4
+			num_districts = {
+				type = district_standard_cm_science
+				value >= 4
+			}
+		}
+		modifier = {
+			add = 5
+			num_districts = {
+				type = district_standard_cm_science
+				value >= 5
+			}
 		}
 	}
 }
