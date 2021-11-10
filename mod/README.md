@@ -29,6 +29,10 @@ This mod adds a Commercial District which also has been build with compatibility
 
 Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
 
+### Not Included in "Subtle Polish"
+
+This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because it would require users to add a UI mod in order to see the expanded districts.  It it otherwise fully compatible.
+
 ### Required Dependency Mods
 
 In order to see and interact with the new district types, it is necessary to use a UI mod that allows more districts to be visible.  [UI Overhaul Dynamic](https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360), [Bigger Planet View](https://steamcommunity.com/sharedfiles/filedetails/?id=1587178040), or [Bigger Planets](https://steamcommunity.com/sharedfiles/filedetails/?id=2560839396) are a few of the available options.
