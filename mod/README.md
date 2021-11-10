@@ -8,14 +8,14 @@ Requested by [Mad Cow](https://steamcommunity.com/profiles/76561197969740903).
 
 # Changes
 
-Research, Commercial, and Leisure districts are now available for regular colonies.  These new districts are considered "city" districts similar to Industrial Districts.  The automation plan for Tech-Worlds is also adjusted to use the new Research District and updated Research Lab.  This mod updates Research Labs to function similarly to how Industrial Districts (their jobs, really) are enhanced by Alloy Foundries or Civilian Industries buildings:
+Research, Trade, and Leisure districts are now available for regular colonies.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod updates Research Labs to function similarly to how Industrial Districts (the jobs provided by the district, really) are enhanced by the Alloy Foundries or Civilian Industries buildings:
 
 * maximum one per planet
 * all tiers provide exactly 2 jobs
 * tier 2 increases research output by 1 point (per field) and increases researcher upkeep
 * tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
 
-Additionally, this mod adds new colony designations for Trade Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts).  Rogue Servitors also have an automation plan for Leisure Worlds.
+Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to offer Research District build speed in addition to its existing benefits.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).  The automation plan for Tech-Worlds is also adjusted to use the new Research District and updated Research Lab.
 
 ## Compatibility
 
