@@ -35,7 +35,7 @@ This mod is intentionally not included in my modpack [Subtle Polish: A Collectio
 
 ### Required Dependency Mods
 
-In order to see and interact with the new district types, it is necessary to use a UI mod that allows more districts to be visible.  [UI Overhaul Dynamic](https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360) and [Bigger Planet View](https://steamcommunity.com/sharedfiles/filedetails/?id=1587178040) are two possible options.  If you play Stellaris on a lower resolution (such as 1366x768 or 1600x900) there are not many mod offerings that show many districts without making the planetview too large, so I created [Basic Planetview: More Districts]() to solve that issue.
+In order to see and interact with the new district types, it is necessary to use a UI mod that allows more districts to be visible.  [UI Overhaul Dynamic](https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360) and [Bigger Planet View](https://steamcommunity.com/sharedfiles/filedetails/?id=1587178040) are two possible options.  If you play Stellaris on a lower resolution (such as 1366x768 or 1600x900) there are not many mod offerings that show many districts without making the planetview too large, so I created [Basic Planetview: More Districts](https://steamcommunity.com/sharedfiles/filedetails/?id=2654043078) to solve that issue.
 
 ## Known Issues
 
