@@ -16,6 +16,8 @@ col_research = {
 	}
 	planet_modifier = {
 		planet_building_research_lab_1_build_speed_mult = 0.25
+		planet_building_research_lab_2_build_speed_mult = 0.25
+		planet_building_research_lab_3_build_speed_mult = 0.25
 		planet_district_standard_cm_science_build_speed_mult = 0.25
 		planet_researchers_upkeep_mult = -0.2
 
