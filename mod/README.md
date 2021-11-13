@@ -39,16 +39,22 @@ In order to see and interact with the new district types, it is necessary to use
 
 ## Known Issues
 
-Overriding an economic category and a colony designation causes the game to log two error like these:
+Overriding an economic category and colony designations causes the game to log four errors like these:
 
 ```
 [20:58:16][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists
 [20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_research already exists
+[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists
+[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_fortress already exists
 ```
 
 ## Changelog
 
 * 1.0.0 Initial version
+* 1.1.0 Add new districts:
+    * Military Districts
+    * Administrative Districts (Hives get Synapse Districts and Machines get Data Warehouse Districts instead)
+    * Adjust colony automation plans for Bureaucratic Center and Fortress World
 
 ## Source Code
 
