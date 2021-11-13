@@ -73,16 +73,21 @@ automate_research_hive_planet = {
 		}
 
 		9 = {
-			building = building_crystal_mines
+			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
 		10 = {
-			building = building_mote_harvesters
+			building = building_crystal_mines
 			available = { always = yes }
 		}
 
 		11 = {
+			building = building_mote_harvesters
+			available = { always = yes }
+		}
+
+		12 = {
 			building = building_refinery
 			available = {
 				owner = {
@@ -95,7 +100,7 @@ automate_research_hive_planet = {
 			}
 		}
 
-		12 = {
+		13 = {
 			building = building_crystal_plant
 			available = {
 				owner = {
@@ -108,7 +113,7 @@ automate_research_hive_planet = {
 			}
 		}
 
-		13 = {
+		14 = {
 			building = building_chemical_plant
 			available = {
 				owner = {
