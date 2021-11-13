@@ -1,0 +1,15 @@
+namespace = even_more_standard_districts
+
+# flag mod as active
+# triggered by on_game_start and on_single_player_save_game_load
+event = {
+	id = even_more_standard_districts.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = even_more_standard_districts_installed }
+	}
+	immediate = {
+		set_global_flag = even_more_standard_districts_installed
+	}
+}
