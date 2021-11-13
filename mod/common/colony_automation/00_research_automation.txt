@@ -81,21 +81,26 @@ automate_research_planet = {
 		}
 
 		10 = {
-			building = building_betharian_power_plant
+			building = building_xeno_zoo
 			available = { always = yes }
 		}
 
 		11 = {
-			building = building_crystal_mines
+			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
 		12 = {
-			building = building_mote_harvesters
+			building = building_crystal_mines
 			available = { always = yes }
 		}
 
 		13 = {
+			building = building_mote_harvesters
+			available = { always = yes }
+		}
+
+		14 = {
 			building = building_refinery
 			available = {
 				owner = {
@@ -108,7 +113,7 @@ automate_research_planet = {
 			}
 		}
 
-		14 = {
+		15 = {
 			building = building_crystal_plant
 			available = {
 				owner = {
@@ -121,7 +126,7 @@ automate_research_planet = {
 			}
 		}
 
-		15 = {
+		16 = {
 			building = building_chemical_plant
 			available = {
 				owner = {

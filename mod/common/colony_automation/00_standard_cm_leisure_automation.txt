@@ -192,41 +192,46 @@ automate_standard_cm_leisure_planet = {
 		}
 
 		18 = {
-			building = building_gas_extractors
+			building = building_xeno_zoo
 			available = { always = yes }
 		}
 
 		19 = {
-			building = building_betharian_power_plant
+			building = building_gas_extractors
 			available = { always = yes }
 		}
 
 		20 = {
-			building = building_crystal_mines
+			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
 		21 = {
-			building = building_mote_harvesters
+			building = building_crystal_mines
 			available = { always = yes }
 		}
 
 		22 = {
+			building = building_mote_harvesters
+			available = { always = yes }
+		}
+
+		23 = {
 			building = building_psi_corps
 			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
 		}
 
-		23 = {
+		24 = {
 			building = building_dread_encampment
 			available = { owner = { has_valid_civic = civic_reanimated_armies } }
 		}
 
-		24 = {
+		25 = {
 			building = building_military_academy
 			available = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
 		}
 
-		25 = {
+		26 = {
 			building = building_holo_theatres
 			available = {
 				owner = { holo_theatres_upkeep_affordable = yes }
@@ -241,7 +246,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		26 = {
+		27 = {
 			building = building_refinery
 			available = {
 				owner = {

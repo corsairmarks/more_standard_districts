@@ -71,36 +71,41 @@ automate_standard_cm_trade_planet = {
 		}
 
 		9 = {
-			building = building_crystal_mines
+			building = building_xeno_zoo
 			available = { always = yes }
 		}
 
 		10 = {
-			building = building_betharian_power_plant
+			building = building_crystal_mines
 			available = { always = yes }
 		}
 
 		11 = {
-			building = building_mote_harvesters
+			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
 		12 = {
-			building = building_gas_extractors
+			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
 		13 = {
+			building = building_gas_extractors
+			available = { always = yes }
+		}
+
+		14 = {
 			building = building_dread_encampment
 			available = { owner = { has_valid_civic = civic_reanimated_armies } }
 		}
 
-		14 = {
+		15 = {
 			building = building_military_academy
 			available = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
 		}
 
-		15 = {
+		16 = {
 			building = building_crystal_plant
 			available = {
 				owner = {
@@ -113,7 +118,7 @@ automate_standard_cm_trade_planet = {
 			}
 		}
 
-		16 = {
+		17 = {
 			building = building_commercial_zone
 			available = { owner = { commercial_zone_upkeep_affordable = yes } }
 		}
