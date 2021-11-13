@@ -9,7 +9,11 @@ col_standard_cm_trade = {
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		uses_district_set = standard
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+		}
 		is_special_colony_type = no
 	}
 	planet_modifier = {
@@ -18,6 +22,142 @@ col_standard_cm_trade = {
 		planet_building_galactic_stock_exchange_build_speed_mult = 0.25
 		planet_district_standard_cm_commercial_build_speed_mult = 0.25
 		trade_value_mult = 0.2
+	}
+	
+	triggered_planet_modifier = {
+		potential = { solar_system = { has_trade_route = yes } }
+		modifier = {
+			trade_value_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = {
+					count_starbase_modules = {
+						count = 1
+						type = trading_hub
+					}
+				}
+			}
+		}
+		modifier = {
+			trade_value_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = {
+					count_starbase_modules = {
+						count = 2
+						type = trading_hub
+					}
+				}
+			}
+		}
+		modifier = {
+			trade_value_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = {
+					count_starbase_modules = {
+						count = 3
+						type = trading_hub
+					}
+				}
+			}
+		}
+		modifier = {
+			trade_value_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = {
+					count_starbase_modules = {
+						count = 4
+						type = trading_hub
+					}
+				}
+			}
+		}
+		modifier = {
+			trade_value_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = {
+					count_starbase_modules = {
+						count = 5
+						type = trading_hub
+					}
+				}
+			}
+		}
+		modifier = {
+			trade_value_add = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = {
+					count_starbase_modules = {
+						count >= 6
+						type = trading_hub
+					}
+				}
+			}
+		}
+		modifier = {
+			trade_value_add = 6
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = { has_starbase_building = offworld_trading_company }
+			}
+		}
+		modifier = {
+			trade_value_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = { has_starbase_building = trader_proxy_office }
+			}
+		}
+		modifier = {
+			trade_value_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				exists = starbase
+				starbase = { has_starbase_building = transit_hub }
+			}
+		}
+		modifier = {
+			trade_value_add = 2
+		}
 	}
 	weight_modifier = {
 		modifier = {
@@ -35,6 +175,20 @@ col_standard_cm_trade = {
 			num_free_districts = { type = district_standard_cm_commercial value >= @free_districts_medium_threshold }
 		}
 		modifier = {
+			add = 1
+			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
+			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
+			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
+			num_free_districts = { type = district_srw_commercial value >= @free_districts_low_threshold }
+		}
+		modifier = {
+			add = 3
+			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
+			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
+			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
+			num_free_districts = { type = district_srw_commercial value >= @free_districts_medium_threshold }
+		}
+		modifier = {
 			add = 3
 			has_designation = col_standard_cm_trade
 		}
@@ -44,15 +198,30 @@ col_standard_cm_trade = {
 		}
 		modifier = {
 			add = 3
-			OR = {
-				num_buildings = {
-					type = building_commercial_zone
-					value > 2
-				}
-				num_buildings = {
-					type = building_commercial_megaplex
-					value > 1
-				}
+			num_buildings = {
+				type = building_commercial_zone
+				value > 2
+			}
+		}
+		modifier = {
+			add = 5
+			num_buildings = {
+				type = building_commercial_zone
+				value > 4
+			}
+		}
+		modifier = {
+			add = 3
+			num_buildings = {
+				type = building_commercial_megaplex
+				value > 1
+			}
+		}
+		modifier = {
+			add = 5
+			num_buildings = {
+				type = building_commercial_megaplex
+				value > 2
 			}
 		}
 		modifier = {
@@ -68,20 +237,11 @@ col_standard_cm_trade = {
 		}
 		modifier = {
 			add = 5
-			OR = {
-				num_buildings = {
-					type = building_commercial_zone
-					value > 4
-				}
-				num_buildings = {
-					type = building_commercial_megaplex
-					value > 2
-				}
-			}
+			has_building = building_galactic_stock_exchange
 		}
 		modifier = {
 			add = 5
-			has_building = building_galactic_stock_exchange
+			has_building = building_nuumismatic_shrine
 		}
 		modifier = {
 			add = 3
