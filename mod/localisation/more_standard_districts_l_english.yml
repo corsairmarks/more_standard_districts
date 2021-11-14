@@ -24,3 +24,5 @@
  mod_planet_building_galactic_stock_exchange_build_speed_mult: "$building_galactic_stock_exchange$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_building_holo_theatres_build_speed_mult: "$building_holo_theatres$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_building_hyper_entertainment_forum_build_speed_mult: "$building_hyper_entertainment_forum$ $mod_planet_built_speed_mult_suffix$"
+ mod_planet_building_research_lab_2_build_speed_mult: "$building_research_lab_2$ $mod_planet_built_speed_mult_suffix$"
+ mod_planet_building_research_lab_3_build_speed_mult: "$building_research_lab_3$ $mod_planet_built_speed_mult_suffix$"

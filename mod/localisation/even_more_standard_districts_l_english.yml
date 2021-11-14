@@ -16,3 +16,4 @@
  mod_planet_district_standard_cm_admin_hive_build_speed_mult: "$district_standard_cm_admin_hive$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_district_standard_cm_admin_machine_build_speed_mult: "$district_standard_cm_admin_machine$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_district_standard_cm_military_build_speed_mult: "$district_standard_cm_military$ $mod_planet_built_speed_mult_suffix$"
+ mod_planet_building_fortress_build_speed_mult: "$building_fortress$ $mod_planet_built_speed_mult_suffix$"
