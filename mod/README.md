@@ -55,6 +55,7 @@ Overriding an economic category and colony designations causes the game to log f
     * Military Districts
     * Administrative Districts (Hives get Synapse Districts and Machines get Data Warehouse Districts instead)
     * Adjust colony automation plans for Bureaucratic Center and Fortress World
+* 1.1.1 Add missing localisation
 
 ## Source Code
 
