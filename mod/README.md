@@ -32,7 +32,7 @@ Also overwrites all three flavors of Tech-World build automation (`common/colony
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/sharedfiles/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.
 
-Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
 
 ### Not Included in "Subtle Polish"
 
@@ -62,6 +62,9 @@ Overriding an economic category and colony designations causes the game to log f
     * Adjust colony automation plans for Bureaucratic Center and Fortress World
 * 1.1.1 Add missing localisation
 * 1.2.0 Add Simplified Chinese localisation by megumin
+* 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
+    * Adjust economic category overwrite
+    * Apply base game colony automation and designation changes
 
 ## Source Code
 

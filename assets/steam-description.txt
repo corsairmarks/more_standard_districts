@@ -36,7 +36,7 @@ Also overwrites all three flavors of Tech-World build automation ([b]common/colo
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2641081470]Enhanced Trade Districts and Designations[/url].  Enjoy building commercial enterprises on practically any world.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 [h3]Not Included in "Subtle Polish"[/h3]
 
