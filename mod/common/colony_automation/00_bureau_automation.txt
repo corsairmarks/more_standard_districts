@@ -1,11 +1,15 @@
 automate_bureau_planet = {
 	available = {
-		has_designation = col_bureau
+		OR = {
+			has_designation = col_bureau
+			has_designation = col_habitat_bureau
+		}
 		owner = { is_regular_empire = yes }
 	}
 	prio_districts = {
 		district_standard_cm_admin
 		district_city
+		district_hab_housing
 	}
 	buildings = {
 		1 = {
