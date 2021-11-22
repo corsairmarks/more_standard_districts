@@ -20,6 +20,7 @@ Along with the new district types, this mod adds new colony designations for Com
 ## Localisation
 
 * English by corsairmarks (author)
+* Russian by [Dimonius](https://steamcommunity.com/profiles/76561198011628045)
 * Simplified Chinese by [megumin](https://steamcommunity.com/profiles/76561199071646261)
 
 ## Compatibility
