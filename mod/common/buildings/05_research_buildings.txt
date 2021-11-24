@@ -486,16 +486,10 @@ building_institute = {
 		engineering_research = 3
 	}
 	ai_resource_production = {
-		trigger = { has_research_exceeding = { THRESHOLD = 20 } }
-		physics_research = 3
-		society_research = 3
-		engineering_research = 3
-	}
-	ai_resource_production = {
-		trigger = { has_research_exceeding = { THRESHOLD = 40 } }
-		physics_research = 3
-		society_research = 3
-		engineering_research = 3
+		trigger = { has_research_exceeding = { THRESHOLD = 30 } }
+		physics_research = 5
+		society_research = 5
+		engineering_research = 5
 	}
 }
 
@@ -597,15 +591,9 @@ building_supercomputer = {
 		engineering_research = 3
 	}
 	ai_resource_production = {
-		trigger = { has_research_exceeding = { THRESHOLD = 20 } }
-		physics_research = 3
-		society_research = 3
-		engineering_research = 3
-	}
-	ai_resource_production = {
-		trigger = { has_research_exceeding = { THRESHOLD = 40 } }
-		physics_research = 3
-		society_research = 3
-		engineering_research = 3
+		trigger = { has_research_exceeding = { THRESHOLD = 30 } }
+		physics_research = 5
+		society_research = 5
+		engineering_research = 5
 	}
 }

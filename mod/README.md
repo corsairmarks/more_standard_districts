@@ -66,6 +66,7 @@ Overriding an economic category and colony designations causes the game to log f
 * 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
     * Adjust economic category overwrite
     * Apply base game colony automation and designation changes
+    * Apply base game research building changes
 
 ## Source Code
 
