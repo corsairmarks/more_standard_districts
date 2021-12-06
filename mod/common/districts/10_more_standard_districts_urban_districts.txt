@@ -17,6 +17,7 @@ district_standard_cm_commercial = {
 			uses_district_set = ring_world
 			uses_district_set = shattered_ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 	}
 	potential = {
 		exists = owner
@@ -27,6 +28,7 @@ district_standard_cm_commercial = {
 			uses_district_set = ring_world
 			uses_district_set = shattered_ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 	}
 	allow = {
 		NOT = { has_modifier = resort_colony }
@@ -247,6 +249,7 @@ district_standard_cm_leisure = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 		exists = from
 		from = {
 			OR = {
@@ -261,6 +264,7 @@ district_standard_cm_leisure = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 		exists = owner
 		owner = {
 			OR = {
@@ -556,6 +560,7 @@ district_standard_cm_science = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 	}
 	potential = {
 		NOR = {
@@ -563,6 +568,7 @@ district_standard_cm_science = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 	}
 	resources = {
 		category = planet_districts

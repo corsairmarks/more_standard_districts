@@ -14,6 +14,7 @@ col_standard_cm_trade = {
 			uses_district_set = ring_world
 			uses_district_set = habitat
 		}
+		msd_uses_planetary_diversity_arcology_district_set = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {
@@ -23,7 +24,7 @@ col_standard_cm_trade = {
 		planet_district_standard_cm_commercial_build_speed_mult = 0.25
 		trade_value_mult = 0.2
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = { solar_system = { has_trade_route = yes } }
 		modifier = {

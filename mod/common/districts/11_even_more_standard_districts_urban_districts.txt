@@ -14,6 +14,7 @@ district_standard_cm_admin = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 		exists = from
 		from = { is_gestalt = no }
 	}
@@ -23,6 +24,7 @@ district_standard_cm_admin = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 		exists = owner
 		owner = { is_gestalt = no }
 	}
@@ -58,6 +60,7 @@ district_standard_cm_admin_hive = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 		exists = from
 		from = { is_hive_empire = yes }
 	}
@@ -67,6 +70,7 @@ district_standard_cm_admin_hive = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 		exists = owner
 		owner = { is_hive_empire = yes }
 	}
@@ -130,6 +134,7 @@ district_standard_cm_admin_machine = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 		exists = from
 		from = { is_machine_empire = yes }
 	}
@@ -139,6 +144,7 @@ district_standard_cm_admin_machine = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 		exists = owner
 		owner = { is_machine_empire = yes }
 	}
@@ -174,6 +180,7 @@ district_standard_cm_military = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 	}
 	potential = {
 		NOR = {
@@ -181,6 +188,7 @@ district_standard_cm_military = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
+		msd_uses_planetary_diversity_special_district_set = no
 	}
 	allow = {
 		always = yes
