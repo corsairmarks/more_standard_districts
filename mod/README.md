@@ -32,7 +32,7 @@ Overwrites `common/buildings/05_research_buildings.txt` to alter the Research La
 
 Also overwrites all three flavors of Tech-World build automation (`common/colony_types/00_research_automation.txt`, `common/colony_types/00_research_hive_automation.txt`, `common/colony_types/00_research_machine_automation.txt`) to use the new Research Districts and enabling the AI to understand the Research Lab building changes.  Bureaucratic Center (`common/colony_types/00_bureau_automation.txt`) and Fortress World (`common/colony_types/00_fortress_automation.txt`, `common/colony_types/00_fortress_hive_automation.txt`, `common/colony_types/00_fortress_machine_automation.txt`) build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these build plans.  Commonly this is AI mods - whichever mod loads _last_ will use its version of these files.
 
-This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/sharedfiles/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.
+This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/sharedfiles/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.  Compatible with Planetary Diversity and follows its exclusions for some colony types.
 
 Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
 
