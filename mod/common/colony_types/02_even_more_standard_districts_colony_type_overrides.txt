@@ -12,7 +12,6 @@ col_bureau = {
 			uses_district_set = hive_world
 			uses_district_set = habitat
 		}
-		msd_uses_planetary_diversity_special_district_set = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {

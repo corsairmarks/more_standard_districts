@@ -560,7 +560,7 @@ district_standard_cm_science = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
-		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_planetary_diversity_non_research_district_set = no
 	}
 	potential = {
 		NOR = {
@@ -568,7 +568,7 @@ district_standard_cm_science = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
 		}
-		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_planetary_diversity_non_research_district_set = no
 	}
 	resources = {
 		category = planet_districts

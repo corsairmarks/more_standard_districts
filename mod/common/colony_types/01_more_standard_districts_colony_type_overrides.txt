@@ -12,7 +12,7 @@ col_research = {
 			uses_district_set = ring_world
 			uses_district_set = habitat
 		}
-		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_planetary_diversity_non_research_district_set = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {
