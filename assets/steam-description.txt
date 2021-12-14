@@ -23,6 +23,7 @@ Along with the new district types, this mod adds new colony designations for Com
 
 [list]
 [*]English by corsairmarks (author)
+[*]German (Deutsch) by [url=https://steamcommunity.com/id/Lucanoria]Lucanoria[/url]
 [*]Polish (Polskie) by [url=https://steamcommunity.com/profiles/76561198440146604]Gatzek[/url]
 [*]Russian (Русский) by [url=https://steamcommunity.com/profiles/76561198011628045]Dimonius[/url]
 [*]Simplified Chinese by [url=https://steamcommunity.com/profiles/76561199071646261]megumin[/url]
