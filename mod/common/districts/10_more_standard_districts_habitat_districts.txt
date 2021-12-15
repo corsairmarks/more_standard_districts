@@ -169,9 +169,6 @@ district_standard_cm_hab_military = {
 	}
 	planet_modifier = {
 		planet_orbital_bombardment_damage = -0.025
-		army_defense_damage_mult = 0.05
-		army_defense_morale_mult = 0.05
-		army_defense_health_mult = 0.05
 		planet_housing_add = 3
 	}
 	triggered_planet_modifier = {
