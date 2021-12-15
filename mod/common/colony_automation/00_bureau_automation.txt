@@ -8,6 +8,7 @@ automate_bureau_planet = {
 	}
 	prio_districts = {
 		district_standard_cm_admin
+		district_standard_cm_hab_admin
 		district_city
 		district_hab_housing
 	}
@@ -60,20 +61,17 @@ automate_bureau_planet = {
 		}
 
 		6 = {
-			building = building_psi_corps
-			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
+			building = building_luxury_residence
+			available = {
+				has_designation = col_habitat_bureau
+				owner = { luxury_residence_upkeep_affordable = yes }
+				free_housing < -3
+			}
 		}
 
-		9 = {
-			building = building_galactic_memorial_1
-			available = {
-				owner = { has_valid_civic = civic_memorialist }
-				NOR = {
-					has_building = building_galactic_memorial_1
-					has_building = building_galactic_memorial_2
-					has_building = building_galactic_memorial_3
-				}
-			}
+		7 = {
+			building = building_psi_corps
+			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
 		}
 
 		8 = {
@@ -84,31 +82,44 @@ automate_bureau_planet = {
 		}
 
 		9 = {
-			building = building_xeno_zoo
-			available = { always = yes }
+			building = building_galactic_memorial_1
+			available = {
+				has_designation = col_bureau
+				owner = { has_valid_civic = civic_memorialist }
+				NOR = {
+					has_building = building_galactic_memorial_1
+					has_building = building_galactic_memorial_2
+					has_building = building_galactic_memorial_3
+				}
+			}
 		}
 
 		10 = {
-			building = building_betharian_power_plant
-			available = { always = yes }
+			building = building_xeno_zoo
+			available = { has_designation = col_bureau }
 		}
 
 		11 = {
+			building = building_betharian_power_plant
+			available = { has_designation = col_bureau }
+		}
+
+		12 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		12 = {
+		13 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		13 = {
+		14 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		14 = {
+		15 = {
 			building = building_bureaucratic_1
 			available = {
 				owner = { bureaucracy_upkeep_affordable = yes }

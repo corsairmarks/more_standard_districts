@@ -35,6 +35,11 @@ automate_fortress_hive_planet = {
 		}
 
 		4 = {
+			building = building_planetary_shield_generator
+			available = { owner = { planetary_shield_generator_upkeep_affordable = yes } }
+		}
+
+		5 = {
 			building = building_stronghold
 			available = {
 				NOT = { has_available_jobs = soldier }
@@ -50,39 +55,27 @@ automate_fortress_hive_planet = {
 			}
 		}
 
-		5 = {
-			building = building_planetary_shield_generator
-			available = { owner = { planetary_shield_generator_upkeep_affordable = yes } }
-		}
-
 		6 = {
-			building = building_mote_harvesters
-			available = {
-				num_buildings = { type = building_mote_harvesters value = 0 }
-			}
-		}
-
-		7 = {
 			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
-		8 = {
+		7 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		9 = {
+		8 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		10 = {
+		9 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		11 = {
+		10 = {
 			building = building_chemical_plant
 			available = {
 				num_buildings = {
@@ -97,7 +90,7 @@ automate_fortress_hive_planet = {
 			}
 		}
 
-		12 = {
+		11 = {
 			building = building_stronghold
 			available = {
 				NOT = { has_available_jobs = soldier }

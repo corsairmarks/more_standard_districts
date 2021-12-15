@@ -1,62 +1,54 @@
-automate_fortress_planet = {
+
+automate_habitat_fortress_hive_planet = {
 	available = {
-		has_designation = col_fortress
-		owner = {
-			is_machine_empire = no
-			is_hive_empire = no
-		}
+		has_designation = col_habitat_fortress
+		owner = { is_hive_empire = yes }
 	}
 
 	prio_districts = {
-		district_standard_cm_military
-		district_city
+		district_standard_cm_hab_military
+		district_hab_housing
 	}
 
 	buildings = {
 		1 = {
-			building = building_capital
+			building = building_hab_capital
 			available = { always = yes }
 		}
 
 		2 = {
-			building = building_clone_vats
-			available = { owner = { has_ascension_perk = ap_engineered_evolution } }
-		}
-
-		3 = {
-			building = building_robot_assembly_plant
+			building = building_spawning_pool
 			available = {
-				owner = {
-					robot_assembly_plant_upkeep_affordable = yes
-					NOR = {
-						has_policy_flag = robots_outlawed
-						has_ascension_perk = ap_engineered_evolution
+				NOT = {
+					owner = {
+						has_origin = origin_necrophage
+						has_trait = trait_necrophage
+						has_valid_civic = civic_hive_devouring_swarm
 					}
 				}
 			}
 		}
 
-		4 = {
-			building = building_dread_encampment
-			available = { owner = { has_valid_civic = civic_reanimated_armies } }
-		}
-
-		5 = {
+		3 = {
 			building = building_military_academy
-			available = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
+			# as of 3.1.2 AI has a destroy_trigger for this building
+			available = { owner = { is_ai = no } }
 		}
 
-		6 = {
+		4 = {
 			building = building_planetary_shield_generator
 			available = { owner = { planetary_shield_generator_upkeep_affordable = yes } }
 		}
 
-		7 = {
-			building = building_psi_corps
-			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
+		5 = {
+			building = building_hive_warren
+			available = {
+				owner = { hive_warren_upkeep_affordable = yes }
+				free_housing < -3
+			}
 		}
 
-		8 = {
+		6 = {
 			building = building_stronghold
 			available = {
 				NOT = { has_available_jobs = soldier }
@@ -72,39 +64,27 @@ automate_fortress_planet = {
 			}
 		}
 
-		9 = {
-			building = building_mote_harvesters
-			available = {
-				num_buildings = { type = building_mote_harvesters value = 0 }
-			}
-		}
-
-		10 = {
-			building = building_xeno_zoo
-			available = { always = yes }
-		}
-
-		11 = {
+		7 = {
 			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
-		12 = {
+		8 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		13 = {
+		9 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		14 = {
+		10 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		15 = {
+		11 = {
 			building = building_chemical_plant
 			available = {
 				num_buildings = {
@@ -119,7 +99,7 @@ automate_fortress_planet = {
 			}
 		}
 
-		16 = {
+		12 = {
 			building = building_stronghold
 			available = {
 				NOT = { has_available_jobs = soldier }
