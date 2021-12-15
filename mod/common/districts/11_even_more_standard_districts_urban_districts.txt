@@ -97,7 +97,7 @@ district_standard_cm_admin_hive = {
 	}
 	planet_modifier = {
 		planet_housing_add = 2
-		job_synapse_drone_add =2
+		job_synapse_drone_add = 2
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -164,7 +164,7 @@ district_standard_cm_admin_machine = {
 	}
 	planet_modifier = {
 		planet_housing_add = 2
-		job_coordinator_add =2
+		job_coordinator_add = 2
 	}
 	triggered_desc = {
 		text = job_coordinator_effect_desc
@@ -211,6 +211,9 @@ district_standard_cm_military = {
 	}
 	planet_modifier = {
 		planet_orbital_bombardment_damage = -0.025
+		army_defense_damage_mult = 0.05
+		army_defense_morale_mult = 0.05
+		army_defense_health_mult = 0.05
 		planet_housing_add = 2
 	}
 	triggered_planet_modifier = {
