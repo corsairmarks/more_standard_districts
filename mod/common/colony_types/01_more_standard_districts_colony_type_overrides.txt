@@ -2,7 +2,7 @@
 @free_districts_verylow_threshold = 3
 @free_districts_high_threshold = 15
 
-# Research Planet
+# Tech-World (Research)
 col_research = {
 	icon = GFX_colony_type_research
 	potential = {
@@ -205,7 +205,120 @@ col_bureau = {
 	}
 }
 
-# Fortress Planet
+# Bureaucratic Station
+col_habitat_bureau = {
+	icon = GFX_colony_type_hab_bureaucratic
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		uses_district_set = habitat
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		custom_tooltip = col_bureaucracy_custom
+		planet_bureaucrats_upkeep_mult = -0.10
+		pop_ethics_shift_speed_mult = -0.20
+		planet_district_standard_cm_hab_admin_build_speed_mult = 0.25
+	}
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			owner = { empire_sprawl_over_cap > 40 }
+		}
+		modifier = {
+			add = 5
+			has_designation = col_habitat_bureau
+		}
+		modifier = {
+			add = 3
+			num_buildings = {
+				type = building_bureaucratic_1
+				value >= 2
+			}
+		}
+		modifier = {
+			add = 4
+			num_buildings = {
+				type = building_bureaucratic_1
+				value >= 3
+			}
+		}
+		modifier = {
+			add = 5
+			num_buildings = {
+				type = building_bureaucratic_1
+				value >= 4
+			}
+		}
+		modifier = {
+			add = 6
+			num_buildings = {
+				type = building_bureaucratic_1
+				value >= 5
+			}
+		}
+		modifier = {
+			add = 3
+			num_districts = {
+				type = district_standard_cm_hab_admin
+				value >= 2
+			}
+		}
+		modifier = {
+			add = 4
+			num_districts = {
+				type = district_standard_cm_hab_admin
+				value >= 3
+			}
+		}
+		modifier = {
+			add = 5
+			num_districts = {
+				type = district_standard_cm_hab_admin
+				value >= 4
+			}
+		}
+		modifier = {
+			add = 6
+			num_districts = {
+				type = district_standard_cm_hab_admin
+				value >= 5
+			}
+		}
+		modifier = {
+			add = 5
+			num_buildings = {
+				type = building_bureaucratic_2
+				value >= 1
+			}
+		}
+		modifier = {
+			add = 6
+			num_buildings = {
+				type = building_bureaucratic_2
+				value >= 2
+			}
+		}
+		modifier = {
+			factor = 0
+			num_buildings = {
+				type = building_bureaucratic_1
+				value = 0
+			}
+			num_buildings = {
+				type = building_bureaucratic_2
+				value = 0
+			}
+			num_districts = {
+				type = district_standard_cm_admin
+				value = 0
+			}
+		}
+	}
+}
+
+# Fortress World
 col_fortress = {
 	icon = GFX_colony_type_fortress
 	potential = {
@@ -286,6 +399,77 @@ col_fortress = {
 			num_buildings = {
 				type = building_fortress
 				value >= 2
+			}
+		}
+	}
+}
+
+# Fortress Station
+col_habitat_fortress = {
+	icon = GFX_colony_type_habitat_fortress
+	potential = {
+		uses_district_set = habitat
+	}
+	planet_modifier = {
+		planet_district_standard_cm_hab_military_build_speed_mult = 0.25
+		planet_building_stronghold_build_speed_mult = 0.25
+		planet_building_fortress_build_speed_mult = 0.25
+		planet_orbital_bombardment_damage = -0.10
+		army_defense_damage_mult = 0.20
+	}
+	weight_modifier = {
+		base = 300
+		modifier = {
+			factor = 3
+			has_designation = col_habitat_fortress
+		}
+		modifier = {
+			factor = 2
+			num_buildings = {
+				type = building_stronghold
+				value >= 3
+			}
+		}
+		modifier = {
+			factor = 3
+			num_buildings = {
+				type = building_stronghold
+				value >= 5
+			}
+		}
+		modifier = {
+			factor = 3
+			num_districts = {
+				type = district_standard_cm_hab_military
+				value >= 2
+			}
+		}
+		modifier = {
+			factor = 4
+			num_districts = {
+				type = district_standard_cm_hab_military
+				value >= 3
+			}
+		}
+		modifier = {
+			factor = 5
+			num_districts = {
+				type = district_standard_cm_hab_military
+				value >= 4
+			}
+		}
+		modifier = {
+			factor = 2
+			num_buildings = {
+				type = building_fortress
+				value >= 2
+			}
+		}
+		modifier = {
+			factor = 3
+			num_buildings = {
+				type = building_fortress
+				value >= 4
 			}
 		}
 	}
