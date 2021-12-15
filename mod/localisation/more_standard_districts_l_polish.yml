@@ -35,7 +35,7 @@
  district_standard_cm_hab_admin_machine_desc: "$district_standard_cm_admin_machine_desc$"
  district_standard_cm_hab_military: "$district_standard_cm_military$"
  district_standard_cm_hab_military_plural: "$district_standard_cm_military_plural$"
- district_standard_cm_hab_military_desc: "Military command/control facilities built into the superstructure of the habitat itself. Redundant bulkheads make the habitat more resilient to attacks from space and can integrate with $building_planetary_shield_generator$" structures to further boost shield strength. $standard_cm_military_defense_boost$"
+ district_standard_cm_hab_military_desc: "Military command/control facilities built into the superstructure of the habitat itself. Redundant bulkheads make the habitat more resilient to attacks from space and can integrate with $building_planetary_shield_generator$ structures to further boost shield strength. $standard_cm_military_defense_boost$"
  standard_cm_military_defense_boost: "Also boosts the strength of defending armies."
  mod_planet_built_speed_mult_suffix: "szybkość budowy"
  mod_planet_researchers_minerals_upkeep_add: "£minerals£ $minerals$ utrzymanie £job_researcher£ [GetResearcherPlural]"
