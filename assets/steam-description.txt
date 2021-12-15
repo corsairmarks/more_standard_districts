@@ -1,6 +1,6 @@
 [h1]Overview[/h1]
 
-Would you like more basic districts for your colonies?  Perhaps you're tired of being limited by building slots?  Then this mods is for you!  Adds a Research District, Trade District, Leisure District, Administrative District, and Military District for construction on normal colonies.  All gestalt empires can use Research Districts and Military Districts, but Leisure Districts are only available for Rogue Servitors.  Hive Minds and Machines have their own versions of the Administrative District.
+Would you like more basic districts for your colonies?  Perhaps you're tired of being limited by building slots?  Then this mods is for you!  Adds a Research District, Trade District, Leisure District, Administrative District, and Military District for construction on normal colonies.  Also adds an Administrative District and Military District for construction on habitats.  All gestalt empires can use Research Districts and Military Districts, but Leisure Districts are only available for Rogue Servitors.  Hive Minds and Machines have their own versions of the Administrative District.
 
 Due to the addition of Research Districts, Research Labs have been adjusted to function similarly to the Alloy Foundries or Civilian Industries buildings.
 
@@ -8,7 +8,7 @@ Requested by [url=https://steamcommunity.com/profiles/76561197969740903]Mad Cow[
 
 [h1]Changes[/h1]
 
-Research, Trade, Leisure, Administrative/Synapse/Data Warehouse, and Military districts are now available for regular colonies.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod updates Research Labs to function similarly to how Industrial Districts (the jobs provided by the district, really) are enhanced by the Alloy Foundries or Civilian Industries buildings:
+Research, Trade, Leisure, Administrative/Synapse/Data Warehouse, and Military districts are now available for regular colonies.  Administrative and Military districts are now also available for construction on habitats.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod updates Research Labs to function similarly to how Industrial Districts (the jobs provided by the district, really) are enhanced by the Alloy Foundries or Civilian Industries buildings:
 
 [list]
 [*]maximum one per planet
@@ -53,13 +53,15 @@ In order to see and interact with the new district types, it is necessary to use
 
 [h2]Known Issues[/h2]
 
-Overriding an economic category and colony designations causes the game to log four errors like these:
+Overriding an economic category and colony designations causes the game to log six errors like these:
 
 [code]
 [20:58:16][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists
 [20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_research already exists
 [20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists
+[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau already exists
 [20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_fortress already exists
+[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_habitat_fortress already exists
 [/code]
 
 [h2]Changelog[/h2]
