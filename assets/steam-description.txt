@@ -19,6 +19,8 @@ Research, Trade, Leisure, Administrative/Synapse/Data Warehouse, and Military di
 
 Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to offer Research District build speed in addition to its existing benefits.  Bureaucratic Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).  The automation plan for Bureaucratic Centers, Fortress Worlds, and Tech-Worlds is also adjusted to use the new Research District and updated Research Lab.
 
+All districts respond to changes in civics that alter jobs.  For example, Leisure Districts trade a Culture Worker for Priests for spiritualists (or Dealth Priest for death cults), and/or trade an Entertainer for a Duelist with Warrior Culture.
+
 [h2]Localisation[/h2]
 
 [list]
