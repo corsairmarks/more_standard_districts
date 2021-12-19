@@ -78,6 +78,9 @@ Overriding an economic category and colony designations causes the game to log s
     * Add Polish localisation by Gatzek
 * 2.2.0 Add German localisation by Lucanoria
 * 2.3.0 Add administrative and military districts for habitats (including for Hives and Machines) with designations and automation plans
+    * Update German localisation by Lucanoria
+    * Update Polish localisation by Gatzek
+    * Could use assistance with Russian and Simplified Chinese
 
 ## Source Code
 
