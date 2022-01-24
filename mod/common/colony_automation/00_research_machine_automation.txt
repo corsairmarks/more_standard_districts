@@ -34,7 +34,7 @@ automate_research_machine_planet = {
 		5 = {
 			building = building_galactic_memorial_1
 			available = {
-				owner = { has_valid_civic = civic_machine_memorialist }
+				owner = { is_memorialist_empire = yes }
 				NOR = {
 					has_building = building_galactic_memorial_1
 					has_building = building_galactic_memorial_2

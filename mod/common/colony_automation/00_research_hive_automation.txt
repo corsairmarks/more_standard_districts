@@ -58,7 +58,7 @@ automate_research_hive_planet = {
 		7 = {
 			building = building_galactic_memorial_1
 			available = {
-				owner = { has_valid_civic = civic_hive_memorialist }
+				owner = { is_memorialist_empire = yes }
 				NOR = {
 					has_building = building_galactic_memorial_1
 					has_building = building_galactic_memorial_2
