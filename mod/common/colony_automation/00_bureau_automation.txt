@@ -226,12 +226,12 @@ automate_bureau_planet = {
 		22 = {
 			building = building_bureaucratic_1
 			available = {
-				owner = { bureaucracy_upkeep_affordable = yes }
-				NOT = {
-					has_available_jobs = bureaucrat
+				owner = {
+					bureaucracy_upkeep_affordable = yes
 					is_spiritualist = no
 					is_death_cult_empire = no
 				}
+				NOT = { has_available_jobs = bureaucrat }
 				num_buildings = {
 					type = building_bureaucratic_1
 					value < 8
