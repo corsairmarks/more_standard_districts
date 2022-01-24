@@ -11,7 +11,6 @@ building_research_lab_1 = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 		}
-		building_relaxed_basic_income_check = yes
 	}
 
 	destroy_trigger = {
@@ -480,12 +479,6 @@ building_institute = {
 	}
 
 	ai_resource_production = {
-		trigger = { always = yes }
-		physics_research = 3
-		society_research = 3
-		engineering_research = 3
-	}
-	ai_resource_production = {
 		trigger = { has_research_exceeding = { THRESHOLD = 30 } }
 		physics_research = 5
 		society_research = 5
@@ -584,12 +577,6 @@ building_supercomputer = {
 		is_gestalt = yes
 	}
 
-	ai_resource_production = {
-		trigger = { always = yes }
-		physics_research = 3
-		society_research = 3
-		engineering_research = 3
-	}
 	ai_resource_production = {
 		trigger = { has_research_exceeding = { THRESHOLD = 30 } }
 		physics_research = 5
