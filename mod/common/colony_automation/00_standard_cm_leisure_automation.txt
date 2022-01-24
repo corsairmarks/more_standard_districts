@@ -71,6 +71,7 @@ automate_standard_cm_leisure_planet = {
 				owner = {
 					is_megacorp = no
 					is_spiritualist = no
+					embassy_upkeep_affordable = yes # same upkeep
 				}
 			}
 		}
@@ -81,28 +82,22 @@ automate_standard_cm_leisure_planet = {
 				owner = {
 					is_megacorp = yes
 					is_spiritualist = no
+					embassy_upkeep_affordable = yes # same upkeep
 				}
 			}
 		}
 
 		9 = {
 			building = building_citadel_of_faith
-			available = { owner = { is_spiritualist = yes } }
-		}
-
-		10 = {
-			building = building_galactic_memorial_1
 			available = {
-				owner = { has_valid_civic = civic_memorialist }
-				NOR = {
-					has_building = building_galactic_memorial_1
-					has_building = building_galactic_memorial_2
-					has_building = building_galactic_memorial_3
+				owner = {
+					is_spiritualist = yes
+					embassy_upkeep_affordable = yes # same upkeep
 				}
 			}
 		}
 
-		11 = {
+		10 = {
 			building = building_holo_theatres
 			available = {
 				owner = { holo_theatres_upkeep_affordable = yes }
@@ -113,58 +108,54 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		12 = {
+		11 = {
 			building = building_autochthon_monument
 			available = {
+				owner = {
+					is_megacorp = no
+					is_memorialist_empire = no
+					autochthon_monument_upkeep_affordable = yes
+				}
 				NOR = {
 					has_building = building_autochthon_monument
 					has_building = building_heritage_site
 					has_building = building_hypercomms_forum
 				}
-				owner = {
-					is_spiritualist = no
-					is_megacorp = no
-					autochthon_monument_upkeep_affordable = yes
-				}
 			}
 		}
 
-		13 = {
-			building = building_temple
-			available = {
-				NOR = {
-					has_building = building_temple
-					has_building = building_holotemple
-					has_building = building_sacred_nexus
-				}
-				owner = {
-					is_spiritualist = yes
-					NOR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-					temple_upkeep_affordable = yes
-				}
-			}
-		}
-
-		14 = {
+		12 = {
 			building = building_corporate_monument
 			available = {
+				owner = {
+					is_megacorp = yes
+					is_memorialist_empire = no
+					autochthon_monument_upkeep_affordable = yes
+				}
 				NOR = {
 					has_building = building_corporate_monument
 					has_building = building_corporate_site
 					has_building = building_corporate_forum
 				}
+			}
+		}
+
+		13 = {
+			building = building_galactic_memorial_1
+			available = {
 				owner = {
-					is_megacorp = yes
-					is_spiritualist = no
-					NOT = { has_valid_civic = civic_death_cult_corporate }
+					is_memorialist_empire = yes
+					autochthon_monument_upkeep_affordable = yes
+				}
+				NOR = {
+					has_building = building_galactic_memorial_1
+					has_building = building_galactic_memorial_2
+					has_building = building_galactic_memorial_3
 				}
 			}
 		}
 
-		15 = {
+		14 = {
 			building = building_sacrificial_temple_1
 			available = {
 				NOR = {
@@ -172,13 +163,13 @@ automate_standard_cm_leisure_planet = {
 					has_building = building_sacrificial_temple_2
 					has_building = building_sacrificial_temple_3
 				}
-				owner = {
-					OR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
+				owner = { is_death_cult_empire = yes }
 			}
+		}
+
+		15 = {
+			building = building_xeno_zoo
+			available = { always = yes }
 		}
 
 		16 = {
@@ -192,43 +183,44 @@ automate_standard_cm_leisure_planet = {
 		}
 
 		18 = {
-			building = building_xeno_zoo
-			available = { always = yes }
-		}
-
-		19 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		20 = {
+		19 = {
 			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
-		21 = {
+		20 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		22 = {
+		21 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		23 = {
+		22 = {
 			building = building_psi_corps
 			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
 		}
 
-		24 = {
+		23 = {
 			building = building_dread_encampment
-			available = { owner = { has_valid_civic = civic_reanimated_armies } }
+			available = { owner = { is_reanimator = yes } }
 		}
 
-		25 = {
+		24 = {
 			building = building_military_academy
-			available = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
+			available = {
+				owner = {
+					is_reanimator = no
+					# as of 3.1.2 AI has a destroy_trigger for this building
+					is_ai = no
+				}
+			}
 		}
 
 		26 = {
@@ -305,24 +297,41 @@ automate_machine_standard_cm_leisure_planet = {
 		}
 
 		5 = {
+			building = building_alpha_hub
+			available = {
+				owner = {
+					embassy_upkeep_affordable = yes # same upkeep
+				}
+			}
+		}
+
+		5 = {
 			building = building_production_center
-			available = { owner = { production_center_upkeep_affordable = yes } }
+			available = {
+				owner = {
+					has_valid_civic = civic_machine_servitor
+					production_center_upkeep_affordable = yes
+				}
+			}
 		}
 
 		6 = {
 			building = building_factory_1
-			available = { owner = { factory_1_upkeep_affordable = yes } }
+			available = {
+				owner = {
+					has_valid_civic = civic_machine_servitor
+					factory_1_upkeep_affordable = yes
+				}
+			}
 		}
 
 		7 = {
-			building = building_alpha_hub
-			available = { always = yes }
-		}
-
-		8 = {
 			building = building_galactic_memorial_1
 			available = {
-				owner = { has_valid_civic = civic_machine_memorialist }
+				owner = {
+					is_memorialist_empire = yes
+					simulation_1_upkeep_affordable = yes
+				}
 				NOR = {
 					has_building = building_galactic_memorial_1
 					has_building = building_galactic_memorial_2
@@ -331,10 +340,13 @@ automate_machine_standard_cm_leisure_planet = {
 			}
 		}
 
-		9 = {
+		8 = {
 			building = building_simulation_1
 			available = {
-				owner = { simulation_1_upkeep_affordable = yes }
+				owner = {
+					is_memorialist_empire = no
+					simulation_1_upkeep_affordable = yes
+				}
 				NOR = {
 					has_building = building_simulation_1
 					has_building = building_simulation_2
@@ -343,10 +355,13 @@ automate_machine_standard_cm_leisure_planet = {
 			}
 		}
 
-		10 = {
+		9 = {
 			building = building_organic_sanctuary
 			available = {
-				owner = { organic_sanctuary_upkeep_affordable = yes }
+				owner = {
+					has_valid_civic = civic_machine_servitor
+					organic_sanctuary_upkeep_affordable = yes
+				}
 				num_buildings = {
 					type = building_organic_sanctuary
 					value < 2
@@ -354,27 +369,32 @@ automate_machine_standard_cm_leisure_planet = {
 			}
 		}
 
-		11 = {
+		10 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		12 = {
+		11 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		13 = {
+		12 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		14 = {
+		13 = {
 			building = building_military_academy
-			available = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
+			available = {
+				owner = {
+					# as of 3.1.2 AI has a destroy_trigger for this building
+					is_ai = no
+				}
+			}
 		}
 
-		15 = {
+		14 = {
 			building = building_refinery
 			available = {
 				owner = {
