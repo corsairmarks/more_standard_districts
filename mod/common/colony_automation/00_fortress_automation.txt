@@ -38,12 +38,12 @@ automate_fortress_planet = {
 
 		4 = {
 			building = building_dread_encampment
-			available = { owner = { has_valid_civic = civic_reanimated_armies } }
+			available = { owner = { is_reanimator = yes } }
 		}
 
 		5 = {
 			building = building_military_academy
-			available = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
+			available = { owner = { is_reanimator = no } }
 		}
 
 		6 = {
