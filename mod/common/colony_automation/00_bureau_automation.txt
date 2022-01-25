@@ -4,16 +4,13 @@ automate_bureau_planet = {
 			has_designation = col_bureau
 			has_designation = col_habitat_bureau
 		}
+		owner = { is_regular_empire = yes }
 	}
 	prio_districts = {
 		district_standard_cm_admin
 		district_standard_cm_admin_religious
-		district_standard_cm_admin_hive
-		district_standard_cm_admin_machine
 		district_standard_cm_hab_admin
 		district_standard_cm_hab_admin_religious
-		district_standard_cm_hab_admin_hive
-		district_standard_cm_hab_admin_machine
 		district_arcology_administrative
 		district_arcology_religious
 		district_city
@@ -53,7 +50,10 @@ automate_bureau_planet = {
 					is_spiritualist = no
 					is_death_cult_empire = no
 				}
-				NOT = { has_available_jobs = bureaucrat }
+				NOR = {
+					has_available_jobs = bureaucrat
+					has_available_jobs = manager
+				}
 				num_buildings = {
 					type = building_bureaucratic_1
 					value < 2
@@ -65,7 +65,7 @@ automate_bureau_planet = {
 			building = building_temple
 			available = {
 				owner = {
-					bureaucracy_upkeep_affordable = yes
+					temple_upkeep_affordable = yes
 					is_spiritualist = yes
 					is_death_cult_empire = no
 				}
@@ -81,7 +81,7 @@ automate_bureau_planet = {
 			building = building_sacrificial_temple_1
 			available = {
 				owner = {
-					bureaucracy_upkeep_affordable = yes
+					temple_upkeep_affordable = yes
 					is_death_cult_empire = yes
 				}
 				NOT = { has_available_jobs = death_priest }
@@ -150,7 +150,6 @@ automate_bureau_planet = {
 				owner = {
 					is_megacorp = no
 					is_memorialist_empire = no
-					autochthon_monument_upkeep_affordable = yes
 				}
 				NOR = {
 					has_building = building_autochthon_monument
@@ -166,7 +165,6 @@ automate_bureau_planet = {
 				owner = {
 					is_megacorp = yes
 					is_memorialist_empire = no
-					autochthon_monument_upkeep_affordable = yes
 				}
 				NOR = {
 					has_building = building_corporate_monument
@@ -181,7 +179,6 @@ automate_bureau_planet = {
 			available = {
 				owner = {
 					is_memorialist_empire = yes
-					autochthon_monument_upkeep_affordable = yes
 				}
 				NOR = {
 					has_building = building_galactic_memorial_1
@@ -199,7 +196,10 @@ automate_bureau_planet = {
 		16 = {
 			building = building_clinic
 			available = {
-				owner = { clinic_upkeep_affordable = yes }
+				owner = {
+					is_gestalt = no
+					clinic_upkeep_affordable = yes
+				}
 			}
 		}
 
@@ -236,7 +236,10 @@ automate_bureau_planet = {
 					is_spiritualist = no
 					is_death_cult_empire = no
 				}
-				NOT = { has_available_jobs = bureaucrat }
+				NOR = {
+					has_available_jobs = bureaucrat
+					has_available_jobs = manager
+				}
 				num_buildings = {
 					type = building_bureaucratic_1
 					value < 8
@@ -248,7 +251,7 @@ automate_bureau_planet = {
 			building = building_temple
 			available = {
 				owner = {
-					bureaucracy_upkeep_affordable = yes
+					temple_upkeep_affordable = yes
 					is_spiritualist = yes
 					is_death_cult_empire = no
 				}
@@ -264,7 +267,7 @@ automate_bureau_planet = {
 			building = building_sacrificial_temple_1
 			available = {
 				owner = {
-					bureaucracy_upkeep_affordable = yes
+					temple_upkeep_affordable = yes
 					is_death_cult_empire = yes
 				}
 				NOT = { has_available_jobs = death_priest }
