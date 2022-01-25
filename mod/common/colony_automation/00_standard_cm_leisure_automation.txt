@@ -114,7 +114,6 @@ automate_standard_cm_leisure_planet = {
 				owner = {
 					is_megacorp = no
 					is_memorialist_empire = no
-					autochthon_monument_upkeep_affordable = yes
 				}
 				NOR = {
 					has_building = building_autochthon_monument
@@ -130,7 +129,6 @@ automate_standard_cm_leisure_planet = {
 				owner = {
 					is_megacorp = yes
 					is_memorialist_empire = no
-					autochthon_monument_upkeep_affordable = yes
 				}
 				NOR = {
 					has_building = building_corporate_monument
@@ -143,10 +141,7 @@ automate_standard_cm_leisure_planet = {
 		13 = {
 			building = building_galactic_memorial_1
 			available = {
-				owner = {
-					is_memorialist_empire = yes
-					autochthon_monument_upkeep_affordable = yes
-				}
+				owner = { is_memorialist_empire = yes }
 				NOR = {
 					has_building = building_galactic_memorial_1
 					has_building = building_galactic_memorial_2
@@ -156,63 +151,51 @@ automate_standard_cm_leisure_planet = {
 		}
 
 		14 = {
-			building = building_sacrificial_temple_1
-			available = {
-				NOR = {
-					has_building = building_sacrificial_temple_1
-					has_building = building_sacrificial_temple_2
-					has_building = building_sacrificial_temple_3
-				}
-				owner = { is_death_cult_empire = yes }
-			}
-		}
-
-		15 = {
 			building = building_xeno_zoo
 			available = { always = yes }
 		}
 
-		16 = {
+		15 = {
 			building = building_galactic_stock_exchange
 			available = { owner = { galactic_stock_exchange_upkeep_affordable = yes } }
 		}
 
-		17 = {
+		16 = {
 			building = building_nuumismatic_shrine
 			available = { owner = { has_country_flag = nuumismatic_shrine } }
 		}
 
-		18 = {
+		17 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		19 = {
+		18 = {
 			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
-		20 = {
+		19 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		21 = {
+		20 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		22 = {
+		21 = {
 			building = building_psi_corps
 			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
 		}
 
-		23 = {
+		22 = {
 			building = building_dread_encampment
 			available = { owner = { is_reanimator = yes } }
 		}
 
-		24 = {
+		23 = {
 			building = building_military_academy
 			available = {
 				owner = {
@@ -223,7 +206,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		26 = {
+		24 = {
 			building = building_holo_theatres
 			available = {
 				owner = { holo_theatres_upkeep_affordable = yes }
@@ -238,7 +221,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		27 = {
+		25 = {
 			building = building_refinery
 			available = {
 				owner = {
