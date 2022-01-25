@@ -4,11 +4,16 @@ automate_bureau_planet = {
 			has_designation = col_bureau
 			has_designation = col_habitat_bureau
 		}
-		owner = { is_regular_empire = yes }
 	}
 	prio_districts = {
 		district_standard_cm_admin
+		district_standard_cm_admin_religious
+		district_standard_cm_admin_hive
+		district_standard_cm_admin_machine
 		district_standard_cm_hab_admin
+		district_standard_cm_hab_admin_religious
+		district_standard_cm_hab_admin_hive
+		district_standard_cm_hab_admin_machine
 		district_arcology_administrative
 		district_arcology_religious
 		district_city
