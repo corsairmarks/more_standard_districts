@@ -47,13 +47,13 @@ automate_bureau_planet = {
 				owner = {
 					has_origin = origin_necrophage
 					has_trait = trait_necrophage
-					NOT = { has_valid_civic = civic_devouring_swarm }
+					NOT = { has_valid_civic = civic_hive_devouring_swarm }
 				}
 			}
 		}
 
 		6 = {
-			building = building_hove_warren
+			building = building_hive_warren
 			available = {
 				has_designation = col_habitat_bureau
 				owner = { hive_warren_upkeep_affordable = yes }
