@@ -234,15 +234,12 @@ district_standard_cm_commercial = {
 			}
 		}
 	}
-	ai_resource_production = {
-		energy = 1
-		trigger = { always = yes }
-	}
 }
 
 district_standard_cm_leisure = {
 	base_buildtime = @city_build_time
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
 	show_on_uncolonized = {
 		NOR = {
 			uses_district_set = city_world
@@ -306,76 +303,11 @@ district_standard_cm_leisure = {
 			exists = owner
 			owner = {
 				is_regular_empire = yes
-				is_megacorp = no
-				is_spiritualist = no
-				NOR = {
-					has_valid_civic = civic_death_cult
-					has_valid_civic = civic_death_cult_corporate
-				}
-			}
-		}
-		modifier = {
-			job_culture_worker_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_spiritualist = yes
-				NOR = {
-					has_valid_civic = civic_death_cult
-					has_valid_civic = civic_death_cult_corporate
-				}
-			}
-		}
-		modifier = {
-			job_priest_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				OR = {
-					has_valid_civic = civic_death_cult
-					has_valid_civic = civic_death_cult_corporate
-				}
-			}
-		}
-		modifier = {
-			job_death_priest_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_megacorp = yes
-				is_spiritualist = no
-				NOR = {
-					has_valid_civic = civic_death_cult
-					has_valid_civic = civic_death_cult_corporate
-				}
-			}
-		}
-		modifier = {
-			job_manager_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
 				NOT = { has_valid_civic = civic_warrior_culture }
 			}
 		}
 		modifier = {
-			job_entertainer_add = 1
+			job_entertainer_add = 2
 		}
 	}
 	triggered_planet_modifier = {
@@ -387,7 +319,7 @@ district_standard_cm_leisure = {
 			}
 		}
 		modifier = {
-			job_duelist_add = 1
+			job_duelist_add = 2
 		}
 	}
 	triggered_planet_modifier = {
@@ -402,91 +334,6 @@ district_standard_cm_leisure = {
 			job_bio_trophy_add = 5
 			job_artisan_drone_add = 1
 		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_megacorp = no
-				is_spiritualist = no
-				NOR = {
-					has_valid_civic = civic_death_cult
-					has_valid_civic = civic_death_cult_corporate
-					has_valid_civic = civic_memorialist
-					has_valid_civic = civic_hive_memorialist
-					has_valid_civic = civic_machine_memorialist
-				}
-			}
-		}
-		text = job_culture_worker_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_spiritualist = yes
-				NOR = {
-					has_valid_civic = civic_death_cult
-					has_valid_civic = civic_death_cult_corporate
-				}
-			}
-		}
-		text = job_priest_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				OR = {
-					has_valid_civic = civic_death_cult
-					has_valid_civic = civic_death_cult_corporate
-				}
-			}
-		}
-		text = job_death_priest_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_megacorp = yes
-				is_spiritualist = no
-				NOR = {
-					has_valid_civic = civic_death_cult
-					has_valid_civic = civic_death_cult_corporate
-				}
-			}
-		}
-		text = job_manager_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_megacorp = yes
-				is_spiritualist = no
-				has_valid_civic = civic_memorialist
-			}
-		}
-		text = job_death_chronicler_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				OR = {
-					has_valid_civic = civic_hive_memorialist
-					has_valid_civic = civic_machine_memorialist
-				}
-			}
-		}
-		text = job_chronicle_drone_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
@@ -526,28 +373,7 @@ district_standard_cm_leisure = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
-		text = job_bio_trophy_effect_desc
-	}
-	ai_resource_production = {
-		unity = 2
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-	}
-	ai_resource_production = {
-		unity = 1
-		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_warrior_culture }
-		}
-	}
-	ai_resource_production = {
-		consumer_goods = 10
-		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_machine_servitor }
-		}
+		text = job_artisan_drone_effect_desc
 	}
 }
 
@@ -630,18 +456,6 @@ district_standard_cm_science = {
 		}
 		text = job_calculator_effect_desc
 	}
-	ai_resource_production = {
-		physics_research = 4
-		trigger = { always = yes }
-	}
-	ai_resource_production = {
-		society_research = 4
-		trigger = { always = yes }
-	}
-	ai_resource_production = {
-		engineering_research = 4
-		trigger = { always = yes }
-	}
 }
 
 district_standard_cm_admin = {
@@ -655,7 +469,10 @@ district_standard_cm_admin = {
 		}
 		msd_uses_planetary_diversity_special_district_set = no
 		exists = from
-		from = { is_gestalt = no }
+		from = {
+			is_spiritualist = no
+			is_gestalt = no
+		}
 	}
 	potential = {
 		NOR = {
@@ -665,10 +482,14 @@ district_standard_cm_admin = {
 		}
 		msd_uses_planetary_diversity_special_district_set = no
 		exists = owner
-		owner = { is_gestalt = no }
+		owner = {
+			is_spiritualist = no
+			is_gestalt = no
+		}
 	}
 	conversion_ratio = 1
 	convert_to = {
+		district_standard_cm_admin_religious
 		district_standard_cm_admin_hive
 		district_standard_cm_admin_machine
 	}
@@ -683,10 +504,142 @@ district_standard_cm_admin = {
 	}
 	planet_modifier = {
 		planet_housing_add = 2
-		job_bureaucrat_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = no }
+		}
+		modifier = {
+			job_bureaucrat_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+		modifier = {
+			job_manager_add = 2
+		}
 	}
 	triggered_desc = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = no }
+		}
 		text = job_bureaucrat_effect_desc
+	}
+	triggered_desc = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+		text = job_manager_effect_desc
+	}
+}
+
+district_standard_cm_admin_religious = {
+	base_buildtime = @city_build_time
+	is_capped_by_modifier = no
+	show_on_uncolonized = {
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = habitat
+			uses_district_set = ring_world
+		}
+		msd_uses_planetary_diversity_special_district_set = no
+		exists = from
+		from = {
+			is_spiritualist = yes
+			is_gestalt = no
+		}
+	}
+	potential = {
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = habitat
+			uses_district_set = ring_world
+		}
+		msd_uses_planetary_diversity_special_district_set = no
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_gestalt = no
+		}
+	}
+	conversion_ratio = 1
+	convert_to = {
+		district_standard_cm_admin
+		district_standard_cm_admin_hive
+		district_standard_cm_admin_machine
+	}
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @city_cost
+		}
+		upkeep = {
+			energy = @city_upkeep
+		}
+	}
+	planet_modifier = {
+		planet_housing_add = 2
+		job_priest_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_death_cult_empire = no
+			}
+		}
+		modifier = {
+			job_priest_add = -1
+			job_manager_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_death_cult_empire = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -2
+			job_death_priest_add = 1
+			job_mortal_initiate_add = 1
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_death_cult_empire = no
+			}
+		}
+		text = job_priest_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_death_cult_empire = yes
+			}
+		}
+		text = jobs_death_priest_and_mortal_initiate_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_death_cult_empire = no
+			}
+		}
+		text = job_manager_effect_desc
 	}
 }
 
@@ -716,6 +669,7 @@ district_standard_cm_admin_hive = {
 	conversion_ratio = 1
 	convert_to = {
 		district_standard_cm_admin
+		district_standard_cm_admin_religious
 		district_standard_cm_admin_machine
 	}
 	resources = {
@@ -790,6 +744,7 @@ district_standard_cm_admin_machine = {
 	conversion_ratio = 1
 	convert_to = {
 		district_standard_cm_admin
+		district_standard_cm_admin_religious
 		district_standard_cm_admin_hive
 	}
 	resources = {
