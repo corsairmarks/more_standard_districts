@@ -524,14 +524,14 @@ district_standard_cm_admin = {
 		}
 	}
 	triggered_desc = {
-		potential = {
+		trigger = {
 			exists = owner
 			owner = { is_megacorp = no }
 		}
 		text = job_bureaucrat_effect_desc
 	}
 	triggered_desc = {
-		potential = {
+		trigger = {
 			exists = owner
 			owner = { is_megacorp = yes }
 		}

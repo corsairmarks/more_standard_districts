@@ -9,7 +9,7 @@ district_standard_cm_hab_admin = {
 		uses_district_set = habitat
 		exists = from
 		from = {
-			is_spritualist = no
+			is_spiritualist = no
 			is_gestalt = no
 		}
 	}
@@ -17,7 +17,7 @@ district_standard_cm_hab_admin = {
 		uses_district_set = habitat
 		exists = owner
 		owner = {
-			is_spritualist = no
+			is_spiritualist = no
 			is_gestalt = no
 		}
 	}
@@ -58,14 +58,14 @@ district_standard_cm_hab_admin = {
 		}
 	}
 	triggered_desc = {
-		potential = {
+		trigger = {
 			exists = owner
 			owner = { is_megacorp = no }
 		}
 		text = job_bureaucrat_effect_desc
 	}
 	triggered_desc = {
-		potential = {
+		trigger = {
 			exists = owner
 			owner = { is_megacorp = yes }
 		}
