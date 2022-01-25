@@ -586,6 +586,7 @@ district_standard_cm_admin_religious = {
 	planet_modifier = {
 		planet_housing_add = 2
 		job_priest_add = 2
+		pop_ethic_spiritualist_attraction_mult = 0.05
 	}
 	triggered_planet_modifier = {
 		potential = {
