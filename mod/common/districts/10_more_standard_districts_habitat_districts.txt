@@ -8,15 +8,22 @@ district_standard_cm_hab_admin = {
 	show_on_uncolonized = {
 		uses_district_set = habitat
 		exists = from
-		from = { is_gestalt = no }
+		from = {
+			is_spritualist = no
+			is_gestalt = no
+		}
 	}
 	potential = {
 		uses_district_set = habitat
 		exists = owner
-		owner = { is_gestalt = no }
+		owner = {
+			is_spritualist = no
+			is_gestalt = no
+		}
 	}
 	conversion_ratio = 1
 	convert_to = {
+		district_standard_cm_hab_admin_religious
 		district_standard_cm_hab_admin_hive
 		district_standard_cm_hab_admin_machine
 	}
@@ -31,10 +38,150 @@ district_standard_cm_hab_admin = {
 	}
 	planet_modifier = {
 		planet_housing_add = 3
-		job_bureaucrat_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = no }
+		}
+		modifier = {
+			job_bureaucrat_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+		modifier = {
+			job_manager_add = 3
+		}
 	}
 	triggered_desc = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = no }
+		}
 		text = job_bureaucrat_effect_desc
+	}
+	triggered_desc = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+		text = job_manager_effect_desc
+	}
+}
+
+district_standard_cm_hab_admin_religious = {
+	base_buildtime = @hab_build_time
+	is_capped_by_modifier = no
+	show_on_uncolonized = {
+		uses_district_set = habitat
+		exists = from
+		from = {
+			is_spiritualist = yes
+			is_gestalt = no
+		}
+	}
+	potential = {
+		uses_district_set = habitat
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_gestalt = no
+		}
+	}
+	conversion_ratio = 1
+	convert_to = {
+		district_standard_cm_hab_admin
+		district_standard_cm_hab_admin_hive
+		district_standard_cm_hab_admin_machine
+	}
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_upkeep
+		}
+	}
+	planet_modifier = {
+		planet_housing_add = 3
+		job_priest_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_death_cult_empire = no
+			}
+		}
+		modifier = {
+			job_priest_add = -1
+			job_manager_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = no
+				is_death_cult_empire = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -2
+			job_death_priest_add = 1
+			job_mortal_initiate_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_death_cult_empire = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -3
+			job_death_priest_add = 1
+			job_mortal_initiate_add = 1
+			job_manager_add = 1
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				NAND = {
+					is_megacorp = yes
+					is_death_cult_empire = yes
+				}
+			}
+		}
+		text = job_priest_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_death_cult_empire = yes
+			}
+		}
+		text = jobs_death_priest_and_mortal_initiate_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+			}
+		}
+		text = job_manager_effect_desc
 	}
 }
 
@@ -54,6 +201,7 @@ district_standard_cm_hab_admin_hive = {
 	conversion_ratio = 1
 	convert_to = {
 		district_standard_cm_hab_admin
+		district_standard_cm_hab_admin_religious
 		district_standard_cm_hab_admin_machine
 	}
 	resources = {
@@ -119,6 +267,7 @@ district_standard_cm_hab_admin_machine = {
 	conversion_ratio = 1
 	convert_to = {
 		district_standard_cm_hab_admin
+		district_standard_cm_hab_admin_religious
 		district_standard_cm_hab_admin_hive
 	}
 	resources = {
