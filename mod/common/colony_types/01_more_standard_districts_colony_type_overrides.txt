@@ -94,113 +94,139 @@ col_bureau = {
 	icon = GFX_colony_type_bureaucratic
 	potential = {
 		exists = owner
-		owner = { is_regular_empire = yes }
 		NOR = {
-			uses_district_set = hive_world
 			uses_district_set = habitat
 			uses_district_set = pdplanethab
 		}
 		is_special_colony_type = no
 	}
 	planet_modifier = {
-		custom_tooltip = col_bureaucracy_custom
-		planet_bureaucrats_upkeep_mult = -0.10
-		pop_ethics_shift_speed_mult = -0.20
-		planet_district_standard_cm_admin_build_speed_mult = 0.25
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_spiritualist = no
+			}
+		}
+		modifier = {
+			planet_district_standard_cm_admin_build_speed_mult = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_spiritualist = yes
+			}
+		}
+		modifier = {
+			planet_district_standard_cm_admin_religious_build_speed_mult = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			planet_district_standard_cm_admin_hive_build_speed_mult = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			planet_district_standard_cm_admin_machine_build_speed_mult = 0.25
+		}
 	}
 	weight_modifier = {
-		base = 10
-		modifier = {
-			add = 5
-			owner = { empire_sprawl_over_cap > 40 }
-		}
+		base = 5
 		modifier = {
 			add = 5
 			has_designation = col_bureau
 		}
+		# Pop jobs
+		modifier = { add = value:unity_job_weight|JOB|synapse_drone| }
+		modifier = { add = value:unity_job_weight|JOB|chronicle_drone| }
+		modifier = { add = value:unity_job_weight|JOB|coordinator| }
+		modifier = { add = value:unity_job_weight|JOB|bureaucrat| always = yes }
+		modifier = { add = value:unity_job_weight|JOB|priest| }
+		modifier = { add = value:unity_job_weight|JOB|death_priest| }
+		modifier = { add = value:unity_job_weight|JOB|death_chronicler| }
+		modifier = { add = value:unity_job_weight|JOB|mortal_initiate| }
+		modifier = { add = value:unity_job_weight|JOB|manager| }
+		# buildings
+		modifier = { add = value:unity_building_weight|BUILDING|building_bureaucratic_1| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_bureaucratic_2| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_bureaucratic_3| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_temple| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_holotemple| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_sacred_nexus| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_sacrificial_temple_1| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_sacrificial_temple_2| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_sacrificial_temple_3| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_hive_node| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_hive_cluster| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_hive_confluence| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_uplink_node| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_network_junction| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_system_conflux| }
+		# districts
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_admin| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_religious| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_hive| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_machine| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_religious| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_hive| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_machine| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_arcology_administrative| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_arcology_religious| }
+		# limit 1 per category buildings
 		modifier = {
-			add = 3
-			num_buildings = {
-				type = building_bureaucratic_1
-				value >= 2
+			add = 2
+			OR = {
+				has_building = building_autochthon_monument
+				has_building = building_corporate_monument
+				has_building = building_galactic_memorial_1
+				has_building = building_simulation_1
+				has_building = building_sensorium_1
 			}
 		}
 		modifier = {
 			add = 4
-			num_buildings = {
-				type = building_bureaucratic_1
-				value >= 3
-			}
-		}
-		modifier = {
-			add = 5
-			num_buildings = {
-				type = building_bureaucratic_1
-				value >= 4
+			OR = {
+				has_building = building_heritage_site
+				has_building = building_corporate_site
+				has_building = building_galactic_memorial_2
+				has_building = building_simulation_2
+				has_building = building_sensorium_2
 			}
 		}
 		modifier = {
 			add = 6
-			num_buildings = {
-				type = building_bureaucratic_1
-				value >= 5
-			}
-		}
-		modifier = {
-			add = 3
-			num_districts = {
-				type = district_standard_cm_admin
-				value >= 2
-			}
-		}
-		modifier = {
-			add = 4
-			num_districts = {
-				type = district_standard_cm_admin
-				value >= 3
-			}
-		}
-		modifier = {
-			add = 5
-			num_districts = {
-				type = district_standard_cm_admin
-				value >= 4
+			OR = {
+				has_building = building_hypercomms_forum
+				has_building = building_corporate_forum
+				has_building = building_galactic_memorial_3
+				has_building = building_simulation_3
+				has_building = building_sensorium_3
 			}
 		}
 		modifier = {
 			add = 6
-			num_districts = {
-				type = district_standard_cm_admin
-				value >= 5
-			}
-		}
-		modifier = {
-			add = 5
-			num_buildings = {
-				type = building_bureaucratic_2
-				value >= 1
-			}
-		}
-		modifier = {
-			add = 6
-			num_buildings = {
-				type = building_bureaucratic_2
-				value >= 2
-			}
-		}
-		modifier = {
-			factor = 0
-			num_buildings = {
-				type = building_bureaucratic_1
-				value = 0
-			}
-			num_buildings = {
-				type = building_bureaucratic_2
-				value = 0
-			}
-			num_districts = {
-				type = district_standard_cm_admin
-				value = 0
+			OR = {
+				has_building = building_autocurating_vault
+				has_building = building_citadel_of_faith
+				has_building = building_corporate_vault
+				has_building = building_alpha_hub
 			}
 		}
 	}
@@ -211,7 +237,6 @@ col_habitat_bureau = {
 	icon = GFX_colony_type_hab_bureaucratic
 	potential = {
 		exists = owner
-		owner = { is_regular_empire = yes }
 		OR = {
 			uses_district_set = habitat
 			uses_district_set = pdplanethab
@@ -219,104 +244,132 @@ col_habitat_bureau = {
 		is_special_colony_type = no
 	}
 	planet_modifier = {
-		custom_tooltip = col_bureaucracy_custom
-		planet_bureaucrats_upkeep_mult = -0.10
-		pop_ethics_shift_speed_mult = -0.20
-		planet_district_standard_cm_hab_admin_build_speed_mult = 0.25
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_spiritualist = no
+			}
+		}
+		modifier = {
+			planet_district_standard_cm_hab_admin_build_speed_mult = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_spiritualist = yes
+			}
+		}
+		modifier = {
+			planet_district_standard_cm_hab_admin_religious_build_speed_mult = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			planet_district_standard_cm_hab_admin_hive_build_speed_mult = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			planet_district_standard_cm_hab_admin_machine_build_speed_mult = 0.25
+		}
 	}
 	weight_modifier = {
-		base = 10
-		modifier = {
-			add = 5
-			owner = { empire_sprawl_over_cap > 40 }
-		}
+		base = 5
 		modifier = {
 			add = 5
 			has_designation = col_habitat_bureau
 		}
+		# Pop jobs
+		modifier = { add = value:unity_job_weight|JOB|synapse_drone| }
+		modifier = { add = value:unity_job_weight|JOB|chronicle_drone| }
+		modifier = { add = value:unity_job_weight|JOB|coordinator| }
+		modifier = { add = value:unity_job_weight|JOB|bureaucrat| }
+		modifier = { add = value:unity_job_weight|JOB|priest| }
+		modifier = { add = value:unity_job_weight|JOB|death_priest| }
+		modifier = { add = value:unity_job_weight|JOB|death_chronicler| }
+		modifier = { add = value:unity_job_weight|JOB|mortal_initiate| }
+		modifier = { add = value:unity_job_weight|JOB|manager| }
+		# buildings
+		modifier = { add = value:unity_building_weight|BUILDING|building_bureaucratic_1| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_bureaucratic_2| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_bureaucratic_3| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_temple| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_holotemple| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_sacred_nexus| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_sacrificial_temple_1| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_sacrificial_temple_2| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_sacrificial_temple_3| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_hive_node| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_hive_cluster| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_hive_confluence| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_uplink_node| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_network_junction| }
+		modifier = { add = value:unity_building_weight|BUILDING|building_system_conflux| }
+		# districts
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_admin| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_religious| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_hive| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_machine| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_religious| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_hive| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_machine| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_arcology_administrative| }
+		modifier = { add = value:unity_district_weight|DISTRICT|district_arcology_religious| }
+		# limit 1 per category buildings
 		modifier = {
-			add = 3
-			num_buildings = {
-				type = building_bureaucratic_1
-				value >= 2
+			add = 2
+			OR = {
+				has_building = building_autochthon_monument
+				has_building = building_corporate_monument
+				has_building = building_galactic_memorial_1
+				has_building = building_simulation_1
+				has_building = building_sensorium_1
 			}
 		}
 		modifier = {
 			add = 4
-			num_buildings = {
-				type = building_bureaucratic_1
-				value >= 3
-			}
-		}
-		modifier = {
-			add = 5
-			num_buildings = {
-				type = building_bureaucratic_1
-				value >= 4
+			OR = {
+				has_building = building_heritage_site
+				has_building = building_corporate_site
+				has_building = building_galactic_memorial_2
+				has_building = building_simulation_2
+				has_building = building_sensorium_2
 			}
 		}
 		modifier = {
 			add = 6
-			num_buildings = {
-				type = building_bureaucratic_1
-				value >= 5
-			}
-		}
-		modifier = {
-			add = 3
-			num_districts = {
-				type = district_standard_cm_hab_admin
-				value >= 2
-			}
-		}
-		modifier = {
-			add = 4
-			num_districts = {
-				type = district_standard_cm_hab_admin
-				value >= 3
-			}
-		}
-		modifier = {
-			add = 5
-			num_districts = {
-				type = district_standard_cm_hab_admin
-				value >= 4
+			OR = {
+				has_building = building_hypercomms_forum
+				has_building = building_corporate_forum
+				has_building = building_galactic_memorial_3
+				has_building = building_simulation_3
+				has_building = building_sensorium_3
 			}
 		}
 		modifier = {
 			add = 6
-			num_districts = {
-				type = district_standard_cm_hab_admin
-				value >= 5
-			}
-		}
-		modifier = {
-			add = 5
-			num_buildings = {
-				type = building_bureaucratic_2
-				value >= 1
-			}
-		}
-		modifier = {
-			add = 6
-			num_buildings = {
-				type = building_bureaucratic_2
-				value >= 2
-			}
-		}
-		modifier = {
-			factor = 0
-			num_buildings = {
-				type = building_bureaucratic_1
-				value = 0
-			}
-			num_buildings = {
-				type = building_bureaucratic_2
-				value = 0
-			}
-			num_districts = {
-				type = district_standard_cm_admin
-				value = 0
+			OR = {
+				has_building = building_autocurating_vault
+				has_building = building_citadel_of_faith
+				has_building = building_corporate_vault
+				has_building = building_alpha_hub
 			}
 		}
 	}
