@@ -1,4 +1,4 @@
-automate_bureau_planet = {
+automate_bureau_planet_machine = {
 	available = {
 		OR = {
 			has_designation = col_bureau
