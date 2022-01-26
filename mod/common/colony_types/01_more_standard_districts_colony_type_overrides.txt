@@ -156,7 +156,7 @@ col_bureau = {
 		modifier = { add = value:unity_job_weight|JOB|synapse_drone| }
 		modifier = { add = value:unity_job_weight|JOB|chronicle_drone| }
 		modifier = { add = value:unity_job_weight|JOB|coordinator| }
-		modifier = { add = value:unity_job_weight|JOB|bureaucrat| always = yes }
+		modifier = { add = value:unity_job_weight|JOB|bureaucrat| }
 		modifier = { add = value:unity_job_weight|JOB|priest| }
 		modifier = { add = value:unity_job_weight|JOB|death_priest| }
 		modifier = { add = value:unity_job_weight|JOB|death_chronicler| }
