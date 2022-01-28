@@ -29,6 +29,11 @@ automate_bureau_planet = {
 		}
 
 		3 = {
+			building = building_posthumous_employment_center
+			available = { owner = { has_valid_civic = civic_permanent_employment } }
+		}
+
+		4 = {
 			building = building_robot_assembly_plant
 			available = {
 				owner = {
@@ -36,13 +41,14 @@ automate_bureau_planet = {
 					NOR = {
 						has_policy_flag = robots_outlawed
 						has_ascension_perk = ap_engineered_evolution
+						has_valid_civic = civic_permanent_employment
 					}
 					has_technology = tech_droid_workers
 				}
 			}
 		}
 
-		4 = {
+		5 = {
 			building = building_bureaucratic_1
 			available = {
 				owner = {
@@ -61,7 +67,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		5 = {
+		6 = {
 			building = building_temple
 			available = {
 				owner = {
@@ -77,7 +83,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		6 = {
+		7 = {
 			building = building_sacrificial_temple_1
 			available = {
 				owner = {
@@ -92,7 +98,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		7 = {
+		8 = {
 			building = building_necrophage_elevation_chamber
 			available = {
 				owner = {
@@ -103,7 +109,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		8 = {
+		9 = {
 			building = building_luxury_residence
 			available = {
 				has_designation = col_habitat_bureau
@@ -112,7 +118,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		9 = {
+		10 = {
 			building = building_autocurating_vault
 			available = {
 				owner = {
@@ -123,7 +129,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		10 = {
+		11 = {
 			building = building_corporate_vault
 			available = {
 				owner = {
@@ -134,7 +140,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		11 = {
+		12 = {
 			building = building_citadel_of_faith
 			available = {
 				owner = {
@@ -144,7 +150,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		12 = {
+		13 = {
 			building = building_autochthon_monument
 			available = {
 				owner = {
@@ -159,7 +165,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		13 = {
+		14 = {
 			building = building_corporate_monument
 			available = {
 				owner = {
@@ -174,7 +180,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		14 = {
+		15 = {
 			building = building_galactic_memorial_1
 			available = {
 				owner = {
@@ -188,12 +194,12 @@ automate_bureau_planet = {
 			}
 		}
 
-		15 = {
+		16 = {
 			building = building_psi_corps
 			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
 		}
 
-		16 = {
+		17 = {
 			building = building_clinic
 			available = {
 				owner = {
@@ -203,32 +209,32 @@ automate_bureau_planet = {
 			}
 		}
 
-		17 = {
+		18 = {
 			building = building_xeno_zoo
 			available = { has_designation = col_bureau }
 		}
 
-		18 = {
+		19 = {
 			building = building_betharian_power_plant
 			available = { has_designation = col_bureau }
 		}
 
-		19 = {
+		20 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		20 = {
+		21 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		21 = {
+		22 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		22 = {
+		23 = {
 			building = building_bureaucratic_1
 			available = {
 				owner = {
@@ -247,7 +253,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		23 = {
+		24 = {
 			building = building_temple
 			available = {
 				owner = {
@@ -263,7 +269,7 @@ automate_bureau_planet = {
 			}
 		}
 
-		24 = {
+		25 = {
 			building = building_sacrificial_temple_1
 			available = {
 				owner = {

@@ -24,6 +24,11 @@ automate_fortress_planet = {
 		}
 
 		3 = {
+			building = building_posthumous_employment_center
+			available = { owner = { has_valid_civic = civic_permanent_employment } }
+		}
+
+		4 = {
 			building = building_robot_assembly_plant
 			available = {
 				owner = {
@@ -31,17 +36,18 @@ automate_fortress_planet = {
 					NOR = {
 						has_policy_flag = robots_outlawed
 						has_ascension_perk = ap_engineered_evolution
+						has_valid_civic = civic_permanent_employment
 					}
 				}
 			}
 		}
 
-		4 = {
+		5 = {
 			building = building_dread_encampment
 			available = { owner = { has_valid_civic = civic_reanimated_armies } }
 		}
 
-		5 = {
+		6 = {
 			building = building_military_academy
 			available = {
 				owner = {
@@ -52,17 +58,17 @@ automate_fortress_planet = {
 			}
 		}
 
-		6 = {
+		7 = {
 			building = building_planetary_shield_generator
 			available = { owner = { planetary_shield_generator_upkeep_affordable = yes } }
 		}
 
-		7 = {
+		8 = {
 			building = building_psi_corps
 			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
 		}
 
-		8 = {
+		9 = {
 			building = building_stronghold
 			available = {
 				NOT = { has_available_jobs = soldier }
@@ -78,39 +84,39 @@ automate_fortress_planet = {
 			}
 		}
 
-		9 = {
+		10 = {
 			building = building_mote_harvesters
 			available = {
 				num_buildings = { type = building_mote_harvesters value = 0 }
 			}
 		}
 
-		10 = {
+		11 = {
 			building = building_xeno_zoo
 			available = { always = yes }
 		}
 
-		11 = {
+		12 = {
 			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
-		12 = {
+		13 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		13 = {
+		14 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		14 = {
+		15 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		15 = {
+		16 = {
 			building = building_chemical_plant
 			available = {
 				num_buildings = {
@@ -125,7 +131,7 @@ automate_fortress_planet = {
 			}
 		}
 
-		16 = {
+		17 = {
 			building = building_stronghold
 			available = {
 				NOT = { has_available_jobs = soldier }

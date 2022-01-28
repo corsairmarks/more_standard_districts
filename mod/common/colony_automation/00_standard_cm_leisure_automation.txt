@@ -24,6 +24,11 @@ automate_standard_cm_leisure_planet = {
 		}
 
 		3 = {
+			building = building_posthumous_employment_center
+			available = { owner = { has_valid_civic = civic_permanent_employment } }
+		}
+
+		4 = {
 			building = building_robot_assembly_plant
 			available = {
 				owner = {
@@ -31,12 +36,13 @@ automate_standard_cm_leisure_planet = {
 					NOR = {
 						has_policy_flag = robots_outlawed
 						has_ascension_perk = ap_engineered_evolution
+						has_valid_civic = civic_permanent_employment
 					}
 				}
 			}
 		}
 
-		4 = {
+		5 = {
 			building = building_clinic
 			available = {
 				owner = { clinic_upkeep_affordable = yes }
@@ -44,7 +50,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		5 = {
+		6 = {
 			building = building_artist_patron
 			available = {
 				owner = {
@@ -54,7 +60,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		6 = {
+		7 = {
 			building = building_necrophage_elevation_chamber
 			available = {
 				owner = {
@@ -65,7 +71,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		7 = {
+		8 = {
 			building = building_autocurating_vault
 			available = {
 				owner = {
@@ -76,7 +82,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		8 = {
+		9 = {
 			building = building_corporate_vault
 			available = {
 				owner = {
@@ -87,7 +93,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		9 = {
+		10 = {
 			building = building_citadel_of_faith
 			available = {
 				owner = {
@@ -97,7 +103,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		10 = {
+		11 = {
 			building = building_holo_theatres
 			available = {
 				owner = { holo_theatres_upkeep_affordable = yes }
@@ -108,7 +114,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		11 = {
+		12 = {
 			building = building_autochthon_monument
 			available = {
 				owner = {
@@ -123,7 +129,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		12 = {
+		13 = {
 			building = building_corporate_monument
 			available = {
 				owner = {
@@ -138,7 +144,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		13 = {
+		14 = {
 			building = building_galactic_memorial_1
 			available = {
 				owner = { is_memorialist_empire = yes }
@@ -150,52 +156,52 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		14 = {
+		15 = {
 			building = building_xeno_zoo
 			available = { always = yes }
 		}
 
-		15 = {
+		16 = {
 			building = building_galactic_stock_exchange
 			available = { owner = { galactic_stock_exchange_upkeep_affordable = yes } }
 		}
 
-		16 = {
+		17 = {
 			building = building_nuumismatic_shrine
 			available = { owner = { has_country_flag = nuumismatic_shrine } }
 		}
 
-		17 = {
+		18 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		18 = {
+		19 = {
 			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
-		19 = {
+		20 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		20 = {
+		21 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		21 = {
+		22 = {
 			building = building_psi_corps
 			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
 		}
 
-		22 = {
+		23 = {
 			building = building_dread_encampment
 			available = { owner = { has_valid_civic = civic_reanimated_armies } }
 		}
 
-		23 = {
+		24 = {
 			building = building_military_academy
 			available = {
 				owner = {
@@ -206,7 +212,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		24 = {
+		25 = {
 			building = building_holo_theatres
 			available = {
 				owner = { holo_theatres_upkeep_affordable = yes }
@@ -221,7 +227,7 @@ automate_standard_cm_leisure_planet = {
 			}
 		}
 
-		25 = {
+		26 = {
 			building = building_refinery
 			available = {
 				owner = {
