@@ -1,6 +1,6 @@
 # Overview
 
-Would you like more basic districts for your colonies?  Perhaps you're tired of being limited by building slots?  Then this mods is for you!  Adds a Research District, Trade District, Leisure District, Administrative District, and Military District for construction on normal colonies.  Also adds an Administrative District and Military District for construction on habitats.  All gestalt empires can use Research Districts and Military Districts, but Leisure Districts are only available for Rogue Servitors.  Hive Minds and Machines have their own versions of the Administrative District.
+Would you like more basic districts for your colonies?  Perhaps you're tired of being limited by building slots?  Then this mods is for you!  Adds a Research District, Trade District, Leisure District, Administrative District, and Military District for construction on normal colonies.  Also adds an Administrative District and Military District for construction on habitats.  All gestalt empires can use Research Districts and Military Districts, but Leisure Districts are only available for Rogue Servitors.  Hive Minds, Machines, and Spiritualists have their own versions of the Administrative District.
 
 Due to the addition of Research Districts, Research Labs have been adjusted to function similarly to the Alloy Foundries or Civilian Industries buildings.
 
@@ -8,16 +8,16 @@ Requested by [Mad Cow](https://steamcommunity.com/profiles/76561197969740903).
 
 # Changes
 
-Research, Trade, Leisure, Administrative/Synapse/Data Warehouse, and Military districts are now available for regular colonies.  Administrative and Military districts are now also available for construction on habitats.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod updates Research Labs to function similarly to how Industrial Districts (the jobs provided by the district, really) are enhanced by the Alloy Foundries or Civilian Industries buildings:
+Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, and Military districts are now available for regular colonies.  Administrative and Military districts are now also available for construction on habitats.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod updates Research Labs to function similarly to how Industrial Districts (the jobs provided by the district, really) are enhanced by the Alloy Foundries or Civilian Industries buildings:
 
 * maximum one per planet
 * all tiers provide exactly 2 jobs
 * tier 2 increases research output by 1 point (per field) and increases researcher upkeep
 * tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
 
-Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to offer Research District build speed in addition to its existing benefits.  Bureaucratic Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).  The automation plan for Bureaucratic Centers, Fortress Worlds, and Tech-Worlds is also adjusted to use the new Research District and updated Research Lab.
+Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to offer Research District build speed in addition to its existing benefits.  Bureaucratic Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).  The automation plan for Bureaucratic Centers, Fortress Worlds, and Tech-Worlds are also adjusted to use the new districts.
 
-All districts respond to changes in civics that alter jobs.  For example, Leisure Districts trade a Culture Worker for a Priest for spiritualists (or a Death Priest for death cults), and/or trade an Entertainer for a Duelist with Warrior Culture.
+All districts respond to changes in civics that alter jobs.  For example, Leisure Districts trade Entertainers for a Duelists with Warrior Culture and Ecclesiastical Districts trade a Priest for a Manager for spiritualists megacorps.
 
 ## Localisation
 
@@ -37,7 +37,7 @@ Also overwrites all three flavors of Tech-World build automation (`common/colony
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/sharedfiles/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.  Compatible with Planetary Diversity and follows its exclusions for some colony types.
 
-Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3.\* "Libra."  Not compatible with achievements.
 
 ### Not Included in "Subtle Polish"
 
@@ -52,12 +52,12 @@ In order to see and interact with the new district types, it is necessary to use
 Overriding an economic category and colony designations causes the game to log six errors like these:
 
 ```
-[20:58:16][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_research already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_fortress already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_habitat_fortress already exists
+[00:31:12][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists, using the one at  file: common/economic_categories/01_more_standard_districts_economic_category_overrides.txt line: 1
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_research already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 6
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 93
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 236
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 380
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_habitat_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 466
 ```
 
 ## Changelog
@@ -81,6 +81,14 @@ Overriding an economic category and colony designations causes the game to log s
     * Update German localisation by Lucanoria
     * Update Polish localisation by Gatzek
     * Could use assistance with Russian and Simplified Chinese
+* 3.0.0 Update for Stellaris version 3.3.0 "Libra" - integrate underlying changes from the base game
+    * Add Ecclesiastical Districts for Spiritualists -these districts replace Administrative Districts and offer a mix of Priests, Death Priests and Mortal Initiates, and/or Managers based on your civics
+    * Leisure Districts are for Entertainers and Duelists only
+    * Administrative Districts replace Bureaucrats with Managers for megacorps
+    * Switched the color on all the flavors of admin districts to light blue
+    * Add bureau colony automation plans for Hive and Machine Intelligence empires
+    * All colony automation already overwritten by this mod now prioritizes the Posthumous Employment Center over Robot Assembly Plants
+    * Use the new `script_values` feature to dynamically weight the bureau colony type based on how many unity jobs and buildings are present
 
 ## Source Code
 

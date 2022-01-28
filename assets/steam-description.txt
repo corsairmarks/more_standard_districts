@@ -1,28 +1,23 @@
 [h1]Overview[/h1]
-
-Would you like more basic districts for your colonies?  Perhaps you're tired of being limited by building slots?  Then this mods is for you!  Adds a Research District, Trade District, Leisure District, Administrative District, and Military District for construction on normal colonies.  Also adds an Administrative District and Military District for construction on habitats.  All gestalt empires can use Research Districts and Military Districts, but Leisure Districts are only available for Rogue Servitors.  Hive Minds and Machines have their own versions of the Administrative District.
+Would you like more basic districts for your colonies?  Perhaps you're tired of being limited by building slots?  Then this mods is for you!  Adds a Research District, Trade District, Leisure District, Administrative District, and Military District for construction on normal colonies.  Also adds an Administrative District and Military District for construction on habitats.  All gestalt empires can use Research Districts and Military Districts, but Leisure Districts are only available for Rogue Servitors.  Hive Minds, Machines, and Spiritualists have their own versions of the Administrative District.
 
 Due to the addition of Research Districts, Research Labs have been adjusted to function similarly to the Alloy Foundries or Civilian Industries buildings.
 
 Requested by [url=https://steamcommunity.com/profiles/76561197969740903]Mad Cow[/url].
 
 [h1]Changes[/h1]
-
-Research, Trade, Leisure, Administrative/Synapse/Data Warehouse, and Military districts are now available for regular colonies.  Administrative and Military districts are now also available for construction on habitats.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod updates Research Labs to function similarly to how Industrial Districts (the jobs provided by the district, really) are enhanced by the Alloy Foundries or Civilian Industries buildings:
-
+Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, and Military districts are now available for regular colonies.  Administrative and Military districts are now also available for construction on habitats.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod updates Research Labs to function similarly to how Industrial Districts (the jobs provided by the district, really) are enhanced by the Alloy Foundries or Civilian Industries buildings:
 [list]
 [*]maximum one per planet
 [*]all tiers provide exactly 2 jobs
 [*]tier 2 increases research output by 1 point (per field) and increases researcher upkeep
 [*]tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
 [/list]
+Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to offer Research District build speed in addition to its existing benefits.  Bureaucratic Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).  The automation plan for Bureaucratic Centers, Fortress Worlds, and Tech-Worlds are also adjusted to use the new districts.
 
-Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to offer Research District build speed in addition to its existing benefits.  Bureaucratic Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).  The automation plan for Bureaucratic Centers, Fortress Worlds, and Tech-Worlds is also adjusted to use the new Research District and updated Research Lab.
-
-All districts respond to changes in civics that alter jobs.  For example, Leisure Districts trade a Culture Worker for a Priest for spiritualists (or a Death Priest for death cults), and/or trade an Entertainer for a Duelist with Warrior Culture.
+All districts respond to changes in civics that alter jobs.  For example, Leisure Districts trade Entertainers for a Duelists with Warrior Culture and Ecclesiastical Districts trade a Priest for a Manager for spiritualists megacorps.
 
 [h2]Localisation[/h2]
-
 [list]
 [*]English by corsairmarks (author)
 [*]German (Deutsch) by [url=https://steamcommunity.com/id/Lucanoria]Lucanoria[/url]
@@ -30,9 +25,7 @@ All districts respond to changes in civics that alter jobs.  For example, Leisur
 [*]Russian (Русский) by [url=https://steamcommunity.com/profiles/76561198011628045]Dimonius[/url]
 [*]Simplified Chinese by [url=https://steamcommunity.com/profiles/76561199071646261]megumin[/url]
 [/list]
-
 [h2]Compatibility[/h2]
-
 Although the districts added by this mod seem similar to existing districts, they are created as new districts so as to not present a compatibility challenge by overwriting many of the district files.  The district changes should work with other mods that add or alter districts.
 
 Overwrites [b]common/buildings/05_research_buildings.txt[/b] to alter the Research Labs, and thus is not compatible with other mods that want to make changes to Research Labs, the Research Institute, or the Planetary Supercomputer.  To implement the desired effect from the new Research Lab, this mod overwrites the economic category for researchers ([b]planet_researchers[/b]) in order to generate the [b]_add[/b] modifiers for research production (previously only [b]_mult[/b] was available).
@@ -41,35 +34,28 @@ Also overwrites all three flavors of Tech-World build automation ([b]common/colo
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2641081470]Enhanced Trade Districts and Designations[/url].  Enjoy building commercial enterprises on practically any world.  Compatible with Planetary Diversity and follows its exclusions for some colony types.
 
-Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3.* "Libra."  Not compatible with achievements.
 
 [h3]Not Included in "Subtle Polish"[/h3]
-
 This mod is intentionally not included in my modpack [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url] because it would require users to add a UI mod in order to see the expanded districts.  It it otherwise fully compatible.
 
 [h3]Required Dependency Mods[/h3]
-
 In order to see and interact with the new district types, it is necessary to use a UI mod that allows more districts to be visible.  [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360]UI Overhaul Dynamic[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1587178040]Bigger Planet View[/url] are two possible options.  If you play Stellaris on a lower resolution (such as 1366x768 or 1600x900) there are not many mod offerings that show many districts without making the planetview too large, so I created [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2654043078]Basic Planetview: More Districts[/url] to solve that issue.
 
 [h2]Known Issues[/h2]
-
 Overriding an economic category and colony designations causes the game to log six errors like these:
-
 [code]
-[20:58:16][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_research already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_fortress already exists
-[20:58:17][game_singleobjectdatabase.h:147]: Object with key: col_habitat_fortress already exists
+[00:31:12][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists, using the one at  file: common/economic_categories/01_more_standard_districts_economic_category_overrides.txt line: 1
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_research already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 6
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 93
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 236
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 380
+[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_habitat_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 466
 [/code]
-
 [h2]Changelog[/h2]
-
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2650611194]Change Notes[/url]
 
 [h2]Source Code[/h2]
-
 Hosted on [url=https://github.com/corsairmarks/more_standard_districts]GitHub[/url]
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
