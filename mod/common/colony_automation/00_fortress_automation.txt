@@ -38,14 +38,14 @@ automate_fortress_planet = {
 
 		4 = {
 			building = building_dread_encampment
-			available = { owner = { is_reanimator = yes } }
+			available = { owner = { has_valid_civic = civic_reanimated_armies } }
 		}
 
 		5 = {
 			building = building_military_academy
 			available = {
 				owner = {
-					is_reanimator = no
+					NOT = { has_valid_civic = civic_reanimated_armies }
 					# as of 3.1.2 AI has a destroy_trigger for this building
 					is_ai = no
 				}
