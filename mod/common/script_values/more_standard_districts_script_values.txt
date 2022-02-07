@@ -2,6 +2,7 @@
 # see the game's docs if you want to know how this black magic works
 
 # value:unity_job_weight|JOB|bureaucrat|
+# this = planet
 unity_job_weight = {
 	base = 0
 	complex_trigger_modifier = {
@@ -16,6 +17,7 @@ unity_job_weight = {
 }
 
 # value:unity_district_weight|DISTRICT|district_standard_cm_admin|
+# this = planet
 unity_district_weight = {
 	base = 0
 	complex_trigger_modifier = {
@@ -30,6 +32,7 @@ unity_district_weight = {
 }
 
 # value:unity_building_weight|BUILDING|building_bureaucratic_1|
+# this = planet
 unity_building_weight = {
 	base = 0
 	complex_trigger_modifier = {
