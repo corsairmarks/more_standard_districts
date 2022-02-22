@@ -16,6 +16,8 @@ district_standard_cm_commercial = {
 			uses_district_set = shattered_ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = from
 		from = { is_regular_empire = yes }
 	}
@@ -27,6 +29,8 @@ district_standard_cm_commercial = {
 			uses_district_set = shattered_ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = owner
 		owner = { is_regular_empire = yes }
 	}
@@ -247,6 +251,8 @@ district_standard_cm_leisure = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = from
 		from = {
 			OR = {
@@ -262,6 +268,8 @@ district_standard_cm_leisure = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = owner
 		owner = {
 			OR = {
@@ -387,6 +395,8 @@ district_standard_cm_science = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_non_research_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 	}
 	potential = {
 		NOR = {
@@ -395,6 +405,8 @@ district_standard_cm_science = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_non_research_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 	}
 	resources = {
 		category = planet_districts
@@ -468,6 +480,8 @@ district_standard_cm_admin = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = from
 		from = {
 			is_spiritualist = no
@@ -481,6 +495,8 @@ district_standard_cm_admin = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = owner
 		owner = {
 			is_spiritualist = no
@@ -549,6 +565,8 @@ district_standard_cm_admin_religious = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = from
 		from = {
 			is_spiritualist = yes
@@ -562,6 +580,8 @@ district_standard_cm_admin_religious = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = owner
 		owner = {
 			is_spiritualist = yes
@@ -654,6 +674,8 @@ district_standard_cm_admin_hive = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = from
 		from = { is_hive_empire = yes }
 	}
@@ -664,6 +686,8 @@ district_standard_cm_admin_hive = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = owner
 		owner = { is_hive_empire = yes }
 	}
@@ -729,6 +753,8 @@ district_standard_cm_admin_machine = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = from
 		from = { is_machine_empire = yes }
 	}
@@ -739,6 +765,8 @@ district_standard_cm_admin_machine = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		exists = owner
 		owner = { is_machine_empire = yes }
 	}
@@ -776,6 +804,8 @@ district_standard_cm_military = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 	}
 	potential = {
 		NOR = {
@@ -784,6 +814,8 @@ district_standard_cm_military = {
 			uses_district_set = ring_world
 		}
 		msd_uses_planetary_diversity_special_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 	}
 	allow = {
 		always = yes

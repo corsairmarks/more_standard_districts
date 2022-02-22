@@ -16,6 +16,8 @@ col_standard_cm_trade = {
 			uses_district_set = pdplanethab
 		}
 		msd_uses_planetary_diversity_arcology_district_set = no
+		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {

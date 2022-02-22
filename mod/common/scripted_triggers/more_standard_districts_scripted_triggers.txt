@@ -70,3 +70,28 @@ msd_uses_planetary_diversity_arcology_district_set = {
 		uses_district_set = pdmachinecapital
 	}
 }
+
+# this = planet
+msd_uses_gigastructural_engineering_habitat_district_set = {
+	OR = {
+		uses_district_set = giga_habitat
+		has_planet_flag = giga_interstellar_hab
+		uses_district_set = giga_gas_giant_habitat
+	}
+}
+
+# this = planet
+msd_uses_gigastructural_engineering_gigastructure_district_set = {
+	OR = {
+		uses_district_set = giga_alderson
+		uses_district_set = giga_birch
+		uses_district_set = giga_planet
+		uses_district_set = maginot_world_districts
+		uses_district_set = maginot_ringworld_districts
+		uses_district_set = penrose_ring
+		uses_district_set = interstellar_ring
+		uses_district_set = virtual_ring
+		uses_district_set = virtual_ring_industry
+		uses_district_set = acot_giga_void_sphere
+	}
+}
