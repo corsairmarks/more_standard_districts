@@ -89,9 +89,12 @@ msd_uses_gigastructural_engineering_gigastructure_district_set = {
 		uses_district_set = maginot_world_districts
 		uses_district_set = maginot_ringworld_districts
 		uses_district_set = penrose_ring
+		has_planet_flag = giga_penrose
 		uses_district_set = interstellar_ring
+		has_planet_flag = giga_interstellar_ring
 		uses_district_set = virtual_ring
 		uses_district_set = virtual_ring_industry
+		has_planet_flag = giga_virtual_industry
 		uses_district_set = acot_giga_void_sphere
 	}
 }
