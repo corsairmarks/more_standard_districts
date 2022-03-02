@@ -6,10 +6,7 @@ district_standard_cm_hab_admin = {
 	base_buildtime = @hab_build_time
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 		exists = from
 		from = {
 			is_spiritualist = no
@@ -17,10 +14,7 @@ district_standard_cm_hab_admin = {
 		}
 	}
 	potential = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 		exists = owner
 		owner = {
 			is_spiritualist = no
@@ -83,26 +77,14 @@ district_standard_cm_hab_admin_religious = {
 	base_buildtime = @hab_build_time
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 		exists = from
-		from = {
-			is_spiritualist = yes
-			is_gestalt = no
-		}
+		from = { is_spiritualist = yes }
 	}
 	potential = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 		exists = owner
-		owner = {
-			is_spiritualist = yes
-			is_gestalt = no
-		}
+		owner = { is_spiritualist = yes }
 	}
 	conversion_ratio = 1
 	convert_to = {
@@ -202,18 +184,12 @@ district_standard_cm_hab_admin_hive = {
 	base_buildtime = @hab_build_time
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 		exists = from
 		from = { is_hive_empire = yes }
 	}
 	potential = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 		exists = owner
 		owner = { is_hive_empire = yes }
 	}
@@ -274,18 +250,12 @@ district_standard_cm_hab_admin_machine = {
 	base_buildtime = @hab_build_time
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 		exists = from
 		from = { is_machine_empire = yes }
 	}
 	potential = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 		exists = owner
 		owner = { is_machine_empire = yes }
 	}
@@ -317,16 +287,10 @@ district_standard_cm_hab_military = {
 	base_buildtime = @hab_build_time
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 	}
 	potential = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 	}
 	allow = {
 		always = yes

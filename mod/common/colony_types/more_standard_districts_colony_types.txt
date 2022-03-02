@@ -9,15 +9,11 @@ col_standard_cm_trade = {
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		NOR = {
-			uses_district_set = city_world
-			uses_district_set = ring_world
-			uses_district_set = habitat
-			uses_district_set = pdplanethab
-		}
-		msd_uses_planetary_diversity_arcology_district_set = no
-		msd_uses_gigastructural_engineering_habitat_district_set = no
+		msd_uses_district_set_city_world = no
+		msd_uses_district_set_habitat = no
+		msd_uses_district_set_ring_world = no
 		msd_uses_gigastructural_engineering_gigastructure_district_set = no
+		# intentionally allows PD special
 		is_special_colony_type = no
 	}
 	planet_modifier = {
