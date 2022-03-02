@@ -56,7 +56,7 @@ msd_building_dynamic_weight_tier_3 = {
 # this = planet
 col_science_composite_dynamic_weight = {
 	modifier = {
-		add = value:msd_district_dynamic_weight|BUILDING|building_research_lab_1|
+		add = value:msd_building_dynamic_weight|BUILDING|building_research_lab_1|
 		has_building = building_research_lab_1
 	}
 	modifier = {
