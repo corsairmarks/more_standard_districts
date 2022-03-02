@@ -41,14 +41,14 @@ msd_building_dynamic_weight = {
 # value:msd_building_dynamic_weight_tier_2|BUILDING|building_bureaucratic_2|
 # this = planet
 msd_building_dynamic_weight_tier_2 = {
-	add = value:msd_district_dynamic_weight|BUILDING|$BUILDING$|
+	add = value:msd_building_dynamic_weight|BUILDING|$BUILDING$|
 	mult = 2.5
 }
 
 # value:msd_building_dynamic_weight_tier_3|BUILDING|building_bureaucratic_3|
 # this = planet
 msd_building_dynamic_weight_tier_3 = {
-	add = value:msd_district_dynamic_weight|BUILDING|$BUILDING$|
+	add = value:msd_building_dynamic_weight|BUILDING|$BUILDING$|
 	mult = 5
 }
 
