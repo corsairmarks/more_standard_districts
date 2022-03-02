@@ -195,7 +195,7 @@ col_habitat_bureau = {
 	}
 }
 
-col_habitat_bureau = {
+col_habitat_bureau_spiritualist = {
 	icon = GFX_colony_type_hab_bureaucratic
 	potential = {
 		exists = owner
@@ -221,7 +221,7 @@ col_habitat_bureau = {
 	}
 }
 
-col_habitat_bureau = {
+col_habitat_bureau_hive = {
 	icon = GFX_colony_type_hab_bureaucratic
 	potential = {
 		exists = owner
