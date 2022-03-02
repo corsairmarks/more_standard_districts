@@ -81,20 +81,60 @@ msd_uses_gigastructural_engineering_habitat_district_set = {
 }
 
 # this = planet
+msd_uses_gigastructural_engineering_ring_world_district_set = {
+	OR = {
+		uses_district_set = maginot_ringworld_districts
+		uses_district_set = penrose_ring
+		has_planet_flag = giga_penrose
+		uses_district_set = interstellar_ring
+		has_planet_flag = giga_interstellar_ring
+	}
+}
+
+# this = planet
 msd_uses_gigastructural_engineering_gigastructure_district_set = {
 	OR = {
 		uses_district_set = giga_alderson
 		uses_district_set = giga_birch
 		uses_district_set = giga_planet
 		uses_district_set = maginot_world_districts
-		uses_district_set = maginot_ringworld_districts
-		uses_district_set = penrose_ring
-		has_planet_flag = giga_penrose
-		uses_district_set = interstellar_ring
-		has_planet_flag = giga_interstellar_ring
 		uses_district_set = virtual_ring
 		uses_district_set = virtual_ring_industry
 		has_planet_flag = giga_virtual_industry
 		uses_district_set = acot_giga_void_sphere
 	}
+}
+
+# this = planet
+msd_uses_district_set_city_world = {
+	OR = {
+		uses_district_set = city_world
+		msd_uses_planetary_diversity_arcology_district_set = yes
+	}
+}
+
+# this = planet
+msd_uses_district_set_habitat = {
+	OR = {
+		uses_district_set = habitat
+		uses_district_set = pdplanethab
+		msd_uses_gigastructural_engineering_habitat_district_set = yes
+	}
+}
+
+# this = planet
+msd_uses_district_set_ring_world = {
+	OR = {
+		uses_district_set = ring_world # includes PD exotic rings
+		msd_uses_gigastructural_engineering_ring_world_district_set = yes
+	}
+}
+
+# this = planet
+msd_uses_regular_district_set = {
+	msd_uses_district_set_city_world = no
+	msd_uses_district_set_habitat = no
+	msd_uses_district_set_ring_world = no
+	msd_uses_planetary_diversity_special_district_set = no
+	msd_uses_gigastructural_engineering_gigastructure_district_set = no
 }
