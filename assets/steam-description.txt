@@ -46,17 +46,17 @@ In order to see and interact with the new district types, it is necessary to use
 Overriding an economic category and colony designations causes the game to log 12 errors like these:
 [code]
 [game.h:147]: Obj w/key: planet_researchers already exists, using: common/economic_categories/01_msd_econ_overrides.txt line: 1
-[game.h:147]: Obj w/key: col_research already exists, using: common/colony_types/01_msd_overrides.txt line: 6
-[game.h:147]: Obj w/key: col_bureau already exists, using: common/colony_types/01_msd_overrides.txt line: 29
-[game.h:147]: Obj w/key: col_bureau_spiritualist already exists, using: common/colony_types/01_msd_overrides.txt line: 70
-[game.h:147]: Obj w/key: col_bureau_hive already exists, using: common/colony_types/01_msd_overrides.txt line: 111
-[game.h:147]: Obj w/key: col_bureau_machine already exists, using: common/colony_types/01_msd_overrides.txt line: 141
-[game.h:147]: Obj w/key: col_habitat_bureau already exists, using: common/colony_types/01_msd_overrides.txt line: 172
-[game.h:147]: Obj w/key: col_habitat_bureau_spiritualist already exists, using: common/colony_types/01_msd_overrides.txt line: 198
-[game.h:147]: Obj w/key: col_habitat_bureau_hive already exists, using: common/colony_types/01_msd_overrides.txt line: 224
-[game.h:147]: Obj w/key: col_habitat_bureau_machine already exists, using: common/colony_types/01_msd_overrides.txt line: 247
-[game.h:147]: Obj w/key: col_fortress already exists, using: common/colony_types/01_msd_overrides.txt line: 271
-[game.h:147]: Obj w/key: col_habitat_fortress already exists, using: common/colony_types/01_msd_overrides.txt line: 358
+[game.h:147]: Obj w/key: col_research already exists, using: common/colony_types/01_msd_col_overrides.txt line: 6
+[game.h:147]: Obj w/key: col_bureau already exists, using: common/colony_types/01_msd_col_overrides.txt line: 29
+[game.h:147]: Obj w/key: col_bureau_spiritualist already exists, using: common/colony_types/01_msd_col_overrides.txt line: 70
+[game.h:147]: Obj w/key: col_bureau_hive already exists, using: common/colony_types/01_msd_col_overrides.txt line: 111
+[game.h:147]: Obj w/key: col_bureau_machine already exists, using: common/colony_types/01_msd_col_overrides.txt line: 141
+[game.h:147]: Obj w/key: col_habitat_bureau already exists, using: common/colony_types/01_msd_col_overrides.txt line: 172
+[game.h:147]: Obj w/key: col_habitat_bureau_spiritualist already exists, using: common/colony_types/01_msd_col_overrides.txt line: 198
+[game.h:147]: Obj w/key: col_habitat_bureau_hive already exists, using: common/colony_types/01_msd_col_overrides.txt line: 224
+[game.h:147]: Obj w/key: col_habitat_bureau_machine already exists, using: common/colony_types/01_msd_col_overrides.txt line: 247
+[game.h:147]: Obj w/key: col_fortress already exists, using: common/colony_types/01_msd_col_overrides.txt line: 271
+[game.h:147]: Obj w/key: col_habitat_fortress already exists, using: common/colony_types/01_msd_col_overrides.txt line: 358
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/workshop/filedetails/changelog/2650611194]Change Notes[/url]
