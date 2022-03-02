@@ -6,15 +6,7 @@
 col_research = {
 	icon = GFX_colony_type_research
 	potential = {
-		exists = owner
-		NOR = {
-			uses_district_set = city_world
-			uses_district_set = ring_world
-			uses_district_set = habitat
-		}
-		msd_uses_planetary_diversity_non_research_district_set = no
-		msd_uses_gigastructural_engineering_habitat_district_set = no
-		msd_uses_gigastructural_engineering_gigastructure_district_set = no
+		msd_uses_regular_district_set = yes
 		is_special_colony_type = no
 	}
 	planet_modifier = {
@@ -23,83 +15,26 @@ col_research = {
 		planet_building_research_lab_3_build_speed_mult = 0.25
 		planet_district_standard_cm_science_build_speed_mult = 0.25
 		planet_researchers_upkeep_mult = -0.2
-
 	}
 	weight_modifier = {
 		modifier = {
 			add = 5
 			has_designation = col_research
 		}
-		modifier = {
-			add = 5
-			OR = {
-				has_modifier = wild_storms
-				has_modifier = titanic_life
-				has_modifier = atmospheric_hallucinogen
-				has_modifier = dangerous_wildlife
-				has_modifier = unstable_tectonics
-				has_deposit = d_central_spire
-			}
-		}
-		modifier = {
-			add = 5
-			has_building = building_research_lab_1
-		}
-		modifier = {
-			add = 10
-			has_building = building_research_lab_2
-		}
-		modifier = {
-			add = 15
-			has_building = building_research_lab_3
-		}
-		modifier = {
-			add = 10
-			OR = {
-				has_building = building_institute
-				has_building = building_supercomputer
-			}
-		}
-		modifier = {
-			add = 2
-			num_districts = {
-				type = district_standard_cm_science
-				value >= 2
-			}
-		}
-		modifier = {
-			add = 3
-			num_districts = {
-				type = district_standard_cm_science
-				value >= 3
-			}
-		}
-		modifier = {
-			add = 4
-			num_districts = {
-				type = district_standard_cm_science
-				value >= 4
-			}
-		}
-		modifier = {
-			add = 5
-			num_districts = {
-				type = district_standard_cm_science
-				value >= 5
-			}
-		}
+		modifier = { add = value:col_science_composite_dynamic_weight }
 	}
 }
 
-# Bureaucratic Center
+# Unification Center
 col_bureau = {
 	icon = GFX_colony_type_bureaucratic
 	potential = {
 		exists = owner
-		NOR = {
-			uses_district_set = habitat
-			uses_district_set = pdplanethab
+		owner = {
+			is_regular_empire = yes
+			is_spiritualist = no
 		}
+		msd_uses_district_set_habitat = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {
@@ -108,11 +43,7 @@ col_bureau = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_spiritualist = no
-			}
+			msd_uses_district_set_city_world = no
 		}
 		modifier = {
 			planet_district_standard_cm_admin_build_speed_mult = 0.25
@@ -120,32 +51,10 @@ col_bureau = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_spiritualist = yes
-			}
+			msd_uses_district_set_city_world = yes
 		}
 		modifier = {
-			planet_district_standard_cm_admin_religious_build_speed_mult = 0.25
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			planet_district_standard_cm_admin_hive_build_speed_mult = 0.25
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			planet_district_standard_cm_admin_machine_build_speed_mult = 0.25
+			planet_district_arcology_administrative_build_speed_mult = 0.25
 		}
 	}
 	weight_modifier = {
@@ -158,15 +67,15 @@ col_bureau = {
 	}
 }
 
-# Bureaucratic Station
-col_habitat_bureau = {
-	icon = GFX_colony_type_hab_bureaucratic
+col_bureau_spiritualist = {
+	icon = GFX_colony_type_bureaucratic
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = habitat
-			uses_district_set = pdplanethab
+		owner = {
+			is_regular_empire = yes
+			is_spiritualist = yes
 		}
+		msd_uses_district_set_habitat = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {
@@ -175,45 +84,106 @@ col_habitat_bureau = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_spiritualist = no
-			}
+			msd_uses_district_set_city_world = no
 		}
 		modifier = {
-			planet_district_standard_cm_hab_admin_build_speed_mult = 0.25
+			planet_district_standard_cm_admin_religious_build_speed_mult = 0.25
 		}
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_spiritualist = yes
-			}
+			msd_uses_district_set_city_world = yes
 		}
 		modifier = {
-			planet_district_standard_cm_hab_admin_religious_build_speed_mult = 0.25
+			planet_district_arcology_religious_build_speed_mult = 0.25
 		}
+	}
+	weight_modifier = {
+		base = 5
+		modifier = {
+			add = 5
+			has_designation = col_bureau_spiritualist
+		}
+		modifier = { add = value:col_unity_composite_dynamic_weight_spiritualist }
+	}
+}
+
+col_bureau_hive = {
+	icon = GFX_colony_type_bureaucratic
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+		msd_uses_district_set_habitat = no
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
+			msd_uses_district_set_city_world = no
 		}
 		modifier = {
-			planet_district_standard_cm_hab_admin_hive_build_speed_mult = 0.25
+			planet_district_standard_cm_admin_hive_build_speed_mult = 0.25
 		}
+	}
+	weight_modifier = {
+		base = 5
+		modifier = {
+			add = 5
+			has_designation = col_bureau_hive
+		}
+		modifier = { add = value:col_unity_composite_dynamic_weight_hive }
+	}
+}
+
+col_bureau_machine = {
+	icon = GFX_colony_type_bureaucratic
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+		msd_uses_district_set_habitat = no
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
+			msd_uses_district_set_city_world = no
 		}
 		modifier = {
-			planet_district_standard_cm_hab_admin_machine_build_speed_mult = 0.25
+			planet_district_standard_cm_admin_machine_build_speed_mult = 0.25
 		}
+	}
+	weight_modifier = {
+		base = 5
+		modifier = {
+			add = 5
+			has_designation = col_bureau_machine
+		}
+		modifier = { add = value:col_unity_composite_dynamic_weight_machine }
+	}
+}
+
+# Unification Station
+col_habitat_bureau = {
+	icon = GFX_colony_type_hab_bureaucratic
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_spiritualist = no
+		}
+		msd_uses_district_set_habitat = yes
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+		planet_district_standard_cm_hab_admin_build_speed_mult = 0.25
 	}
 	weight_modifier = {
 		base = 5
@@ -225,20 +195,91 @@ col_habitat_bureau = {
 	}
 }
 
+col_habitat_bureau = {
+	icon = GFX_colony_type_hab_bureaucratic
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_spiritualist = yes
+		}
+		msd_uses_district_set_habitat = yes
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+		planet_district_standard_cm_hab_admin_religious_build_speed_mult = 0.25
+	}
+	weight_modifier = {
+		base = 5
+		modifier = {
+			add = 5
+			has_designation = col_habitat_bureau_spiritualist
+		}
+		modifier = { add = value:col_unity_composite_dynamic_weight_spiritualist }
+	}
+}
+
+col_habitat_bureau = {
+	icon = GFX_colony_type_hab_bureaucratic
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+		msd_uses_district_set_habitat = yes
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+		planet_district_standard_cm_hab_admin_hive_build_speed_mult = 0.25
+	}
+	weight_modifier = {
+		base = 5
+		modifier = {
+			add = 5
+			has_designation = col_habitat_bureau_hive
+		}
+		modifier = { add = value:col_unity_composite_dynamic_weight_hive }
+	}
+}
+
+col_habitat_bureau_machine = {
+	icon = GFX_colony_type_hab_bureaucratic
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+		msd_uses_district_set_habitat = yes
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_administrators_produces_mult = 0.10
+		planet_administrators_upkeep_mult = -0.10
+		planet_district_standard_cm_hab_admin_machine_build_speed_mult = 0.25
+	}
+	weight_modifier = {
+		base = 5
+		modifier = {
+			add = 5
+			has_designation = col_habitat_bureau_machine
+		}
+		modifier = { add = value:col_unity_composite_dynamic_weight_machine }
+	}
+}
+
 # Fortress World
 col_fortress = {
 	icon = GFX_colony_type_fortress
 	potential = {
 		exists = owner
 		NOR = {
-			uses_district_set = city_world
-			uses_district_set = ring_world
-			uses_district_set = habitat
 			uses_district_set = machine_world
 			uses_district_set = hive_world
 		}
+		msd_uses_district_set_city_world = no
+		msd_uses_district_set_habitat = no
+		msd_uses_district_set_ring_world = no
 		msd_uses_planetary_diversity_special_district_set = no
-		msd_uses_gigastructural_engineering_habitat_district_set = no
 		msd_uses_gigastructural_engineering_gigastructure_district_set = no
 		is_special_colony_type = no
 	}
@@ -317,10 +358,7 @@ col_fortress = {
 col_habitat_fortress = {
 	icon = GFX_colony_type_habitat_fortress
 	potential = {
-		OR = {
-			uses_district_set = habitat
-			msd_uses_gigastructural_engineering_habitat_district_set = yes
-		}
+		msd_uses_district_set_habitat = yes
 	}
 	planet_modifier = {
 		planet_district_standard_cm_hab_military_build_speed_mult = 0.25
