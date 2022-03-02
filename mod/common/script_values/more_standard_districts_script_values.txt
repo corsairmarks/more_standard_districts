@@ -1,4 +1,3 @@
-
 # see the game's docs if you want to know how this black magic works
 
 # value:unity_job_weight|JOB|bureaucrat|
@@ -7,7 +6,6 @@ unity_job_weight = {
 	base = 0
 	complex_trigger_modifier = {
 		trigger = num_assigned_jobs
-		trigger_scope = this
 		parameters = {
 			job = $JOB$
 		}
@@ -22,13 +20,11 @@ unity_district_weight = {
 	base = 0
 	complex_trigger_modifier = {
 		trigger = num_districts
-		trigger_scope = this
 		parameters = {
 			type = $DISTRICT$
 		}
 		mode = add
 	}
-	mult = 1
 }
 
 # value:unity_building_weight|BUILDING|building_bureaucratic_1|
@@ -37,12 +33,168 @@ unity_building_weight = {
 	base = 0
 	complex_trigger_modifier = {
 		trigger = num_buildings
-		trigger_scope = this
 		parameters = {
 			type = $BUILDING$
 			in_construction = any
 		}
 		mode = add
 	}
-	mult = 1
+}
+
+# this = planet
+col_unity_dynamic_weight = {
+	add = value:unity_building_weight|BUILDING|building_bureaucratic_1|
+	add = value:unity_building_weight|BUILDING|building_bureaucratic_2|
+	add = value:unity_building_weight|BUILDING|building_bureaucratic_3|
+	add = value:unity_district_weight|DISTRICT|district_standard_cm_admin|
+	add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin|
+	add = value:unity_district_weight|DISTRICT|district_arcology_administrative|
+}
+
+col_unity_dynamic_weight_religious = {
+	add = value:unity_job_weight|JOB|priest|
+	add = value:unity_building_weight|BUILDING|building_temple|
+	add = value:unity_building_weight|BUILDING|building_holotemple|
+	add = value:unity_building_weight|BUILDING|building_sacred_nexus|
+	add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_religious|
+	add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_religious|
+	add = value:unity_district_weight|DISTRICT|district_arcology_religious|
+}
+
+# this = planet
+col_unity_dynamic_weight_death_cult = {
+	add = value:unity_job_weight|JOB|death_priest|
+	add = value:unity_job_weight|JOB|mortal_initiate|
+	add = value:unity_building_weight|BUILDING|building_sacrificial_temple_1|
+	add = value:unity_building_weight|BUILDING|building_sacrificial_temple_2|
+	add = value:unity_building_weight|BUILDING|building_sacrificial_temple_3|
+}
+
+# this = planet
+col_unity_dynamic_weight_hive = {
+	add = value:unity_job_weight|JOB|synapse_drone|
+	add = value:unity_building_weight|BUILDING|building_hive_node|
+	add = value:unity_building_weight|BUILDING|building_hive_cluster|
+	add = value:unity_building_weight|BUILDING|building_hive_confluence|
+	add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_hive|
+	add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_hive|
+}
+
+# this = planet
+col_unity_dynamic_weight_machine = {
+	add = value:unity_job_weight|JOB|coordinator|
+	add = value:unity_job_weight|JOB|evaluator|
+	add = value:unity_building_weight|BUILDING|building_uplink_node|
+	add = value:unity_building_weight|BUILDING|building_network_junction|
+	add = value:unity_building_weight|BUILDING|building_system_conflux|
+	add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_machine|
+	add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_machine|
+}
+
+# adds weight based on unity-related buildings, districts, and employed Pops appropriate for the planet owner's empire
+# this = planet
+col_unity_composite_dynamic_weight = {
+	base = 0
+	modifier = {
+		add = value:unity_job_weight|JOB|culture_worker|
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		add = value:unity_job_weight|JOB|bureaucrat|
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_spiritualist = no
+			is_megacorp = no
+		}
+	}
+	modifier = {
+		add = value:unity_job_weight|JOB|manager|
+		exists = owner
+		owner = { is_megacorp = yes }
+	}
+	modifier = {
+		add = value:unity_job_weight|JOB|death_chronicler|
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_memorialist_empire = yes
+		}
+	}
+	modifier = {
+		add = value:unity_job_weight|JOB|chronicle_drone|
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_memorialist_empire = yes
+		}
+	}
+	modifier = {
+		add = value:col_unity_dynamic_weight_hive
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	modifier = {
+		add = value:col_unity_dynamic_weight_machine
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	modifier = {
+		add = value:col_unity_dynamic_weight
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_spiritualist = no
+		}
+	}
+	modifier = {
+		add = value:col_unity_dynamic_weight_religious
+		exists = owner
+		owner = { is_spiritualist = yes }
+	}
+	modifier = {
+		add = value:col_unity_dynamic_weight_death_cult
+		exists = owner
+		owner = { is_death_cult_empire = yes }
+	}
+	modifier = {
+		add = 2
+		OR = {
+			has_building = building_autochthon_monument
+			has_building = building_corporate_monument
+			has_building = building_galactic_memorial_1
+			has_building = building_simulation_1
+			has_building = building_sensorium_1
+		}
+	}
+	modifier = {
+		add = 4
+		OR = {
+			has_building = building_heritage_site
+			has_building = building_corporate_site
+			has_building = building_galactic_memorial_2
+			has_building = building_simulation_2
+			has_building = building_sensorium_2
+		}
+	}
+	modifier = {
+		add = 6
+		OR = {
+			has_building = building_hypercomms_forum
+			has_building = building_corporate_forum
+			has_building = building_galactic_memorial_3
+			has_building = building_simulation_3
+			has_building = building_sensorium_3
+		}
+	}
+	modifier = {
+		add = 6
+		OR = {
+			has_building = building_autocurating_vault
+			has_building = building_citadel_of_faith
+			has_building = building_corporate_vault
+			has_building = building_alpha_hub
+		}
+	}
 }
