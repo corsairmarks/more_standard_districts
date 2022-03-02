@@ -1,9 +1,8 @@
 # see the game's docs if you want to know how this black magic works
 
-# value:unity_job_weight|JOB|bureaucrat|
+# value:msd_job_dynamic_weight|JOB|bureaucrat|
 # this = planet
-unity_job_weight = {
-	base = 0
+msd_job_dynamic_weight = {
 	complex_trigger_modifier = {
 		trigger = num_assigned_jobs
 		parameters = {
@@ -14,10 +13,9 @@ unity_job_weight = {
 	mult = 0.25
 }
 
-# value:unity_district_weight|DISTRICT|district_standard_cm_admin|
+# value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_admin|
 # this = planet
-unity_district_weight = {
-	base = 0
+msd_district_dynamic_weight = {
 	complex_trigger_modifier = {
 		trigger = num_districts
 		parameters = {
@@ -27,10 +25,9 @@ unity_district_weight = {
 	}
 }
 
-# value:unity_building_weight|BUILDING|building_bureaucratic_1|
+# value:msd_building_dynamic_weight|BUILDING|building_bureaucratic_1|
 # this = planet
-unity_building_weight = {
-	base = 0
+msd_building_dynamic_weight = {
 	complex_trigger_modifier = {
 		trigger = num_buildings
 		parameters = {
@@ -41,122 +38,81 @@ unity_building_weight = {
 	}
 }
 
+# value:msd_building_dynamic_weight_tier_2|BUILDING|building_bureaucratic_2|
 # this = planet
-col_unity_dynamic_weight = {
-	add = value:unity_building_weight|BUILDING|building_bureaucratic_1|
-	add = value:unity_building_weight|BUILDING|building_bureaucratic_2|
-	add = value:unity_building_weight|BUILDING|building_bureaucratic_3|
-	add = value:unity_district_weight|DISTRICT|district_standard_cm_admin|
-	add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin|
-	add = value:unity_district_weight|DISTRICT|district_arcology_administrative|
+msd_building_dynamic_weight_tier_2 = {
+	add = value:msd_district_dynamic_weight|BUILDING|$BUILDING$|
+	mult = 2.5
 }
 
-col_unity_dynamic_weight_religious = {
-	add = value:unity_job_weight|JOB|priest|
-	add = value:unity_building_weight|BUILDING|building_temple|
-	add = value:unity_building_weight|BUILDING|building_holotemple|
-	add = value:unity_building_weight|BUILDING|building_sacred_nexus|
-	add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_religious|
-	add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_religious|
-	add = value:unity_district_weight|DISTRICT|district_arcology_religious|
+# value:msd_building_dynamic_weight_tier_3|BUILDING|building_bureaucratic_3|
+# this = planet
+msd_building_dynamic_weight_tier_3 = {
+	add = value:msd_district_dynamic_weight|BUILDING|$BUILDING$|
+	mult = 5
 }
 
+# adds weight based on science-related buildings, districts, and employed Pops for regular planets
 # this = planet
-col_unity_dynamic_weight_death_cult = {
-	add = value:unity_job_weight|JOB|death_priest|
-	add = value:unity_job_weight|JOB|mortal_initiate|
-	add = value:unity_building_weight|BUILDING|building_sacrificial_temple_1|
-	add = value:unity_building_weight|BUILDING|building_sacrificial_temple_2|
-	add = value:unity_building_weight|BUILDING|building_sacrificial_temple_3|
-}
-
-# this = planet
-col_unity_dynamic_weight_hive = {
-	add = value:unity_job_weight|JOB|synapse_drone|
-	add = value:unity_building_weight|BUILDING|building_hive_node|
-	add = value:unity_building_weight|BUILDING|building_hive_cluster|
-	add = value:unity_building_weight|BUILDING|building_hive_confluence|
-	add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_hive|
-	add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_hive|
-}
-
-# this = planet
-col_unity_dynamic_weight_machine = {
-	add = value:unity_job_weight|JOB|coordinator|
-	add = value:unity_job_weight|JOB|evaluator|
-	add = value:unity_building_weight|BUILDING|building_uplink_node|
-	add = value:unity_building_weight|BUILDING|building_network_junction|
-	add = value:unity_building_weight|BUILDING|building_system_conflux|
-	add = value:unity_district_weight|DISTRICT|district_standard_cm_admin_machine|
-	add = value:unity_district_weight|DISTRICT|district_standard_cm_hab_admin_machine|
-}
-
-# adds weight based on unity-related buildings, districts, and employed Pops appropriate for the planet owner's empire
-# this = planet
-col_unity_composite_dynamic_weight = {
-	base = 0
+col_science_composite_dynamic_weight = {
 	modifier = {
-		add = value:unity_job_weight|JOB|culture_worker|
+		add = value:msd_district_dynamic_weight|BUILDING|building_research_lab_1|
+		has_building = building_research_lab_1
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_research_lab_2|
+		has_building = building_research_lab_2
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_3|BUILDING|building_research_lab_3|
+		has_building = building_research_lab_3
+	}
+	modifier = {
+		add = 5
+		has_modifier = wild_storms
+	}
+	modifier = {
+		add = 5
+		has_modifier = titanic_life
+	}
+	modifier = {
+		add = 5
+		has_modifier = atmospheric_hallucinogen
+	}
+	modifier = {
+		add = 5
+		has_modifier = dangerous_wildlife
+	}
+	modifier = {
+		add = 5
+		has_modifier = unstable_tectonics
+	}
+	modifier = {
+		add = 10
+		OR = {
+			has_building = building_institute
+			has_building = building_supercomputer
+		}
+	}
+}
+
+# base unity dynamic weight - includes megacorp and memorialist specials and common building checks
+# this = planet
+col_unity_base_dynamic_weight = {
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|culture_worker|
 		exists = owner
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		add = value:unity_job_weight|JOB|bureaucrat|
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			is_megacorp = no
-		}
-	}
-	modifier = {
-		add = value:unity_job_weight|JOB|manager|
+		add = value:msd_job_dynamic_weight|JOB|manager|
 		exists = owner
 		owner = { is_megacorp = yes }
 	}
 	modifier = {
-		add = value:unity_job_weight|JOB|death_chronicler|
+		add = value:msd_job_dynamic_weight|JOB|death_chronicler|
 		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_memorialist_empire = yes
-		}
-	}
-	modifier = {
-		add = value:unity_job_weight|JOB|chronicle_drone|
-		exists = owner
-		owner = {
-			is_gestalt = yes
-			is_memorialist_empire = yes
-		}
-	}
-	modifier = {
-		add = value:col_unity_dynamic_weight_hive
-		exists = owner
-		owner = { is_hive_empire = yes }
-	}
-	modifier = {
-		add = value:col_unity_dynamic_weight_machine
-		exists = owner
-		owner = { is_machine_empire = yes }
-	}
-	modifier = {
-		add = value:col_unity_dynamic_weight
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-		}
-	}
-	modifier = {
-		add = value:col_unity_dynamic_weight_religious
-		exists = owner
-		owner = { is_spiritualist = yes }
-	}
-	modifier = {
-		add = value:col_unity_dynamic_weight_death_cult
-		exists = owner
-		owner = { is_death_cult_empire = yes }
+		owner = { is_memorialist_empire = yes }
 	}
 	modifier = {
 		add = 2
@@ -192,9 +148,165 @@ col_unity_composite_dynamic_weight = {
 		add = 6
 		OR = {
 			has_building = building_autocurating_vault
-			has_building = building_citadel_of_faith
 			has_building = building_corporate_vault
+			has_building = building_citadel_of_faith
 			has_building = building_alpha_hub
 		}
+	}
+}
+
+# this = planet
+col_unity_base_dynamic_weight_death_cult = {
+	add = value:msd_job_dynamic_weight|JOB|death_priest|
+	add = value:msd_job_dynamic_weight|JOB|mortal_initiate|
+	modifier = {
+		add = value:msd_building_dynamic_weight|BUILDING|building_sacrificial_temple_1|
+		has_building = building_sacrificial_temple_1
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_sacrificial_temple_2|
+		has_building = building_sacrificial_temple_2
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_3|BUILDING|building_sacrificial_temple_3|
+		has_building = building_sacrificial_temple_3
+	}
+}
+
+# adds weight based on unity-related buildings, districts, and employed Pops for regular, non-spiritualist empires
+# this = planet
+col_unity_composite_dynamic_weight = {
+	add = value:col_unity_base_dynamic_weight
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|bureaucrat|
+		exists = owner
+		owner = { is_megacorp = no }
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight|BUILDING|building_bureaucratic_1|
+		has_building = building_bureaucratic_1
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_bureaucratic_2|
+		has_building = building_bureaucratic_2
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_3|BUILDING|building_bureaucratic_3|
+		has_building = building_bureaucratic_3
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_admin|
+		msd_uses_district_set_habitat = no
+		msd_uses_district_set_city_world = no
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_hab_admin|
+		msd_uses_district_set_habitat = yes
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_arcology_administrative|
+		msd_uses_district_set_city_world = yes
+	}
+}
+
+# adds weight based on unity-related buildings, districts, and employed Pops for regular spiritualist empires
+# this = planet
+col_unity_composite_dynamic_weight_spiritualist = {
+	add = value:col_unity_base_dynamic_weight
+	add = value:msd_job_dynamic_weight|JOB|priest|
+	modifier = {
+		add = value:msd_building_dynamic_weight|BUILDING|building_temple|
+		has_building = building_temple
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_holotemple|
+		has_building = building_holotemple
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_3|BUILDING|building_sacred_nexus|
+		has_building = building_sacred_nexus
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_admin_religious|
+		msd_uses_district_set_habitat = no
+		msd_uses_district_set_city_world = no
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_hab_admin_religious|
+		msd_uses_district_set_habitat = yes
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_arcology_religious|
+		msd_uses_district_set_city_world = yes
+	}
+	modifier = {
+		add = value:col_unity_base_dynamic_weight_death_cult
+		exists = owner
+		owner = { is_death_cult_empire = yes }
+	}
+}
+
+# adds weight based on unity-related buildings, districts, and employed Pops for hive empires
+# this = planet
+col_unity_composite_dynamic_weight_hive = {
+	add = value:col_unity_base_dynamic_weight
+	add = value:msd_job_dynamic_weight|JOB|synapse_drone|
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|chronicle_drone|
+		exists = owner
+		owner = { is_memorialist_empire = yes }
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight|BUILDING|building_hive_node|
+		has_building = building_hive_node
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_hive_cluster|
+		has_building = building_hive_cluster
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_3|BUILDING|building_hive_confluence|
+		has_building = building_hive_confluence
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_admin_hive|
+		msd_uses_district_set_habitat = no
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_hab_admin_hive|
+		msd_uses_district_set_habitat = yes
+	}
+}
+
+# adds weight based on unity-related buildings, districts, and employed Pops for machine empires
+# this = planet
+col_unity_composite_dynamic_weight_machine = {
+	add = value:col_unity_base_dynamic_weight
+	add = value:msd_job_dynamic_weight|JOB|coordinator|
+	add = value:msd_job_dynamic_weight|JOB|evaluator|
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|chronicle_drone|
+		exists = owner
+		owner = { is_memorialist_empire = yes }
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight|BUILDING|building_uplink_node|
+		has_building = building_uplink_node
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_network_junction|
+		has_building = building_network_junction
+	}
+	modifier = {
+		add = value:msd_building_dynamic_weight_tier_3|BUILDING|building_system_conflux|
+		has_building = building_system_conflux
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_admin_machine|
+		msd_uses_district_set_habitat = no
+	}
+	modifier = {
+		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_hab_admin_machine|
+		msd_uses_district_set_habitat = yes
 	}
 }
