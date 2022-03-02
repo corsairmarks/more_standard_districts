@@ -15,7 +15,7 @@ Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, 
 * tier 2 increases research output by 1 point (per field) and increases researcher upkeep
 * tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
 
-Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to offer Research District build speed in addition to its existing benefits.  Bureaucratic Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).  The automation plan for Bureaucratic Centers, Fortress Worlds, and Tech-Worlds are also adjusted to use the new districts.
+Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to offer Research District build speed in addition to its existing benefits.  Unification Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).  The automation plan for Unification Centers, Fortress Worlds, and Tech-Worlds are also adjusted to use the new districts.
 
 All districts respond to changes in civics that alter jobs.  For example, Leisure Districts trade Entertainers for a Duelists with Warrior Culture and Ecclesiastical Districts trade a Priest for a Manager for spiritualists megacorps.
 
@@ -33,31 +33,37 @@ Although the districts added by this mod seem similar to existing districts, the
 
 Overwrites `common/buildings/05_research_buildings.txt` to alter the Research Labs, and thus is not compatible with other mods that want to make changes to Research Labs, the Research Institute, or the Planetary Supercomputer.  To implement the desired effect from the new Research Lab, this mod overwrites the economic category for researchers (`planet_researchers`) in order to generate the `_add` modifiers for research production (previously only `_mult` was available).
 
-Also overwrites all three flavors of Tech-World build automation (`common/colony_types/00_research_automation.txt`, `common/colony_types/00_research_hive_automation.txt`, `common/colony_types/00_research_machine_automation.txt`) to use the new Research Districts and enabling the AI to understand the Research Lab building changes.  Bureaucratic Center (`common/colony_types/00_bureau_automation.txt`) and Fortress World (`common/colony_types/00_fortress_automation.txt`, `common/colony_types/00_fortress_hive_automation.txt`, `common/colony_types/00_fortress_machine_automation.txt`) build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these build plans.  Commonly this is AI mods - whichever mod loads _last_ will use its version of these files.
+Also overwrites all three flavors of Tech-World build automation (`common/colony_types/00_research_automation.txt`, `common/colony_types/00_research_hive_automation.txt`, `common/colony_types/00_research_machine_automation.txt`) to use the new Research Districts and enabling the AI to understand the Research Lab building changes.  Unification Center (`common/colony_types/00_bureau_automation.txt`) and Fortress World (`common/colony_types/00_fortress_automation.txt`, `common/colony_types/00_fortress_hive_automation.txt`, `common/colony_types/00_fortress_machine_automation.txt`) build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these build plans.  Commonly this is AI mods - whichever mod loads _last_ will use its version of these files.
 
-This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/sharedfiles/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.  Compatible with Planetary Diversity and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
+This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/workshop/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.  Compatible with Planetary Diversity and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
 
 Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 ### Not Included in "Subtle Polish"
 
-This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because it would require users to add a UI mod in order to see the expanded districts.  It it otherwise fully compatible.
+This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2522974089); however is fully compatible.
 
 ### Required Dependency Mods
 
-In order to see and interact with the new district types, it is necessary to use a UI mod that allows more districts to be visible.  [UI Overhaul Dynamic](https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360) and [Bigger Planet View](https://steamcommunity.com/sharedfiles/filedetails/?id=1587178040) are two possible options.  If you play Stellaris on a lower resolution (such as 1366x768 or 1600x900) there are not many mod offerings that show many districts without making the planetview too large, so I created [Basic Planetview: More Districts](https://steamcommunity.com/sharedfiles/filedetails/?id=2654043078) to solve that issue.
+In order to see and interact with the new district types, it is necessary to use a UI mod that allows more districts to be visible.  [UI Overhaul Dynamic](https://steamcommunity.com/workshop/filedetails/?id=1623423360) and [Bigger Planet View](https://steamcommunity.com/workshop/filedetails/?id=1587178040) are two possible options.  If you play Stellaris on a lower resolution (such as 1366x768 or 1600x900) there are not many mod offerings that show many districts without making the planetview too large, so I created [Basic Planetview: More Districts](https://steamcommunity.com/workshop/filedetails/?id=2654043078) to solve that issue.
 
 ## Known Issues
 
-Overriding an economic category and colony designations causes the game to log six errors like these:
+Overriding an economic category and colony designations causes the game to log 12 errors like these:
 
 ```
-[00:31:12][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists, using the one at  file: common/economic_categories/01_more_standard_districts_economic_category_overrides.txt line: 1
-[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_research already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 6
-[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 93
-[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 236
-[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 380
-[00:31:13][game_singleobjectdatabase.h:147]: Object with key: col_habitat_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 466
+[01:10:26][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists, using the one at  file: common/economic_categories/01_more_standard_districts_economic_category_overrides.txt line: 1
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_research already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 6
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 29
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_bureau_spiritualist already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 70
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_bureau_hive already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 111
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_bureau_machine already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 141
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 172
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau_spiritualist already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 198
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau_hive already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 224
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_habitat_bureau_machine already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 247
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 271
+[01:10:28][game_singleobjectdatabase.h:147]: Object with key: col_habitat_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 358
 ```
 
 ## Changelog
@@ -85,10 +91,11 @@ Overriding an economic category and colony designations causes the game to log s
     * Add Ecclesiastical Districts for Spiritualists -these districts replace Administrative Districts and offer a mix of Priests, Death Priests and Mortal Initiates, and/or Managers based on your civics
     * Leisure Districts are for Entertainers and Duelists only
     * Administrative Districts replace Bureaucrats with Managers for megacorps
-    * Switched the color on all the flavors of admin districts to light blue
+    * Switched the color on all the flavors of admin districts to light blue to match the new arcology unity districts
+    * Update icons for all flavors of admin district to use the unity symbol instead of the administrative capacity symbol
     * Add bureau colony automation plans for Hive and Machine Intelligence empires
     * All colony automation already overwritten by this mod now prioritizes the Posthumous Employment Center over Robot Assembly Plants
-    * Use the new `script_values` feature to dynamically weight the bureau colony type based on how many unity jobs and buildings are present
+    * Use the new `script_values` feature to dynamically weight the bureau (unity) colony type based on how many unity jobs and buildings are present
     * Add compatibility for Gigastructural Engineering: districts from this mod are prohibited on gigastructures, habitat-specific districts from this mod are allowed on Interstellar habitats and Gas Giant Habitats
 
 ## Source Code
