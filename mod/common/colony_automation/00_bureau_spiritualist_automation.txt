@@ -1,18 +1,18 @@
-automate_bureau_planet = {
+automate_bureau_planet_spiritualist = {
 	available = {
 		OR = {
-			has_designation = col_bureau
-			has_designation = col_habitat_bureau
+			has_designation = col_bureau_spiritualist
+			has_designation = col_habitat_bureau_spiritualist
 		}
 		owner = {
 			is_regular_empire = yes
-			is_spiritualist = no
+			is_spiritualist = yes
 		}
 	}
 	prio_districts = {
-		district_standard_cm_admin
-		district_standard_cm_hab_admin
-		district_arcology_administrative
+		district_standard_cm_admin_religious
+		district_standard_cm_hab_admin_religious
+		district_arcology_religious
 		district_city
 		district_hab_housing
 		district_arcology_housing
@@ -49,21 +49,36 @@ automate_bureau_planet = {
 		}
 
 		5 = {
-			building = building_bureaucratic_1
+			building = building_temple
 			available = {
-				owner = { bureaucracy_upkeep_affordable = yes }
-				NOR = {
-					has_available_jobs = bureaucrat
-					has_available_jobs = manager
+				owner = {
+					temple_upkeep_affordable = yes
+					is_death_cult_empire = no
 				}
+				NOT = { has_available_jobs = priest }
 				num_buildings = {
-					type = building_bureaucratic_1
+					type = building_temple
 					value < 2
 				}
 			}
 		}
 
 		6 = {
+			building = building_sacrificial_temple_1
+			available = {
+				owner = {
+					temple_upkeep_affordable = yes
+					is_death_cult_empire = yes
+				}
+				NOT = { has_available_jobs = death_priest }
+				num_buildings = {
+					type = building_sacrificial_temple_1
+					value < 2
+				}
+			}
+		}
+
+		7 = {
 			building = building_necrophage_elevation_chamber
 			available = {
 				owner = {
@@ -74,66 +89,26 @@ automate_bureau_planet = {
 			}
 		}
 
-		7 = {
+		8 = {
 			building = building_luxury_residence
 			available = {
-				has_designation = col_habitat_bureau
+				has_designation = col_habitat_bureau_spiritualist
 				owner = { luxury_residence_upkeep_affordable = yes }
 				free_housing < -3
 			}
 		}
 
-		8 = {
-			building = building_autocurating_vault
-			available = {
-				owner = {
-					is_megacorp = no
-					embassy_upkeep_affordable = yes # same upkeep
-				}
-			}
-		}
-
 		9 = {
-			building = building_corporate_vault
+			building = building_citadel_of_faith
 			available = {
 				owner = {
-					is_megacorp = yes
+					is_spiritualist = yes
 					embassy_upkeep_affordable = yes # same upkeep
 				}
 			}
 		}
 
 		10 = {
-			building = building_autochthon_monument
-			available = {
-				owner = {
-					is_megacorp = no
-					is_memorialist_empire = no
-				}
-				NOR = {
-					has_building = building_autochthon_monument
-					has_building = building_heritage_site
-					has_building = building_hypercomms_forum
-				}
-			}
-		}
-
-		11 = {
-			building = building_corporate_monument
-			available = {
-				owner = {
-					is_megacorp = yes
-					is_memorialist_empire = no
-				}
-				NOR = {
-					has_building = building_corporate_monument
-					has_building = building_corporate_site
-					has_building = building_corporate_forum
-				}
-			}
-		}
-
-		12 = {
 			building = building_galactic_memorial_1
 			available = {
 				owner = { is_memorialist_empire = yes }
@@ -145,12 +120,12 @@ automate_bureau_planet = {
 			}
 		}
 
-		13 = {
+		11 = {
 			building = building_psi_corps
 			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
 		}
 
-		14 = {
+		12 = {
 			building = building_clinic
 			available = {
 				owner = {
@@ -160,41 +135,56 @@ automate_bureau_planet = {
 			}
 		}
 
-		15 = {
+		13 = {
 			building = building_xeno_zoo
-			available = { has_designation = col_bureau }
+			available = { has_designation = col_bureau_spiritualist }
 		}
 
-		16 = {
+		14 = {
 			building = building_betharian_power_plant
-			available = { has_designation = col_bureau }
+			available = { has_designation = col_bureau_spiritualist }
 		}
 
-		17 = {
+		15 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		18 = {
+		16 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		19 = {
+		17 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		20 = {
-			building = building_bureaucratic_1
+		18 = {
+			building = building_temple
 			available = {
-				owner = { bureaucracy_upkeep_affordable = yes }
-				NOR = {
-					has_available_jobs = bureaucrat
-					has_available_jobs = manager
+				owner = {
+					temple_upkeep_affordable = yes
+					is_death_cult_empire = no
 				}
+				NOT = { has_available_jobs = priest }
 				num_buildings = {
-					type = building_bureaucratic_1
+					type = building_temple
+					value < 8
+				}
+			}
+		}
+
+		19 = {
+			building = building_sacrificial_temple_1
+			available = {
+				owner = {
+					temple_upkeep_affordable = yes
+					is_death_cult_empire = yes
+				}
+				NOT = { has_available_jobs = death_priest }
+				num_buildings = {
+					type = building_sacrificial_temple_1
 					value < 8
 				}
 			}

@@ -1,8 +1,8 @@
 automate_bureau_planet_machine = {
 	available = {
 		OR = {
-			has_designation = col_bureau
-			has_designation = col_habitat_bureau
+			has_designation = col_bureau_machine
+			has_designation = col_habitat_bureau_machine
 		}
 		owner = { is_machine_empire = yes }
 	}
@@ -39,7 +39,7 @@ automate_bureau_planet_machine = {
 		4 = {
 			building = building_drone_storage
 			available = {
-				has_designation = col_habitat_bureau
+				has_designation = col_habitat_bureau_machine
 				owner = { drone_storage_upkeep_affordable = yes }
 				free_housing < -3
 			}
@@ -48,9 +48,7 @@ automate_bureau_planet_machine = {
 		5 = {
 			building = building_alpha_hub
 			available = {
-				owner = {
-					embassy_upkeep_affordable = yes # same upkeep
-				}
+				owner = { embassy_upkeep_affordable = yes } # same upkeep
 			}
 		}
 
@@ -86,7 +84,7 @@ automate_bureau_planet_machine = {
 
 		8 = {
 			building = building_betharian_power_plant
-			available = { has_designation = col_bureau }
+			available = { has_designation = col_bureau_machine }
 		}
 
 		9 = {

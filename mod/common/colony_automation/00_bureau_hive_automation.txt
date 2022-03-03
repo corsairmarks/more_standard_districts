@@ -1,8 +1,8 @@
 automate_bureau_planet_hive = {
 	available = {
 		OR = {
-			has_designation = col_bureau
-			has_designation = col_habitat_bureau
+			has_designation = col_bureau_hive
+			has_designation = col_habitat_bureau_hive
 		}
 		owner = { is_hive_empire = yes }
 	}
@@ -55,7 +55,7 @@ automate_bureau_planet_hive = {
 		6 = {
 			building = building_hive_warren
 			available = {
-				has_designation = col_habitat_bureau
+				has_designation = col_habitat_bureau_hive
 				owner = { hive_warren_upkeep_affordable = yes }
 				free_housing < -3
 			}
@@ -64,9 +64,7 @@ automate_bureau_planet_hive = {
 		7 = {
 			building = building_autocurating_vault
 			available = {
-				owner = {
-					embassy_upkeep_affordable = yes # same upkeep
-				}
+				owner = { embassy_upkeep_affordable = yes } # same upkeep
 			}
 		}
 
@@ -85,9 +83,7 @@ automate_bureau_planet_hive = {
 		9 = {
 			building = building_galactic_memorial_1
 			available = {
-				owner = {
-					is_memorialist_empire = yes
-				}
+				owner = { is_memorialist_empire = yes }
 				NOR = {
 					has_building = building_galactic_memorial_1
 					has_building = building_galactic_memorial_2
@@ -98,7 +94,7 @@ automate_bureau_planet_hive = {
 
 		10 = {
 			building = building_betharian_power_plant
-			available = { has_designation = col_bureau }
+			available = { has_designation = col_bureau_hive }
 		}
 
 		11 = {
