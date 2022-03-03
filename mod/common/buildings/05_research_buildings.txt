@@ -96,33 +96,6 @@ building_research_lab_1 = {
 		}
 		text = job_calculator_effect_desc
 	}
-
-	# This is an important building for future research upgrades.
-	ai_resource_production = {
-		physics_research = 4
-		society_research = 4
-		engineering_research = 4
-		trigger = { always = yes }
-	}
-	# Overvalue this building if this planet is a major source of research.
-	ai_resource_production = {
-		physics_research = 4
-		society_research = 4
-		engineering_research = 4
-		trigger = { has_research_exceeding = { THRESHOLD = 8 } }
-	}
-	ai_resource_production = {
-		physics_research = 4
-		society_research = 4
-		engineering_research = 4
-		trigger = { has_research_exceeding = { THRESHOLD = 16 } }
-	}
-	ai_resource_production = {
-		physics_research = 4
-		society_research = 4
-		engineering_research = 4
-		trigger = { has_research_exceeding = { THRESHOLD = 24 } }
-	}
 }
 
 building_research_lab_2 = {
@@ -223,33 +196,6 @@ building_research_lab_2 = {
 			owner = { is_machine_empire = yes }
 		}
 		text = job_calculator_effect_desc
-	}
-
-	# This is an important building for future research upgrades.
-	ai_resource_production = {
-		physics_research = 8
-		society_research = 8
-		engineering_research = 8
-		trigger = { always = yes }
-	}
-	# Overvalue this building if this planet is a major source of research.
-	ai_resource_production = {
-		physics_research = 8
-		society_research = 8
-		engineering_research = 8
-		trigger = { has_research_exceeding = { THRESHOLD = 8 } }
-	}
-	ai_resource_production = {
-		physics_research = 8
-		society_research = 8
-		engineering_research = 8
-		trigger = { has_research_exceeding = { THRESHOLD = 16 } }
-	}
-	ai_resource_production = {
-		physics_research = 8
-		society_research = 8
-		engineering_research = 8
-		trigger = { has_research_exceeding = { THRESHOLD = 24 } }
 	}
 }
 
@@ -389,33 +335,6 @@ building_research_lab_3 = {
 			owner = { is_machine_empire = yes }
 		}
 		text = job_calculator_effect_desc
-	}
-
-	# This is an important building for research.
-	ai_resource_production = {
-		physics_research = 16
-		society_research = 16
-		engineering_research = 16
-		trigger = { always = yes }
-	}
-	# Overvalue this building if this planet is a major source of research.
-	ai_resource_production = {
-		physics_research = 16
-		society_research = 16
-		engineering_research = 16
-		trigger = { has_research_exceeding = { THRESHOLD = 16 } }
-	}
-	ai_resource_production = {
-		physics_research = 16
-		society_research = 16
-		engineering_research = 16
-		trigger = { has_research_exceeding = { THRESHOLD = 32 } }
-	}
-	ai_resource_production = {
-		physics_research = 16
-		society_research = 16
-		engineering_research = 16
-		trigger = { has_research_exceeding = { THRESHOLD = 48 } }
 	}
 }
 
