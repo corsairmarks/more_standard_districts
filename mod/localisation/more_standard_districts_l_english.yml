@@ -32,7 +32,7 @@
  district_standard_cm_hab_admin_desc: "Stacks of tightly-packed habitat offices house $job_bureaucrat_plural$ who ceaselessly oversee governmental functions on the habitat and beyond."
  district_standard_cm_hab_admin_religious: "$district_standard_cm_admin_religious$"
  district_standard_cm_hab_admin_religious_plural: "$district_standard_cm_admin_religious_plural$"
- district_standard_cm_hab_admin_religious_desc: "Land reserved exclusively for the church, to aid them in caring for our spiritual well-being."
+ district_standard_cm_hab_admin_religious_desc: "Habitat sectors reserved exclusively for the church, to aid them in caring for our spiritual well-being."
  district_standard_cm_hab_admin_hive: "$district_standard_cm_admin_hive$"
  district_standard_cm_hab_admin_hive_plural: "$district_standard_cm_admin_hive_plural$"
  district_standard_cm_hab_admin_hive_desc: "Banks of vats and tanks designed to house the Hive Mind's meganeurons safely in the cramped conditions of a space habitat."
