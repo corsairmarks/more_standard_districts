@@ -27,6 +27,7 @@ district_standard_cm_commercial = {
 	convert_to = {
 		district_generator
 		district_generator_uncapped
+		district_arcology_housing # district_arcology_commercial would require my trade mod
 	}
 	resources = {
 		category = planet_districts
@@ -254,6 +255,9 @@ district_standard_cm_leisure = {
 	convert_to = {
 		district_generator
 		district_generator_uncapped
+		district_arcology_leisure
+		district_arcology_organic_housing
+		district_rw_generator
 	}
 	resources = {
 		category = planet_districts
@@ -366,6 +370,13 @@ district_standard_cm_science = {
 	potential = {
 		msd_uses_regular_district_set = yes
 	}
+	conversion_ratio = 0.5
+	convert_to = {
+		district_generator
+		district_generator_uncapped
+		district_arcology_housing
+		district_rw_science
+	}
 	resources = {
 		category = planet_districts
 		cost = {
@@ -452,6 +463,8 @@ district_standard_cm_admin = {
 		district_standard_cm_admin_religious
 		district_standard_cm_admin_hive
 		district_standard_cm_admin_machine
+		district_arcology_administrative
+		district_rw_city
 	}
 	resources = {
 		category = planet_districts
@@ -517,6 +530,8 @@ district_standard_cm_admin_religious = {
 		district_standard_cm_admin
 		district_standard_cm_admin_hive
 		district_standard_cm_admin_machine
+		district_arcology_religious
+		district_rw_city
 	}
 	resources = {
 		category = planet_districts
@@ -606,6 +621,7 @@ district_standard_cm_admin_hive = {
 		district_standard_cm_admin
 		district_standard_cm_admin_religious
 		district_standard_cm_admin_machine
+		district_rw_hive
 	}
 	resources = {
 		category = planet_districts
@@ -671,6 +687,7 @@ district_standard_cm_admin_machine = {
 		district_standard_cm_admin
 		district_standard_cm_admin_religious
 		district_standard_cm_admin_hive
+		district_rw_nexus
 	}
 	resources = {
 		category = planet_districts
