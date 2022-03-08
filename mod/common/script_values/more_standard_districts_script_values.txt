@@ -112,7 +112,18 @@ col_unity_base_dynamic_weight = {
 	modifier = {
 		add = value:msd_job_dynamic_weight|JOB|death_chronicler|
 		exists = owner
-		owner = { is_memorialist_empire = yes }
+		owner = {
+			is_gestalt = no
+			is_memorialist_empire = yes
+		}
+	}
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|chronicle_drone|
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_memorialist_empire = yes
+		}
 	}
 	modifier = {
 		add = 2
@@ -252,11 +263,6 @@ col_unity_composite_dynamic_weight_hive = {
 	add = value:col_unity_base_dynamic_weight
 	add = value:msd_job_dynamic_weight|JOB|synapse_drone|
 	modifier = {
-		add = value:msd_job_dynamic_weight|JOB|chronicle_drone|
-		exists = owner
-		owner = { is_memorialist_empire = yes }
-	}
-	modifier = {
 		add = value:msd_building_dynamic_weight|BUILDING|building_hive_node|
 		has_building = building_hive_node
 	}
@@ -284,11 +290,6 @@ col_unity_composite_dynamic_weight_machine = {
 	add = value:col_unity_base_dynamic_weight
 	add = value:msd_job_dynamic_weight|JOB|coordinator|
 	add = value:msd_job_dynamic_weight|JOB|evaluator|
-	modifier = {
-		add = value:msd_job_dynamic_weight|JOB|chronicle_drone|
-		exists = owner
-		owner = { is_memorialist_empire = yes }
-	}
 	modifier = {
 		add = value:msd_building_dynamic_weight|BUILDING|building_uplink_node|
 		has_building = building_uplink_node
