@@ -138,3 +138,17 @@ msd_uses_regular_district_set = {
 	msd_uses_planetary_diversity_special_district_set = no
 	msd_uses_gigastructural_engineering_gigastructure_district_set = no
 }
+
+# this = planet
+msd_has_any_science_district_or_buildings = {
+	OR = {
+		has_district = district_hab_science
+		has_district = district_rw_science
+		has_district = district_standard_cm_science
+		has_building = building_research_lab_1
+		has_building = building_research_lab_2
+		has_building = building_research_lab_3
+		has_building = building_institute
+		has_building = building_supercomputer
+	}
+}
