@@ -9,7 +9,7 @@ Requested by [url=https://steamcommunity.com/profiles/76561197969740903]Mad Cow[
 Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, and Military Districts are now available for regular colonies. Administrative ([i]et al[/i]) and Military Districts are now also available for construction on habitats. These new districts are considered "city" districts similar to Industrial Districts. In addition, this mod updates Research Labs to function similarly to how Industrial Districts are enhanced (the jobs provided by the district, really) by the Alloy Foundries or Civilian Industries buildings:
 [list]
 [*]maximum one per planet
-[*]all tiers provide exactly 2 jobs
+[*]all tiers provide 1 head researcher or 2 gestalt researcher jobs
 [*]tier 2 increases research output by 1 point (per field) and increases researcher upkeep
 [*]tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
 [/list]
@@ -28,9 +28,10 @@ All districts respond to changes in civics that alter jobs. For example, Leisure
 [h2]Compatibility[/h2]
 Although the districts added by this mod seem similar to existing districts, they are created as new districts so as to not present a compatibility challenge by overwriting many of the district files. The district changes should work with other mods that add or alter districts.
 
-Overwrites the three built-in Research Labs ([b]building_research_lab_1[/b], [b]building_research_lab_2[/b], and [b]building_research_lab_3[/b]). To implement the new Research Lab job bonuses, this mod overwrites the economic category for researchers ([b]planet_researchers[/b]) in order to generate the [b]_add[/b] modifiers for research production (previously only [b]_mult[/b] was available).
+To implement the new research support building (planetary Archives) job bonuses, this mod overwrites the economic category for researchers ([b]planet_researchers[/b]) in order to generate the [b]_add[/b] modifiers for research production (previously only [b]_mult[/b] was available).
 
-Also overwrites three flavors of Tech-World build automation (excluding ecumenopoleis) to use the new Research Districts and enabling the AI to understand the Research Lab building changes. Unification Center and Fortress World build automation is similarly overwritten. Thus this mod is incompatible with other mods that also update these build plans. Commonly this is AI mods - whichever mod loads _last_ will use its version of these files.
+Also overwrites all types of Tech-World build automation to use the new Research Districts and include the new research support building.  Unification Center and Fortress World build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these build plans.  Commonly this is AI mods - whichever mod loads [i]last[/i] will use its version of these files.
+
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [url=https://steamcommunity.com/workshop/filedetails/?id=2641081470]Enhanced Trade Districts and Designations[/url]. Enjoy building commercial enterprises on practically any world.
 
@@ -46,9 +47,6 @@ In order to see and interact with the new district types, it is necessary to use
 Overriding a game object causes the game to write a line to its error.log file, expect to see 15 errors like these (abbreviated for clarity):
 [code]
 [00:24:45][game.h:147]: Obj w/key: planet_researchers already exists, using: 01_moresd_econ_overrides.txt line: 1
-[00:24:50][game.h:147]: Obj w/key: building_research_lab_1 already exists, using: 15_msd_bldg_overrides.txt line: 4
-[00:24:50][game.h:147]: Obj w/key: building_research_lab_2 already exists, using: 15_msd_bldg_overrides.txt line: 101
-[00:24:50][game.h:147]: Obj w/key: building_research_lab_3 already exists, using: 15_msd_bldg_overrides.txt line: 202
 [00:24:50][game.h:147]: Obj w/key: col_research already exists, using: 01_msd_col_overrides.txt line: 6
 [00:24:50][game.h:147]: Obj w/key: col_bureau already exists, using: 01_msd_col_overrides.txt line: 29
 [00:24:50][game.h:147]: Obj w/key: col_bureau_spiritualist already exists, using: 01_msd_col_overrides.txt line: 70

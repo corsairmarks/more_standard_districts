@@ -11,7 +11,7 @@ Requested by [Mad Cow](https://steamcommunity.com/profiles/76561197969740903).
 Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, and Military Districts are now available for regular colonies.  Administrative (_et al_) and Military Districts are now also available for construction on habitats.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod adds a new research support building which functions similarly to how Industrial Districts are enhanced (the jobs provided by the district, really) by the Alloy Foundries or Civilian Industries buildings:
 
 * maximum one per planet
-* all tiers provide exactly head researcher/2 gestalt researcher jobs
+* all tiers provide 1 head researcher or 2 gestalt researcher jobs
 * tier 2 increases research output by 1 point (per field) and increases researcher upkeep
 * tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
 
