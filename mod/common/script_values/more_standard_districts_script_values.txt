@@ -56,6 +56,46 @@ msd_building_dynamic_weight_tier_3 = {
 # this = planet
 col_science_composite_dynamic_weight = {
 	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|researcher|
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|head_researcher|
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|dimensional_portal_researcher|
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|space_time_anomaly_researcher|
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|dimensional_portal_researcher_gestalt|
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|space_time_anomaly_researcher_gestalt|
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|brain_drone|
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	modifier = {
+		add = value:msd_job_dynamic_weight|JOB|calculator|
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	modifier = {
 		add = value:msd_building_dynamic_weight|BUILDING|building_research_lab_1|
 		has_building = building_research_lab_1
 	}
@@ -66,6 +106,18 @@ col_science_composite_dynamic_weight = {
 	modifier = {
 		add = value:msd_building_dynamic_weight_tier_3|BUILDING|building_research_lab_3|
 		has_building = building_research_lab_3
+	}
+	modifier = {
+		add = 2
+		has_building = building_research_support_1
+	}
+	modifier = {
+		add = 4
+		has_building = building_research_support_2
+	}
+	modifier = {
+		add = 6
+		has_building = building_research_support_3
 	}
 	modifier = {
 		add = 5
