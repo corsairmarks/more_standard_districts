@@ -1,32 +1,44 @@
 
-automate_research_machine_planet = {
+automate_ringworld_reseach_hive_planet = {
 	available = {
-		has_designation = col_research
-		owner = { is_machine_empire = yes }
+		has_designation = col_ring_research
+		owner = { has_authority = auth_hive_mind }
 	}
 
 	prio_districts = {
-		district_standard_cm_science
-		district_nexus
+		district_rw_science
 	}
 
 	buildings = {
 		1 = {
-			building = building_machine_capital
+			building = building_hive_capital
 			available = { always = yes }
 		}
 
 		2 = {
-			building = building_machine_assembly_plant
-			available = { owner = { machine_assembly_plant_upkeep_affordable = yes } }
+			building = building_spawning_pool
+			available = {
+				owner = {
+					NAND = {
+						has_origin = origin_necrophage
+						has_trait = trait_necrophage
+						has_valid_civic = civic_hive_devouring_swarm
+					}
+				}
+			}
 		}
 
 		3 = {
+			building = building_clone_vats
+			available = { owner = { has_ascension_perk = ap_engineered_evolution } }
+		}
+
+		4 = {
 			building = building_supercomputer
 			available = { owner = { supercomputer_upkeep_affordable = yes } }
 		}
 
-		4 = {
+		5 = {
 			building = building_research_support_1
 			available = {
 				NOR = {
@@ -37,7 +49,7 @@ automate_research_machine_planet = {
 			}
 		}
 
-		5 = {
+		6 = {
 			building = building_research_lab_1
 			available = {
 				owner = { research_lab_1_upkeep_affordable = yes }
@@ -48,7 +60,18 @@ automate_research_machine_planet = {
 			}
 		}
 
-		6 = {
+		7 = {
+			building = building_necrophage_elevation_chamber
+			available = {
+				owner = {
+					has_origin = origin_necrophage
+					has_trait = trait_necrophage
+					NOT = { has_valid_civic = civic_hive_devouring_swarm }
+				}
+			}
+		}
+
+		8 = {
 			building = building_galactic_memorial_1
 			available = {
 				owner = { is_memorialist_empire = yes }
@@ -60,24 +83,21 @@ automate_research_machine_planet = {
 			}
 		}
 
-		7 = {
-			building = building_gas_extractors
-			available = { always = yes }
-		}
-
-		8 = {
-			building = building_betharian_power_plant
-			available = { always = yes }
-		}
-
 		9 = {
-			building = building_crystal_mines
-			available = { always = yes }
-		}
-
-		10 = {
-			building = building_mote_harvesters
-			available = { always = yes }
+			building = building_refinery
+			available = {
+				owner = {
+					refinery_upkeep_affordable = yes
+					has_monthly_income = {
+						resource = exotic_gases
+						value < 2
+					}
+				}
+				num_buildings = {
+					type = building_refinery
+					value < 3
+				}
+			}
 		}
 
 		11 = {
@@ -87,19 +107,6 @@ automate_research_machine_planet = {
 				num_buildings = {
 					type = building_research_lab_1
 					value < 6
-				}
-			}
-		}
-
-		12 = {
-			building = building_refinery
-			available = {
-				owner = {
-					refinery_upkeep_affordable = yes
-					has_monthly_income = {
-						resource = exotic_gases
-						value < 2
-					}
 				}
 			}
 		}

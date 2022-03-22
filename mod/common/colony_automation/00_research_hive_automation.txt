@@ -40,11 +40,28 @@ automate_research_hive_planet = {
 		}
 
 		5 = {
-			building = building_research_lab_1
-			available = { owner = { research_lab_1_upkeep_affordable = yes } }
+			building = building_research_support_1
+			available = {
+				NOR = {
+					has_building = building_research_support_1
+					has_building = building_research_support_2
+					has_building = building_research_support_3
+				}
+			}
 		}
 
 		6 = {
+			building = building_research_lab_1
+			available = {
+				owner = { research_lab_1_upkeep_affordable = yes }
+				num_buildings = {
+					type = building_research_lab_1
+					value < 2
+				}
+			}
+		}
+
+		7 = {
 			building = building_necrophage_elevation_chamber
 			available = {
 				owner = {
@@ -55,7 +72,7 @@ automate_research_hive_planet = {
 			}
 		}
 
-		7 = {
+		8 = {
 			building = building_galactic_memorial_1
 			available = {
 				owner = { is_memorialist_empire = yes }
@@ -67,59 +84,44 @@ automate_research_hive_planet = {
 			}
 		}
 
-		8 = {
+		9 = {
 			building = building_gas_extractors
 			available = { always = yes }
 		}
 
-		9 = {
+		10 = {
 			building = building_betharian_power_plant
 			available = { always = yes }
 		}
 
-		10 = {
+		11 = {
 			building = building_crystal_mines
 			available = { always = yes }
 		}
 
-		11 = {
+		12 = {
 			building = building_mote_harvesters
 			available = { always = yes }
 		}
 
-		12 = {
+		13 = {
+			building = building_research_lab_1
+			available = {
+				owner = { research_lab_1_upkeep_affordable = yes }
+				num_buildings = {
+					type = building_research_lab_1
+					value < 6
+				}
+			}
+		}
+
+		14 = {
 			building = building_refinery
 			available = {
 				owner = {
 					refinery_upkeep_affordable = yes
 					has_monthly_income = {
 						resource = exotic_gases
-						value < 2
-					}
-				}
-			}
-		}
-
-		13 = {
-			building = building_crystal_plant
-			available = {
-				owner = {
-					crystal_plant_upkeep_affordable = yes
-					has_monthly_income = {
-						resource = rare_crystals
-						value < 2
-					}
-				}
-			}
-		}
-
-		14 = {
-			building = building_chemical_plant
-			available = {
-				owner = {
-					chemical_plant_upkeep_affordable = yes
-					has_monthly_income = {
-						resource = volatile_motes
 						value < 2
 					}
 				}

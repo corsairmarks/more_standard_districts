@@ -1,0 +1,76 @@
+
+automate_habitat_research_hive_planet = {
+	available = {
+		has_designation = col_habitat_research
+		owner = { is_hive_empire = yes }
+	}
+
+	prio_districts = {
+		district_hab_science
+	}
+
+	buildings = {
+		1 = {
+			building = building_hab_capital
+			available = { always = yes }
+		}
+
+		2 = {
+			building = building_spawning_pool
+			available = {
+				owner = {
+					NAND = {
+						has_origin = origin_necrophage
+						has_trait = trait_necrophage
+						has_valid_civic = civic_hive_devouring_swarm
+					}
+				}
+			}
+		}
+
+		3 = {
+			building = building_clone_vats
+			available = { owner = { has_ascension_perk = ap_engineered_evolution } }
+		}
+
+		4 = {
+			building = building_supercomputer
+			available = { owner = { supercomputer_upkeep_affordable = yes } }
+		}
+
+		5 = {
+			building = building_research_support_1
+			available = {
+				NOR = {
+					has_building = building_research_support_1
+					has_building = building_research_support_2
+					has_building = building_research_support_3
+				}
+			}
+		}
+
+		6 = {
+			building = building_hive_warren
+			available = {
+				owner = { hive_warren_upkeep_affordable = yes }
+				free_housing < -3
+			}
+		}
+
+		7 = {
+			building = building_gas_extractors
+			available = { always = yes }
+		}
+
+		8 = {
+			building = building_research_lab_1
+			available = {
+				owner = { research_lab_1_upkeep_affordable = yes }
+				num_buildings = {
+					type = building_research_lab_1
+					value < 6
+				}
+			}
+		}
+	}
+}

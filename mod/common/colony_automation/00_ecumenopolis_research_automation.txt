@@ -1,6 +1,6 @@
-automate_research_planet = {
+automate_ecumenopolis_research_planet = {
 	available = {
-		has_designation = col_research
+		has_designation = col_ecu_research
 		owner = {
 			is_machine_empire = no
 			is_hive_empire = no
@@ -8,8 +8,8 @@ automate_research_planet = {
 	}
 
 	prio_districts = {
-		district_standard_cm_science
-		district_city
+		district_arcology_housing
+		district_arcology_civilian_industry
 	}
 
 	buildings = {
@@ -110,31 +110,11 @@ automate_research_planet = {
 		}
 
 		12 = {
-			building = building_gas_extractors
-			available = { always = yes }
+			building = building_factory_1
+			available = { owner = { factory_1_upkeep_affordable = yes } }
 		}
 
 		13 = {
-			building = building_xeno_zoo
-			available = { always = yes }
-		}
-
-		14 = {
-			building = building_betharian_power_plant
-			available = { always = yes }
-		}
-
-		15 = {
-			building = building_crystal_mines
-			available = { always = yes }
-		}
-
-		16 = {
-			building = building_mote_harvesters
-			available = { always = yes }
-		}
-
-		17 = {
 			building = building_refinery
 			available = {
 				owner = {
@@ -143,6 +123,21 @@ automate_research_planet = {
 						resource = exotic_gases
 						value < 2
 					}
+				}
+				num_buildings = {
+					type = building_refinery
+					value < 3
+				}
+			}
+		}
+
+		14 = {
+			building = building_research_lab_1
+			available = {
+				owner = { research_lab_1_upkeep_affordable = yes }
+				num_buildings = {
+					type = building_research_lab_1
+					value < 6
 				}
 			}
 		}

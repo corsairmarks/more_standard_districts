@@ -1,0 +1,63 @@
+
+automate_habitat_research_machine_planet = {
+	available = {
+		has_designation = col_habitat_research
+		owner = { is_machine_empire = yes }
+	}
+
+	prio_districts = {
+		district_hab_science
+	}
+
+	buildings = {
+		1 = {
+			building = building_hab_capital
+			available = { always = yes }
+		}
+
+		2 = {
+			building = building_machine_assembly_plant
+			available = { owner = { machine_assembly_plant_upkeep_affordable = yes } }
+		}
+
+		3 = {
+			building = building_supercomputer
+			available = { owner = { supercomputer_upkeep_affordable = yes } }
+		}
+
+		4 = {
+			building = building_research_support_1
+			available = {
+				NOR = {
+					has_building = building_research_support_1
+					has_building = building_research_support_2
+					has_building = building_research_support_3
+				}
+			}
+		}
+
+		5 = {
+			building = building_drone_storage
+			available = {
+				owner = { drone_storage_upkeep_affordable = yes }
+				free_housing < -3
+			}
+		}
+
+		6 = {
+			building = building_gas_extractors
+			available = { always = yes }
+		}
+
+		7 = {
+			building = building_research_lab_1
+			available = {
+				owner = { research_lab_1_upkeep_affordable = yes }
+				num_buildings = {
+					type = building_research_lab_1
+					value < 6
+				}
+			}
+		}
+	}
+}
