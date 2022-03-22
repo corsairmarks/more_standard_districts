@@ -8,10 +8,10 @@ Requested by [Mad Cow](https://steamcommunity.com/profiles/76561197969740903).
 
 # Changes
 
-Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, and Military Districts are now available for regular colonies.  Administrative (_et al_) and Military Districts are now also available for construction on habitats.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod updates Research Labs to function similarly to how Industrial Districts are enhanced (the jobs provided by the district, really) by the Alloy Foundries or Civilian Industries buildings:
+Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, and Military Districts are now available for regular colonies.  Administrative (_et al_) and Military Districts are now also available for construction on habitats.  These new districts are considered "city" districts similar to Industrial Districts.  In addition, this mod adds a new research support building which functions similarly to how Industrial Districts are enhanced (the jobs provided by the district, really) by the Alloy Foundries or Civilian Industries buildings:
 
 * maximum one per planet
-* all tiers provide exactly 2 jobs
+* all tiers provide exactly head researcher/2 gestalt researcher jobs
 * tier 2 increases research output by 1 point (per field) and increases researcher upkeep
 * tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
 
@@ -31,9 +31,9 @@ All districts respond to changes in civics that alter jobs.  For example, Leisur
 
 Although the districts added by this mod seem similar to existing districts, they are created as new districts so as to not present a compatibility challenge by overwriting many of the district files.  The district changes should work with other mods that add or alter districts.
 
-Overwrites the three built-in Research Labs (`building_research_lab_1`, `building_research_lab_2`, and `building_research_lab_3`).  To implement the new Research Lab job bonuses, this mod overwrites the economic category for researchers (`planet_researchers`) in order to generate the `_add` modifiers for research production (previously only `_mult` was available).
+To implement the new research support building (planetary Archives) job bonuses, this mod overwrites the economic category for researchers (`planet_researchers`) in order to generate the `_add` modifiers for research production (previously only `_mult` was available).
 
-Also overwrites three flavors of Tech-World build automation (excluding ecumenopoleis) to use the new Research Districts and enabling the AI to understand the Research Lab building changes.  Unification Center and Fortress World build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these build plans.  Commonly this is AI mods - whichever mod loads _last_ will use its version of these files.
+Also overwrites all types of Tech-World build automation to use the new Research Districts and include the new research support building.  Unification Center and Fortress World build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these build plans.  Commonly this is AI mods - whichever mod loads _last_ will use its version of these files.
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/workshop/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.
 
@@ -53,9 +53,6 @@ Overriding a game object causes the game to write a line to its error.log file, 
 
 ```
 [00:24:45][game_singleobjectdatabase.h:147]: Object with key: planet_researchers already exists, using the one at  file: common/economic_categories/01_more_standard_districts_economic_category_overrides.txt line: 1
-[00:24:50][game_singleobjectdatabase.h:147]: Object with key: building_research_lab_1 already exists, using the one at  file: common/buildings/15_more_standard_districts_research_building_overrides.txt line: 4
-[00:24:50][game_singleobjectdatabase.h:147]: Object with key: building_research_lab_2 already exists, using the one at  file: common/buildings/15_more_standard_districts_research_building_overrides.txt line: 101
-[00:24:50][game_singleobjectdatabase.h:147]: Object with key: building_research_lab_3 already exists, using the one at  file: common/buildings/15_more_standard_districts_research_building_overrides.txt line: 202
 [00:24:50][game_singleobjectdatabase.h:147]: Object with key: col_research already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 6
 [00:24:50][game_singleobjectdatabase.h:147]: Object with key: col_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 29
 [00:24:50][game_singleobjectdatabase.h:147]: Object with key: col_bureau_spiritualist already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 70
@@ -102,6 +99,9 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * All colony automation overwritten by this mod now prioritizes the Posthumous Employment Center over Robot Assembly Plants
     * Use the new `script_values` feature to dynamically weight the bureau (unity) colony type based on how many unity jobs, buildings, and districts are present
     * Add compatibility for Gigastructural Engineering: districts from this mod are prohibited on gigastructures, habitat-specific districts from this mod are allowed on Interstellar habitats and Gas Giant Habitats
+* 3.1.0 Allow an uncapped amount of Research Labs to be built
+    * Previous "per researcher" bonus from Research Labs is now part of a new building series (Planetary Archives)
+    * All research-related automation plans are now overwritten to account for this new building
 
 ## Source Code
 
