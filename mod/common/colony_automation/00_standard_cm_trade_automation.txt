@@ -1,70 +1,56 @@
 automate_standard_cm_trade_planet = {
+	category = "planet_automation_designation_construction"
 	available = {
 		has_designation = col_standard_cm_trade
 	}
-
 	prio_districts = {
 		district_standard_cm_commercial
 		district_city
 	}
-
 	buildings = {
 		1 = {
 			building = building_capital
-			available = { always = yes }
+			available = {
+				msd_uses_district_set_habitat = no
+				owner = {
+					is_hive_empire = no
+					is_machine_empire = no
+				}
+			}
+		}
+
+		1 = {
+			building = building_hive_capital
+			available = {
+				msd_uses_district_set_habitat = no
+				owner = { is_hive_empire = yes }
+			}
+		}
+
+		1 = {
+			building = building_machine_capital
+			available = {
+				msd_uses_district_set_habitat = no
+				owner = { is_machine_empire = yes }
+			}
+		}
+
+		1 = {
+			building = building_hab_capital
+			available = { msd_uses_district_set_habitat = yes }
 		}
 
 		2 = {
-			building = building_clone_vats
-			available = { owner = { has_ascension_perk = ap_engineered_evolution } }
-		}
-
-		3 = {
-			building = building_posthumous_employment_center
-			available = { owner = { has_valid_civic = civic_permanent_employment } }
-		}
-
-		4 = {
-			building = building_robot_assembly_plant
-			available = {
-				owner = {
-					robot_assembly_plant_upkeep_affordable = yes
-					NOR = {
-						has_policy_flag = robots_outlawed
-						has_ascension_perk = ap_engineered_evolution
-						has_valid_civic = civic_permanent_employment
-					}
-				}
-			}
-		}
-
-		5 = {
-			building = building_necrophage_elevation_chamber
-			available = {
-				owner = {
-					has_origin = origin_necrophage
-					has_trait = trait_necrophage
-					NOT = { has_valid_civic = civic_fanatic_purifiers }
-				}
-			}
-		}
-
-		6 = {
 			building = building_galactic_stock_exchange
 			available = { owner = { galactic_stock_exchange_upkeep_affordable = yes } }
 		}
 
-		7 = {
+		3 = {
 			building = building_nuumismatic_shrine
 			available = { owner = { has_country_flag = nuumismatic_shrine } }
 		}
 
-		8 = {
-			building = building_psi_corps
-			available = { owner = { has_ascension_perk = ap_mind_over_matter } }
-		}
-
-		9 = {
+		4 = {
 			building = building_galactic_memorial_1
 			available = {
 				owner = { is_memorialist_empire = yes }
@@ -76,37 +62,32 @@ automate_standard_cm_trade_planet = {
 			}
 		}
 
-		10 = {
+		5 = {
 			building = building_xeno_zoo
-			available = { always = yes }
 		}
 
-		11 = {
+		6 = {
 			building = building_crystal_mines
-			available = { always = yes }
 		}
 
-		12 = {
+		7 = {
 			building = building_betharian_power_plant
-			available = { always = yes }
 		}
 
-		13 = {
+		8 = {
 			building = building_mote_harvesters
-			available = { always = yes }
 		}
 
-		14 = {
+		9 = {
 			building = building_gas_extractors
-			available = { always = yes }
 		}
 
-		15 = {
+		10 = {
 			building = building_dread_encampment
 			available = { owner = { has_valid_civic = civic_reanimated_armies } }
 		}
 
-		16 = {
+		10 = {
 			building = building_military_academy
 			available = {
 				owner = {
@@ -117,7 +98,7 @@ automate_standard_cm_trade_planet = {
 			}
 		}
 
-		17 = {
+		11 = {
 			building = building_crystal_plant
 			available = {
 				owner = {
@@ -130,7 +111,7 @@ automate_standard_cm_trade_planet = {
 			}
 		}
 
-		18 = {
+		12 = {
 			building = building_commercial_zone
 			available = { owner = { commercial_zone_upkeep_affordable = yes } }
 		}
