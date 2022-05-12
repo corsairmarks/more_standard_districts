@@ -42,14 +42,14 @@ msd_building_dynamic_weight = {
 # this = planet
 msd_building_dynamic_weight_tier_2 = {
 	add = value:msd_building_dynamic_weight|BUILDING|$BUILDING$|
-	mult = 2.5
+	mult = 2
 }
 
 # value:msd_building_dynamic_weight_tier_3|BUILDING|building_bureaucratic_3|
 # this = planet
 msd_building_dynamic_weight_tier_3 = {
 	add = value:msd_building_dynamic_weight|BUILDING|$BUILDING$|
-	mult = 5
+	mult = 4
 }
 
 # adds weight based on science-related buildings, districts, and employed Pops for regular planets
