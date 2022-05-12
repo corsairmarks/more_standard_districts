@@ -17,11 +17,23 @@ col_research = {
 		planet_researchers_upkeep_mult = -0.2
 	}
 	weight_modifier = {
+		base = 1
 		modifier = {
 			add = 5
 			has_designation = col_research
 		}
 		modifier = { add = value:col_science_composite_dynamic_weight }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "research"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
 	}
 }
 
@@ -64,6 +76,22 @@ col_bureau = {
 			has_designation = col_bureau
 		}
 		modifier = { add = value:col_unity_composite_dynamic_weight }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "unity"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = { has_sector_focus = "unity" }
+		}
 	}
 }
 
@@ -105,6 +133,22 @@ col_bureau_spiritualist = {
 			has_designation = col_bureau_spiritualist
 		}
 		modifier = { add = value:col_unity_composite_dynamic_weight_spiritualist }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "unity"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = { has_sector_focus = "unity" }
+		}
 	}
 }
 
@@ -135,6 +179,22 @@ col_bureau_hive = {
 			has_designation = col_bureau_hive
 		}
 		modifier = { add = value:col_unity_composite_dynamic_weight_hive }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "unity"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = { has_sector_focus = "unity" }
+		}
 	}
 }
 
@@ -165,6 +225,22 @@ col_bureau_machine = {
 			has_designation = col_bureau_machine
 		}
 		modifier = { add = value:col_unity_composite_dynamic_weight_machine }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "unity"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = { has_sector_focus = "unity" }
+		}
 	}
 }
 
@@ -192,6 +268,22 @@ col_habitat_bureau = {
 			has_designation = col_habitat_bureau
 		}
 		modifier = { add = value:col_unity_composite_dynamic_weight }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "unity"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = { has_sector_focus = "unity" }
+		}
 	}
 }
 
@@ -218,6 +310,22 @@ col_habitat_bureau_spiritualist = {
 			has_designation = col_habitat_bureau_spiritualist
 		}
 		modifier = { add = value:col_unity_composite_dynamic_weight_spiritualist }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "unity"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = { has_sector_focus = "unity" }
+		}
 	}
 }
 
@@ -241,6 +349,22 @@ col_habitat_bureau_hive = {
 			has_designation = col_habitat_bureau_hive
 		}
 		modifier = { add = value:col_unity_composite_dynamic_weight_hive }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "unity"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = { has_sector_focus = "unity" }
+		}
 	}
 }
 
@@ -264,6 +388,22 @@ col_habitat_bureau_machine = {
 			has_designation = col_habitat_bureau_machine
 		}
 		modifier = { add = value:col_unity_composite_dynamic_weight_machine }
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "unity"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = { has_sector_focus = "unity" }
+		}
 	}
 }
 
@@ -272,10 +412,6 @@ col_fortress = {
 	icon = GFX_colony_type_fortress
 	potential = {
 		exists = owner
-		NOR = {
-			uses_district_set = machine_world
-			uses_district_set = hive_world
-		}
 		msd_uses_district_set_city_world = no
 		msd_uses_district_set_habitat = no
 		msd_uses_district_set_ring_world = no
@@ -351,6 +487,11 @@ col_fortress = {
 				value >= 2
 			}
 		}
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = { has_any_sector_focus = yes }
+		}
 	}
 }
 
@@ -421,6 +562,11 @@ col_habitat_fortress = {
 				type = building_fortress
 				value >= 4
 			}
+		}
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = { has_any_sector_focus = yes }
 		}
 	}
 }
