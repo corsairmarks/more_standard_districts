@@ -6,6 +6,7 @@
 # this = planet
 # THRESHOLD = integer
 has_research_exceeding = {
+	optimize_memory
 	OR = {
 		planet_resource_compare = {
 			resource = physics_research
@@ -27,6 +28,7 @@ has_research_exceeding = {
 
 # this = planet
 msd_uses_planetary_diversity_special_district_set = {
+	optimize_memory
 	OR = {
 		uses_district_set = pdarchive
 		uses_district_set = pdpalacearc
@@ -46,6 +48,7 @@ msd_uses_planetary_diversity_special_district_set = {
 
 # this = planet
 msd_uses_planetary_diversity_non_research_district_set = {
+	optimize_memory
 	OR = {
 		uses_district_set = pdarchive
 		uses_district_set = pdpalacearc
@@ -61,6 +64,7 @@ msd_uses_planetary_diversity_non_research_district_set = {
 
 # this = planet
 msd_uses_planetary_diversity_arcology_district_set = {
+	optimize_memory
 	OR = {
 		uses_district_set = pdecocity
 		uses_district_set = pdpalacearc
@@ -73,6 +77,7 @@ msd_uses_planetary_diversity_arcology_district_set = {
 
 # this = planet
 msd_uses_gigastructural_engineering_habitat_district_set = {
+	optimize_memory
 	OR = {
 		uses_district_set = giga_habitat
 		has_planet_flag = giga_interstellar_hab
@@ -82,6 +87,7 @@ msd_uses_gigastructural_engineering_habitat_district_set = {
 
 # this = planet
 msd_uses_gigastructural_engineering_ring_world_district_set = {
+	optimize_memory
 	OR = {
 		uses_district_set = maginot_ringworld_districts
 		uses_district_set = penrose_ring
@@ -93,6 +99,7 @@ msd_uses_gigastructural_engineering_ring_world_district_set = {
 
 # this = planet
 msd_uses_gigastructural_engineering_gigastructure_district_set = {
+	optimize_memory
 	OR = {
 		uses_district_set = giga_alderson
 		uses_district_set = giga_birch
@@ -107,6 +114,7 @@ msd_uses_gigastructural_engineering_gigastructure_district_set = {
 
 # this = planet
 msd_uses_district_set_city_world = {
+	optimize_memory
 	OR = {
 		uses_district_set = city_world
 		msd_uses_planetary_diversity_arcology_district_set = yes
@@ -115,6 +123,7 @@ msd_uses_district_set_city_world = {
 
 # this = planet
 msd_uses_district_set_habitat = {
+	optimize_memory
 	OR = {
 		uses_district_set = habitat
 		uses_district_set = pdplanethab
@@ -124,6 +133,7 @@ msd_uses_district_set_habitat = {
 
 # this = planet
 msd_uses_district_set_ring_world = {
+	optimize_memory
 	OR = {
 		uses_district_set = ring_world # includes PD exotic rings
 		msd_uses_gigastructural_engineering_ring_world_district_set = yes
@@ -132,6 +142,7 @@ msd_uses_district_set_ring_world = {
 
 # this = planet
 msd_uses_regular_district_set = {
+	optimize_memory
 	msd_uses_district_set_city_world = no
 	msd_uses_district_set_habitat = no
 	msd_uses_district_set_ring_world = no
@@ -141,6 +152,7 @@ msd_uses_regular_district_set = {
 
 # this = planet
 msd_has_any_science_district_or_buildings = {
+	optimize_memory
 	OR = {
 		has_district = district_hab_science
 		has_district = district_rw_science
