@@ -13,6 +13,7 @@ col_standard_cm_trade = {
 		msd_uses_district_set_habitat = no
 		msd_uses_district_set_ring_world = no
 		msd_uses_gigastructural_engineering_gigastructure_district_set = no
+		NOT = { uses_district_set = shattered_ring_world }
 		# intentionally allows PD special
 		is_special_colony_type = no
 	}
