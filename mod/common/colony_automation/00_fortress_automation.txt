@@ -8,6 +8,7 @@ automate_fortress_planet = {
 	}
 	prio_districts = {
 		district_standard_cm_military
+		district_standard_cm_hab_military
 	}
 	buildings = {
 		1 = {
