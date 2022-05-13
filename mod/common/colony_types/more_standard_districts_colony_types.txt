@@ -23,239 +23,14 @@ col_standard_cm_trade = {
 		planet_district_standard_cm_commercial_build_speed_mult = 0.25
 		trade_value_mult = 0.2
 	}
-
 	triggered_planet_modifier = {
-		potential = { solar_system = { has_trade_route = yes } }
-		modifier = {
-			trade_value_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = {
-					count_starbase_modules = {
-						count = 1
-						type = trading_hub
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = {
-					count_starbase_modules = {
-						count = 2
-						type = trading_hub
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = {
-					count_starbase_modules = {
-						count = 3
-						type = trading_hub
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 3
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = {
-					count_starbase_modules = {
-						count = 4
-						type = trading_hub
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = {
-					count_starbase_modules = {
-						count = 5
-						type = trading_hub
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = {
-					count_starbase_modules = {
-						count >= 6
-						type = trading_hub
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 6
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = { has_starbase_building = offworld_trading_company }
-			}
-		}
-		modifier = {
-			trade_value_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = { has_starbase_building = trader_proxy_office }
-			}
-		}
-		modifier = {
-			trade_value_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			solar_system = {
-				exists = starbase
-				starbase = { has_starbase_building = transit_hub }
-			}
-		}
-		modifier = {
-			trade_value_add = 2
-		}
+		potential = { always = yes }
+		trade_value_add = 1
+		mult = value:msd_trade_colony_bonus_trade
 	}
 	weight_modifier = {
 		modifier = {
-			add = 1
-			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
-			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
-			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			num_free_districts = { type = district_standard_cm_commercial value >= @free_districts_low_threshold }
-		}
-		modifier = {
-			add = 3
-			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
-			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
-			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			num_free_districts = { type = district_standard_cm_commercial value >= @free_districts_medium_threshold }
-		}
-		modifier = {
-			add = 1
-			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
-			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
-			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			num_free_districts = { type = district_srw_commercial value >= @free_districts_low_threshold }
-		}
-		modifier = {
-			add = 3
-			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
-			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
-			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			num_free_districts = { type = district_srw_commercial value >= @free_districts_medium_threshold }
-		}
-		modifier = {
-			add = 3
-			has_designation = col_standard_cm_trade
-		}
-		modifier = {
-			factor = 1.25
-			has_designation = col_city
-		}
-		modifier = {
-			add = 3
-			num_buildings = {
-				type = building_commercial_zone
-				value > 2
-			}
-		}
-		modifier = {
-			add = 5
-			num_buildings = {
-				type = building_commercial_zone
-				value > 4
-			}
-		}
-		modifier = {
-			add = 3
-			num_buildings = {
-				type = building_commercial_megaplex
-				value > 1
-			}
-		}
-		modifier = {
-			add = 5
-			num_buildings = {
-				type = building_commercial_megaplex
-				value > 2
-			}
-		}
-		modifier = {
-			add = 3
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_merchant_guilds
-					has_valid_civic = civic_corporate_dominion
-					is_megacorp = yes
-				}
-			}
-		}
-		modifier = {
-			add = 5
-			has_building = building_galactic_stock_exchange
-		}
-		modifier = {
-			add = 5
-			has_building = building_nuumismatic_shrine
-		}
-		modifier = {
-			add = 3
-			num_districts = {
-				type = district_standard_cm_commercial
-				value >= @built_districts_low_threshold
-			}
-		}
-		modifier = {
-			add = 6
-			num_districts = {
-				type = district_standard_cm_commercial
-				value >= @built_districts_medium_threshold
-			}
+			add = value:tde_col_standard_cm_trade_weight_multiplier
 		}
 	}
 }
@@ -266,7 +41,7 @@ col_standard_cm_leisure = {
 		exists = owner
 		owner = {
 			OR = {
-				is_gestalt = no
+				is_regular_empire = yes
 				has_valid_civic = civic_machine_servitor
 			}
 		}
@@ -274,10 +49,24 @@ col_standard_cm_leisure = {
 		is_special_colony_type = no
 	}
 	planet_modifier = {
+		pop_happiness = 0.10
+		planet_district_standard_cm_leisure_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
 		planet_building_holo_theatres_build_speed_mult = 0.25
 		planet_building_hyper_entertainment_forum_build_speed_mult = 0.25
-		planet_district_standard_cm_leisure_build_speed_mult = 0.25
-		pop_happiness = 0.10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_machine_servitor }
+		}
+		planet_building_organic_sanctuary_build_speed_mult = 0.25
+		planet_building_organic_paradise_build_speed_mult = 0.25
 	}
 	weight_modifier = {
 		modifier = {
