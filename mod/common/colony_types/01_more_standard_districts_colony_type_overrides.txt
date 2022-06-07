@@ -412,11 +412,7 @@ col_fortress = {
 	icon = GFX_colony_type_fortress
 	potential = {
 		exists = owner
-		msd_uses_district_set_city_world = no
-		msd_uses_district_set_habitat = no
-		msd_uses_district_set_ring_world = no
-		msd_uses_planetary_diversity_special_district_set = no
-		msd_uses_gigastructural_engineering_gigastructure_district_set = no
+		msd_uses_regular_district_set = yes
 		is_special_colony_type = no
 	}
 	planet_modifier = {
