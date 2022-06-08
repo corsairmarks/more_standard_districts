@@ -112,6 +112,7 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Update support for Planetary Diversity and Gigastructural Engineering
     * Reduce the amount of free MegaCorp job swaps; post-unity-rework they are much more powerful than in the past
     * Simplify the Merchant/Executive/Manager jobs swaps for commercial districts - things got a little out of hand
+    * Add custom description to the trade district, describing the job shifts
 
 ## Source Code
 

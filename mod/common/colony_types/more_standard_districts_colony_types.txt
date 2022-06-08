@@ -17,6 +17,7 @@ col_standard_cm_trade = {
 		# intentionally allows PD special
 		is_special_colony_type = no
 	}
+	custom_tooltip = col_standard_cm_trade_custom
 	planet_modifier = {
 		planet_building_commercial_zone_build_speed_mult = 0.25
 		planet_building_commercial_megaplex_build_speed_mult = 0.25

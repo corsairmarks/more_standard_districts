@@ -1,6 +1,7 @@
 ﻿l_polish:
  col_standard_cm_trade: "Świat handlowy"
  col_standard_cm_trade_desc: "Świat przeznaczony dla przedsiębiorstw handlowych\n\nPoprawia efekty §Y$district_standard_cm_commercial_plural$§!"
+ col_standard_cm_trade_custom: "§Y$district_standard_cm_commercial_plural$§! przesuną jedno miejsce pracy z $job_clerk$ do $job_merchant$, jeśli to możliwe.\n\n"
  col_standard_cm_leisure: "Świat rekreacyjny"
  col_standard_cm_leisure_desc: "Świat pełen atrakcji i miejsc wypoczynkowych"
  building_research_support_1: "Planetary Research Archive"

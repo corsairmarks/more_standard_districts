@@ -1,6 +1,7 @@
 ﻿l_simp_chinese:
  col_standard_cm_trade: "商业世界"
  col_standard_cm_trade_desc: "一充斥各类企业的世界\n\n改善§Y$district_standard_cm_commercial_plural$§!的效果"
+ col_standard_cm_trade_custom: "§Y$district_standard_cm_commercial_plural$§! will shift one job from $job_clerk$ to $job_merchant$ if possible.\n\n"
  col_standard_cm_leisure: "休闲世界"
  col_standard_cm_leisure_desc: "一个致力于娱乐和休闲活动的世界"
  building_research_support_1: "Planetary Research Archive"
