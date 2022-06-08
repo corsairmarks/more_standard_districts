@@ -2,7 +2,7 @@
 
 Would you like more basic districts for your colonies?  Perhaps you're tired of being limited by building slots?  Then this mods is for you!  Adds a Research District, Trade District, Leisure District, Administrative District, and Military District for construction on normal colonies.  Also adds an Administrative District and Military District for construction on habitats.  All gestalt empires can use Research Districts and Military Districts, but Leisure Districts are only available for Rogue Servitors.  Hive Minds, Machines, and Spiritualists have their own versions of the Administrative District.
 
-Due to the addition of Research Districts, Research Labs have been adjusted to function similarly to the Alloy Foundries or Civilian Industries buildings.
+Due to the addition of Research Districts, this mod adds a new research support building similar to the Alloy Foundries or Civilian Industries buildings.
 
 Requested by [Mad Cow](https://steamcommunity.com/profiles/76561197969740903).
 
@@ -17,7 +17,7 @@ Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, 
 
 Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to understand the new research district type and to offer a Research District build speed increase.  Unification Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).
 
-All districts respond to changes in civics that alter jobs.  For example, Leisure Districts swap Entertainers for a Duelists with Warrior Culture and Ecclesiastical Districts trade a Priest for a Manager for spiritualist megacorps.
+All districts respond to changes in civics that alter jobs.  For example, Leisure Districts swap Entertainers for a Duelists with Warrior Culture and Ecclesiastical Districts trade a Priest for a Manager for spiritualist MegaCorps.
 
 ## Localisation
 
@@ -108,6 +108,10 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Remove existing automation plans, replace with simplified versions (similar to how the base game simplified and refined its automation plans)
     * Update overridden colony types to respect sector automation settings
     * Commercial World colony designation now indicates that it improves the relevant trade district type
+* 4.1.0 Balance update - reduce the overwhelming **Trade Power™** generated for minimal effort and also simplify triggered job swaps
+    * Update support for Planetary Diversity and Gigastructural Engineering
+    * Reduce the amount of free MegaCorp job swaps; post-unity-rework they are much more powerful than in the past
+    * Simplify the Merchant/Executive/Manager jobs swaps for commercial districts - things got a little out of hand
 
 ## Source Code
 
