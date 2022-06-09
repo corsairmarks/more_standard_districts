@@ -1,2 +1,4 @@
 ﻿l_polish:
  col_bureaucracy_custom: "Możliwości administracji biurokratów wzrastają o §G2§!.\nUtrzymanie miejsca pracy dla biurokratów maleje o §G10%§!. \nSzansa na zmianę etyki £pop£ populacji maleje o §G20%§! \n$mod_planet_district_standard_cm_admin_build_speed_mult$ zwiększona o §G25%§!"
+ # was not updated in the base game - Merchants no longer produce Unity
+ job_merchant_effect_desc: "£job_merchant£ $job_merchant_plural$ zmieniają £consumer_goods£ §Y$consumer_goods$§! w £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§! i £mod_trade_value_add£ §Y$TRADE_VALUE$§!."

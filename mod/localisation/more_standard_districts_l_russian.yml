@@ -1,6 +1,6 @@
 ﻿l_russian:
  col_standard_cm_trade: "Коммерческий Мир"
- col_standard_cm_trade_desc: "Мир, посвященный коммерческим предприятиям\n\nУлучшает эффекты §Y$district_standard_cm_commercial_plural$§!"
+ col_standard_cm_trade_desc: "Мир, посвященный коммерческим предприятиям"
  col_standard_cm_trade_custom: "§Y$district_standard_cm_commercial_plural$§! по возможности переключат одну из $job_clerk$ на $job_merchant$.\n\n"
  col_standard_cm_leisure: "Мир Досуга"
  col_standard_cm_leisure_desc: "Мир, посвященный развлечениям и досугу"

@@ -1,2 +1,4 @@
 ﻿l_english:
  col_bureaucracy_custom: "Administrative Capacity from Bureaucrats is increased by §G2§!.\nBureaucrat Job Upkeep reduced by §G10%§!. \n£pop£ Pop Ethics Shift Chance reduced by §G20%§!. \n$mod_planet_district_standard_cm_admin_build_speed_mult$ increased by §G25%§!"
+ # was not updated in the base game - Merchants no longer produce Unity
+ job_merchant_effect_desc: "£job_merchant£ $job_merchant_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§! and £mod_trade_value_add£ §Y$TRADE_VALUE$§!"

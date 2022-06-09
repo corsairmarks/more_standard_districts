@@ -1,2 +1,4 @@
 ﻿l_simp_chinese:
  col_bureaucracy_custom: "每个官僚产出的行政能力提升§G2§!。\n官僚岗位的维护费降低§G10%§!。\n£pop£ 人口思潮转化几率降低§G20%§!。\n$mod_planet_district_standard_cm_admin_build_speed_mult$提升§G25%§!。"
+ # was not updated in the base game - Merchants no longer produce Unity
+ job_merchant_effect_desc: "£job_merchant£ $job_merchant_plural$将 £consumer_goods£ §Y$consumer_goods$§!转化为 £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!以及 £mod_trade_value_add£ §Y$TRADE_VALUE$§!"
