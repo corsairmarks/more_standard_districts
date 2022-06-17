@@ -365,7 +365,7 @@ col_unity_composite_dynamic_weight_machine = {
 }
 
 # this = planet
-tde_col_standard_cm_trade_weight_multiplier = {
+msd_col_standard_cm_trade_weight_multiplier = {
 	modifier = { 
 		add = 2
 		has_designation = col_standard_cm_trade
@@ -374,10 +374,10 @@ tde_col_standard_cm_trade_weight_multiplier = {
 		add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_commercial|
 	}
 	modifier = {
-		add = value:tde_building_dynamic_weight|BUILDING|building_commercial_zone|
+		add = value:msd_building_dynamic_weight|BUILDING|building_commercial_zone|
 	}
 	modifier = {
-		add = value:tde_building_dynamic_weight_tier_2|BUILDING|building_commercial_megaplex|
+		add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_commercial_megaplex|
 	}
 	modifier = {
 		add = 3

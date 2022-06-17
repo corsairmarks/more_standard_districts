@@ -32,7 +32,7 @@ col_standard_cm_trade = {
 	}
 	weight_modifier = {
 		modifier = {
-			add = value:tde_col_standard_cm_trade_weight_multiplier
+			add = value:msd_col_standard_cm_trade_weight_multiplier
 		}
 	}
 }
