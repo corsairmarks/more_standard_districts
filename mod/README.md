@@ -113,6 +113,10 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Reduce the amount of free MegaCorp job swaps; post-unity-rework they are much more powerful than in the past
     * Simplify the Merchant/Executive/Manager jobs swaps for commercial districts - things got a little out of hand
     * Add custom description to the trade district, describing the job shifts
+* 4.2.0 Better colony designation compatibility
+    * The Tech-World and Fortress World colony designations requirements more accurately reflect the base game: they can be used on any planet which is not an ecumenopolis, habitat, or ringworld - the bonus district build speed modifiers will only appear on planets supported by the districts
+    * Fix the broken weight-related script_value for the Commercial World colony designation
+    * Improve weighting for Fortress Worlds and Fortress Stations
 
 ## Source Code
 
