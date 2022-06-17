@@ -6,15 +6,24 @@
 col_research = {
 	icon = GFX_colony_type_research
 	potential = {
-		msd_uses_regular_district_set = yes
+		msd_uses_district_set_city_world = no
+		msd_uses_district_set_habitat = no
+		msd_uses_district_set_ring_world = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {
 		planet_building_research_lab_1_build_speed_mult = 0.25
 		planet_building_research_lab_2_build_speed_mult = 0.25
 		planet_building_research_lab_3_build_speed_mult = 0.25
-		planet_district_standard_cm_science_build_speed_mult = 0.25
 		planet_researchers_upkeep_mult = -0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			msd_uses_regular_district_set = yes
+		}
+		modifier = {
+			planet_district_standard_cm_science_build_speed_mult = 0.25
+		}
 	}
 	weight_modifier = {
 		base = 1
@@ -55,7 +64,7 @@ col_bureau = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			msd_uses_district_set_city_world = no
+			msd_uses_regular_district_set = yes
 		}
 		modifier = {
 			planet_district_standard_cm_admin_build_speed_mult = 0.25
@@ -112,7 +121,7 @@ col_bureau_spiritualist = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			msd_uses_district_set_city_world = no
+			msd_uses_regular_district_set = yes
 		}
 		modifier = {
 			planet_district_standard_cm_admin_religious_build_speed_mult = 0.25
@@ -166,7 +175,7 @@ col_bureau_hive = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			msd_uses_district_set_city_world = no
+			msd_uses_regular_district_set = yes
 		}
 		modifier = {
 			planet_district_standard_cm_admin_hive_build_speed_mult = 0.25
@@ -212,7 +221,7 @@ col_bureau_machine = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			msd_uses_district_set_city_world = no
+			msd_uses_regular_district_set = yes
 		}
 		modifier = {
 			planet_district_standard_cm_admin_machine_build_speed_mult = 0.25
@@ -411,78 +420,33 @@ col_habitat_bureau_machine = {
 col_fortress = {
 	icon = GFX_colony_type_fortress
 	potential = {
-		exists = owner
-		msd_uses_regular_district_set = yes
+		msd_uses_district_set_city_world = no
+		msd_uses_district_set_habitat = no
+		msd_uses_district_set_ring_world = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {
-		planet_district_standard_cm_military_build_speed_mult = 0.25
 		planet_building_stronghold_build_speed_mult = 0.25
 		planet_building_fortress_build_speed_mult = 0.25
 		planet_orbital_bombardment_damage = -0.10
 		army_defense_damage_mult = 0.20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			msd_uses_regular_district_set = yes
+		}
+		modifier = {
+			planet_district_standard_cm_military_build_speed_mult = 0.25
+		}
 	}
 	weight_modifier = {
 		modifier = {
 			add = 5
 			has_designation = col_fortress
 		}
-		modifier = {
-			add = 3
-			num_buildings = {
-				type = building_stronghold
-				value >= 2
-			}
-		}
-		modifier = {
-			add = 4
-			num_buildings = {
-				type = building_stronghold
-				value >= 3
-			}
-		}
-		modifier = {
-			add = 5
-			num_buildings = {
-				type = building_stronghold
-				value >= 4
-			}
-		}
-		modifier = {
-			add = 3
-			num_districts = {
-				type = district_standard_cm_military
-				value >= 2
-			}
-		}
-		modifier = {
-			add = 4
-			num_districts = {
-				type = district_standard_cm_military
-				value >= 3
-			}
-		}
-		modifier = {
-			add = 5
-			num_districts = {
-				type = district_standard_cm_military
-				value >= 4
-			}
-		}
-		modifier = {
-			add = 3
-			num_buildings = {
-				type = building_fortress
-				value >= 1
-			}
-		}
-		modifier = {
-			add = 5
-			num_buildings = {
-				type = building_fortress
-				value >= 2
-			}
-		}
+		modifier = { add = value:msd_building_dynamic_weight|BUILDING|building_stronghold| }
+		modifier = { add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_fortress| }
+		modifier = { add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_military| }
 		modifier = {
 			factor = 0
 			exists = sector
@@ -510,55 +474,9 @@ col_habitat_fortress = {
 			factor = 3
 			has_designation = col_habitat_fortress
 		}
-		modifier = {
-			factor = 2
-			num_buildings = {
-				type = building_stronghold
-				value >= 3
-			}
-		}
-		modifier = {
-			factor = 3
-			num_buildings = {
-				type = building_stronghold
-				value >= 5
-			}
-		}
-		modifier = {
-			factor = 3
-			num_districts = {
-				type = district_standard_cm_hab_military
-				value >= 2
-			}
-		}
-		modifier = {
-			factor = 4
-			num_districts = {
-				type = district_standard_cm_hab_military
-				value >= 3
-			}
-		}
-		modifier = {
-			factor = 5
-			num_districts = {
-				type = district_standard_cm_hab_military
-				value >= 4
-			}
-		}
-		modifier = {
-			factor = 2
-			num_buildings = {
-				type = building_fortress
-				value >= 2
-			}
-		}
-		modifier = {
-			factor = 3
-			num_buildings = {
-				type = building_fortress
-				value >= 4
-			}
-		}
+		modifier = { add = value:msd_building_dynamic_weight|BUILDING|building_stronghold| }
+		modifier = { add = value:msd_building_dynamic_weight_tier_2|BUILDING|building_fortress| }
+		modifier = { add = value:msd_district_dynamic_weight|DISTRICT|district_standard_cm_hab_military| }
 		modifier = {
 			factor = 0
 			exists = sector
