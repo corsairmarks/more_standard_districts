@@ -127,6 +127,7 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Integrate underlying automation plan and colony designation changes
     * Apply changes from the game's district types to my similar types (e.g. the new perks for the spiritualist federation affecting unity districts)
     * Support the megalopolis from Guilli's Planet Modifiers and Features
+* 5.1.0 Minor improvements to the Research Archive - disallowed on Crucible Worlds, T1 allowed without an upgraded capital
 
 ## Source Code
 
