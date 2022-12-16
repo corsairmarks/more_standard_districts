@@ -78,3 +78,5 @@
  mod_planet_building_research_lab_3_build_speed_mult: "$building_research_lab_3$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_district_arcology_administrative_build_speed_mult: "$district_arcology_administrative$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_district_arcology_religious_build_speed_mult: "$district_arcology_religious$ $mod_planet_built_speed_mult_suffix$"
+ # localisation for dummy districts
+ district_arcology_commercial: "Commercial Arcology"
