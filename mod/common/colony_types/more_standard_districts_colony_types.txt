@@ -13,16 +13,38 @@ col_standard_cm_trade = {
 		msd_uses_district_set_habitat = no
 		msd_uses_district_set_ring_world = no
 		msd_uses_gigastructural_engineering_gigastructure_district_set = no
-		NOT = { uses_district_set = shattered_ring_world }
+		NOR = {
+			uses_district_set = shattered_ring_world
+			uses_district_set = gpm_precursor
+		}
 		# intentionally allows PD special
 		is_special_colony_type = no
 	}
 	custom_tooltip = col_standard_cm_trade_custom
 	planet_modifier = {
 		planet_building_commercial_zone_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_interstellar_economics }
+		}
 		planet_building_commercial_megaplex_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_galactic_markets }
+		}
 		planet_building_galactic_stock_exchange_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = { msd_uses_regular_district_set = yes }
 		planet_district_standard_cm_commercial_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		# always-on triggered modifier for ordering purposes
 		trade_value_mult = 0.2
 	}
 	triggered_planet_modifier = {
@@ -52,7 +74,6 @@ col_standard_cm_leisure = {
 	}
 	planet_modifier = {
 		pop_happiness = 0.10
-		planet_district_standard_cm_leisure_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -60,6 +81,15 @@ col_standard_cm_leisure = {
 			owner = { is_regular_empire = yes }
 		}
 		planet_building_holo_theatres_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_technology = tech_hyper_entertainment_forum
+			}
+		}
 		planet_building_hyper_entertainment_forum_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
@@ -68,7 +98,20 @@ col_standard_cm_leisure = {
 			owner = { has_valid_civic = civic_machine_servitor }
 		}
 		planet_building_organic_sanctuary_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_machine_servitor
+				has_technology = tech_paradise_dome
+			}
+		}
 		planet_building_organic_paradise_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = { msd_uses_regular_district_set = yes }
+		planet_district_standard_cm_leisure_build_speed_mult = 0.25
 	}
 	weight_modifier = {
 		modifier = {

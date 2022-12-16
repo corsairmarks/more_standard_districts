@@ -126,6 +126,7 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * No longer destroy the archive advanced buildings when out of exotic gas (mirrors similar changes in the underlying game)
     * Integrate underlying automation plan and colony designation changes
     * Apply changes from the game's district types to my similar types (e.g. the new perks for the spiritualist federation affecting unity districts)
+    * Support the megalopolis from Guilli's Planet Modifiers and Features
 
 ## Source Code
 
