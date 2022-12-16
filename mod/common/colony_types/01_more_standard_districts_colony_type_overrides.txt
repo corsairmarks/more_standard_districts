@@ -18,15 +18,15 @@ col_research = {
 		potential = {
 			exists = owner
 			owner = { has_technology = tech_basic_science_lab_2 }
-		planet_building_research_lab_2_build_speed_mult = 0.25
 		}
+		planet_building_research_lab_2_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_technology = tech_basic_science_lab_3 }
-		planet_building_research_lab_3_build_speed_mult = 0.25
 		}
+		planet_building_research_lab_3_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
 		potential = { msd_uses_regular_district_set = yes }
