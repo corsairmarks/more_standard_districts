@@ -1,10 +1,7 @@
 automate_fortress_planet = {
 	category = "planet_automation_designation_construction"
 	available = {
-		OR = {
-			has_designation = col_fortress
-			has_designation = col_habitat_fortress
-		}
+		has_fortress_designation = yes
 	}
 	prio_districts = {
 		district_standard_cm_military

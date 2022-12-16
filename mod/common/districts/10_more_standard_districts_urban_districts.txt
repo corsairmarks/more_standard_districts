@@ -78,7 +78,7 @@ district_standard_cm_commercial = {
 		potential = {
 			exists = owner
 			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
+				has_active_tradition = tr_mercantile_trickle_up_economics
 				is_fallen_empire_spiritualist = no
 			}
 		}
@@ -90,7 +90,7 @@ district_standard_cm_commercial = {
 		potential = {
 			exists = owner
 			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
+				has_active_tradition = tr_mercantile_trickle_up_economics
 				is_fallen_empire_spiritualist = yes
 			}
 		}
@@ -141,7 +141,7 @@ district_standard_cm_commercial = {
 								has_valid_civic = civic_corporate_dominion
 								is_megacorp = yes
 							}
-							NOT = { has_active_tradition = tr_prosperity_interstellar_franchising }
+							NOT = { has_active_tradition = tr_mercantile_trickle_up_economics }
 						}
 					}
 				}
@@ -395,6 +395,7 @@ district_standard_cm_admin = {
 		msd_uses_regular_district_set = yes
 		exists = from
 		from = {
+			has_make_spiritualist_perk = no
 			is_spiritualist = no
 			is_gestalt = no
 		}
@@ -403,6 +404,7 @@ district_standard_cm_admin = {
 		msd_uses_regular_district_set = yes
 		exists = owner
 		owner = {
+			has_make_spiritualist_perk = no
 			is_spiritualist = no
 			is_gestalt = no
 		}
@@ -467,12 +469,22 @@ district_standard_cm_admin_religious = {
 	show_on_uncolonized = {
 		msd_uses_regular_district_set = yes
 		exists = from
-		from = { is_spiritualist = yes }
+		from = {
+			OR = {
+				has_make_spiritualist_perk = yes
+				is_spiritualist = yes
+			}
+		}
 	}
 	potential = {
 		msd_uses_regular_district_set = yes
 		exists = owner
-		owner = { is_spiritualist = yes }
+		owner = {
+			OR = {
+				has_make_spiritualist_perk = yes
+				is_spiritualist = yes
+			}
+		}
 	}
 	conversion_ratio = 1
 	convert_to = {

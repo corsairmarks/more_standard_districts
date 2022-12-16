@@ -9,6 +9,7 @@ district_standard_cm_hab_admin = {
 		msd_uses_district_set_habitat = yes
 		exists = from
 		from = {
+			has_make_spiritualist_perk = no
 			is_spiritualist = no
 			is_gestalt = no
 		}
@@ -17,6 +18,7 @@ district_standard_cm_hab_admin = {
 		msd_uses_district_set_habitat = yes
 		exists = owner
 		owner = {
+			has_make_spiritualist_perk = no
 			is_spiritualist = no
 			is_gestalt = no
 		}
@@ -79,12 +81,22 @@ district_standard_cm_hab_admin_religious = {
 	show_on_uncolonized = {
 		msd_uses_district_set_habitat = yes
 		exists = from
-		from = { is_spiritualist = yes }
+		from = {
+			OR = {
+				has_make_spiritualist_perk = yes
+				is_spiritualist = yes
+			}
+		}
 	}
 	potential = {
 		msd_uses_district_set_habitat = yes
 		exists = owner
-		owner = { is_spiritualist = yes }
+		owner = {
+			OR = {
+				has_make_spiritualist_perk = yes
+				is_spiritualist = yes
+			}
+		}
 	}
 	conversion_ratio = 1
 	convert_to = {

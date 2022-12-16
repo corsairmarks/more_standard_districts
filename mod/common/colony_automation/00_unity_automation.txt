@@ -1,16 +1,7 @@
 automate_bureau_planet = {
 	category = "planet_automation_designation_construction"
 	available = {
-		OR = {
-			has_designation = col_bureau
-			has_designation = col_bureau_hive
-			has_designation = col_bureau_machine
-			has_designation = col_bureau_spiritualist
-			has_designation = col_habitat_bureau
-			has_designation = col_habitat_bureau_hive
-			has_designation = col_habitat_bureau_machine
-			has_designation = col_habitat_bureau_spiritualist
-		}
+		has_unity_designation = yes
 	}
 	prio_districts = {
 		district_standard_cm_admin
@@ -23,6 +14,7 @@ automate_bureau_planet = {
 		district_standard_cm_hab_admin_religious
 		district_arcology_administrative
 		district_arcology_religious
+		district_arcology_organic_housing
 	}
 	buildings = {
 		1 = {
@@ -232,6 +224,16 @@ automate_bureau_planet = {
 				owner = {
 					is_machine_empire = yes
 					uplink_node_upkeep_affordable = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_organic_sanctuary
+			available = {
+				owner = {
+					has_valid_civic = civic_machine_servitor
+					organic_sanctuary_upkeep_affordable = yes
 				}
 			}
 		}

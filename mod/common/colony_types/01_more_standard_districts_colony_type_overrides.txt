@@ -63,6 +63,19 @@ col_bureau = {
 		planet_administrators_upkeep_mult = -0.10
 	}
 	triggered_planet_modifier = {
+		potential = { msd_uses_district_set_ring_world = yes }
+		pop_growth_speed = 0.1
+		planet_pop_assembly_mult = 0.1
+		planet_pop_assembly_organic_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = all_the_priests_1 }
+		}
+		job_priest_per_pop = 0.04
+	}
+	triggered_planet_modifier = {
 		potential = {
 			msd_uses_regular_district_set = yes
 		}
@@ -120,6 +133,19 @@ col_bureau_spiritualist = {
 		planet_administrators_upkeep_mult = -0.10
 	}
 	triggered_planet_modifier = {
+		potential = { msd_uses_district_set_ring_world = yes }
+		pop_growth_speed = 0.1
+		planet_pop_assembly_mult = 0.1
+		planet_pop_assembly_organic_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = all_the_priests_1 }
+		}
+		job_priest_per_pop = 0.04
+	}
+	triggered_planet_modifier = {
 		potential = {
 			msd_uses_regular_district_set = yes
 		}
@@ -174,6 +200,12 @@ col_bureau_hive = {
 		planet_administrators_upkeep_mult = -0.10
 	}
 	triggered_planet_modifier = {
+		potential = { msd_uses_district_set_ring_world = yes }
+		pop_growth_speed = 0.1
+		planet_pop_assembly_mult = 0.1
+		planet_pop_assembly_organic_mult = 0.1
+	}
+	triggered_planet_modifier = {
 		potential = {
 			msd_uses_regular_district_set = yes
 		}
@@ -211,13 +243,22 @@ col_bureau_machine = {
 	icon = GFX_colony_type_bureaucratic
 	potential = {
 		exists = owner
-		owner = { is_machine_empire = yes }
+		owner = {
+			is_machine_empire = yes
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
 		msd_uses_district_set_habitat = no
 		is_special_colony_type = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
 		planet_administrators_upkeep_mult = -0.10
+	}
+	triggered_planet_modifier = {
+		potential = { msd_uses_district_set_ring_world = yes }
+		pop_growth_speed = 0.1
+		planet_pop_assembly_mult = 0.1
+		planet_pop_assembly_organic_mult = 0.1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -253,6 +294,93 @@ col_bureau_machine = {
 	}
 }
 
+col_trophy_machine = {
+	icon = GFX_colony_type_bureaucratic
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_machine_servitor }
+		msd_uses_district_set_habitat = no
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_bio_trophies_produces_mult = 0.10
+		pop_growth_speed = 0.10
+	}
+	triggered_planet_modifier = {
+		potential = { msd_uses_district_set_ring_world = yes }
+		pop_growth_speed = 0.1
+		planet_pop_assembly_mult = 0.1
+		planet_pop_assembly_organic_mult = 0.1
+	}
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_trophy_machine
+		}
+		modifier = {
+			add = 3
+			OR = {
+				num_buildings = { type = building_organic_sanctuary value >= 2 }
+				num_districts = { type = district_arcology_organic_housing value >= 2 }
+			}
+		}
+		modifier = {
+			add = 4
+			OR = {
+				num_buildings = { type = building_organic_sanctuary value >= 3 }
+				num_districts = { type = district_arcology_organic_housing value >= 3 }
+			}
+		}
+		modifier = {
+			add = 5
+			OR = {
+				num_buildings = { type = building_organic_sanctuary value >= 4 }
+				num_districts = { type = district_arcology_organic_housing value >= 4 }
+			}
+		}
+		modifier = {
+			add = 6
+			OR = {
+				num_buildings = { type = building_organic_sanctuary value >= 5 }
+				num_districts = { type = district_arcology_organic_housing value >= 5 }
+			}
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_organic_paradise value >= 1 }
+		}
+		modifier = {
+			add = 6
+			num_buildings = { type = building_organic_paradise value >= 2 }
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				num_buildings = { type = building_organic_sanctuary value = 0 }
+				num_buildings = { type = building_organic_paradise value = 0 }
+				num_districts = { type = district_arcology_organic_housing value = 0 }
+			}
+		}
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				not = { has_sector_focus = "unity" }
+				not = { has_sector_focus = "balanced" }
+			}
+		}
+		modifier = {
+			add = 1
+			exists = sector
+			sector = {
+				has_sector_focus = "unity"
+			}
+		}
+	}
+}
+
 # Unification Station
 col_habitat_bureau = {
 	icon = GFX_colony_type_hab_bureaucratic
@@ -269,6 +397,13 @@ col_habitat_bureau = {
 		planet_administrators_produces_mult = 0.10
 		planet_administrators_upkeep_mult = -0.10
 		planet_district_standard_cm_hab_admin_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = all_the_priests_1 }
+		}
+		job_priest_per_pop = 0.04
 	}
 	weight_modifier = {
 		base = 5
@@ -311,6 +446,13 @@ col_habitat_bureau_spiritualist = {
 		planet_administrators_produces_mult = 0.10
 		planet_administrators_upkeep_mult = -0.10
 		planet_district_standard_cm_hab_admin_religious_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = all_the_priests_1 }
+		}
+		job_priest_per_pop = 0.04
 	}
 	weight_modifier = {
 		base = 5
@@ -467,6 +609,16 @@ col_habitat_fortress = {
 		planet_building_fortress_build_speed_mult = 0.25
 		planet_orbital_bombardment_damage = -0.10
 		army_defense_damage_mult = 0.20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_building = building_order_keep
+				has_building = building_order_castle
+			}
+		}
+		knights_independent_category_produces_mult = 0.1
+		pop_defense_armies_add = 1
 	}
 	weight_modifier = {
 		base = 300
