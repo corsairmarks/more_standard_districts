@@ -131,7 +131,6 @@ building_research_support_2 = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			buildings_no_exotic_gases = yes
 			AND = {
 				exists = owner
 				owner = { is_ai = yes }
@@ -244,7 +243,6 @@ building_research_support_3 = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			buildings_no_exotic_gases = yes
 			AND = {
 				exists = owner
 				owner = { is_ai = yes }
