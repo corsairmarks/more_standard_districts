@@ -12,6 +12,7 @@ building_research_support_1 = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
+			has_modifier = crucible_colony
 		}
 		OR = {
 			AND = {
@@ -26,16 +27,13 @@ building_research_support_1 = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
+			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = { is_ai = yes }
 				msd_has_any_science_district_or_buildings = no
 			}
 		}
-	}
-
-	allow = {
-		has_upgraded_capital = yes
 	}
 
 	triggered_planet_modifier = {
@@ -116,8 +114,7 @@ building_research_support_2 = {
 	can_build = no
 	category = research
 
-	allow = {
-		has_upgraded_capital = yes
+	potential = {
 		OR = {
 			AND = {
 				exists = owner
@@ -127,10 +124,15 @@ building_research_support_2 = {
 		}
 	}
 
+	allow = {
+		has_upgraded_capital = yes
+	}
+
 	destroy_trigger = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
+			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = { is_ai = yes }
@@ -228,8 +230,7 @@ building_research_support_3 = {
 	can_build = no
 	category = research
 
-	allow = {
-		has_major_upgraded_capital = yes
+	potential = {
 		OR = {
 			AND = {
 				exists = owner
@@ -239,10 +240,15 @@ building_research_support_3 = {
 		}
 	}
 
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
 	destroy_trigger = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
+			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = { is_ai = yes }
