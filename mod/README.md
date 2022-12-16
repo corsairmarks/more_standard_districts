@@ -15,7 +15,7 @@ Research, Trade, Leisure, Administrative/Ecclesiastical/Synapse/Data Warehouse, 
 * tier 2 increases research output by 1 point (per field) and increases researcher upkeep
 * tier 3 increases research output by a total of 2 points (per field) and further increases researcher upkeep
 
-Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to understand the new research district type and to offer a Research District build speed increase.  Unification Center and Fortress World automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).
+Along with the new district types, this mod adds new colony designations for Commercial Worlds (focuses on Trade Districts) and Leisure Worlds (focuses on Leisure Districts) as well as updates the Tech-World designation to understand the new research district type and to offer a Research District build speed increase. Trade planet, unity planet, and fortress planet automation plans are also updated to understand the new district types.  Each of the new colony designations features a build automation plan (including Rogue Servitors for Leisure Worlds).
 
 All districts respond to changes in civics that alter jobs.  For example, Leisure Districts swap Entertainers for a Duelists with Warrior Culture and Ecclesiastical Districts trade a Priest for a Manager for spiritualist MegaCorps.
 
@@ -33,11 +33,11 @@ Although the districts added by this mod seem similar to existing districts, the
 
 To implement the new research support building (Planetary Archives) job bonuses, this mod overwrites the economic category for researchers (`planet_researchers`) in order to generate the `_add` modifiers for research production (previously only `_mult` was available).
 
-Also overwrites Tech-World build automation to use the new Research Districts and include the new research support building.  Unification Center and Fortress World build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these three build plans.  Commonly this is AI mods - whichever mod loads _last_ will use its version of these files.
+Also overwrites research world build automation to use the new Research Districts and include the new research support building.  Trade planet, unity planet, and fortress planet build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these four build plans.  Whichever mod loads _last_ will use its version of these files.
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/workshop/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.  Compatible with Planetary Diversity and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.  Compatible with Planetary Diversity and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
 
 ### Not Included in "Subtle Polish"
 
@@ -49,21 +49,23 @@ In order to see and interact with the new district types, it is necessary to use
 
 ## Known Issues
 
-Overriding a game object causes the game to write a line to its error.log file, expect to see twelve errors like these:
+Overriding a game object causes the game to write a line to its error.log file, expect to see fourteen errors like these:
 
 ```
-[16:10:59][game_singleobjectdatabase.h:148]: Object with key: planet_researchers already exists, using the one at  file: common/economic_categories/01_more_standard_districts_economic_category_overrides.txt line: 1
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_research already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 6
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 41
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_bureau_spiritualist already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 98
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_bureau_hive already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 155
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_bureau_machine already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 201
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_habitat_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 248
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_habitat_bureau_spiritualist already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 290
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_habitat_bureau_hive already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 332
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_habitat_bureau_machine already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 371
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 411
-[16:11:05][game_singleobjectdatabase.h:148]: Object with key: col_habitat_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 499
+[00:09:59][game_singleobjectdatabase.h:165]: Object with key: planet_researchers already exists, using the one at  file: common/economic_categories/01_more_standard_districts_economic_category_overrides.txt line: 1
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_research already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 6
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 50
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_bureau_spiritualist already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 120
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_bureau_hive already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 190
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_bureau_machine already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 242
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_trophy_machine already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 297
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_habitat_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 385
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_habitat_bureau_spiritualist already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 434
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_habitat_bureau_hive already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 483
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_habitat_bureau_machine already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 522
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 562
+[00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_habitat_fortress already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 601
+[00:10:02][game_singleobjectdatabase.h:165]: Object with key: has_trade_designation already exists, using the one at  file: common/scripted_triggers/10_more_standard_districts_scripted_triggers_ai_overrides.txt line: 2
 ```
 
 ## Changelog
@@ -117,6 +119,13 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * The Tech-World and Fortress World colony designations requirements more accurately reflect the base game: they can be used on any planet which is not an ecumenopolis, habitat, or ringworld - the bonus district build speed modifiers will only appear on planets supported by the districts
     * Fix the broken weight-related script_value for the Commercial World colony designation
     * Improve weighting for Fortress Worlds and Fortress Stations
+* 5.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
+    * Bonus clerk jobs are now tied to the tradition Trickle Up Economics instead of Interstellar Franchising (from underlying game changes)
+    * Add override of new built-in trigger `has_trade_designation`, consume it for trade colony automation
+    * Trade planet automation is now an override and cooperates with my other trade-related district mods
+    * No longer destroy the archive advanced buildings when out of exotic gas (mirrors similar changes in the underlying game)
+    * Integrate underlying automation plan and colony designation changes
+    * Apply changes from the game's district types to my similar types (e.g. the new perks for the spiritualist federation affecting unity districts)
 
 ## Source Code
 
