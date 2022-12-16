@@ -1,10 +1,14 @@
-# duplicates the enhanced automate_trade_planet, but for shattered ring worlds
-automate_standard_cm_trade_planet = {
+# Modified: added the Numistic Shrine, added affordability checks, account for my added trade districts
+automate_trade_planet = {
 	category = "planet_automation_designation_construction"
 	available = {
-		has_designation = col_standard_cm_trade
+		has_trade_designation = yes
 	}
 	prio_districts = {
+		district_rw_commercial
+		district_hab_commercial
+		district_srw_commercial
+		district_arcology_commercial
 		district_standard_cm_commercial
 	}
 	buildings = {
