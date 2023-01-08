@@ -202,10 +202,10 @@ district_standard_cm_leisure = {
 	}
 	conversion_ratio = 0.5
 	convert_to = {
-		district_generator
 		district_generator_uncapped
-		district_arcology_leisure
+		district_generator
 		district_arcology_organic_housing
+		district_arcology_leisure
 		district_rw_generator
 	}
 	resources = {
@@ -240,7 +240,7 @@ district_standard_cm_leisure = {
 			}
 		}
 		modifier = {
-			job_entertainer_add = 2
+			job_entertainer_add = 1
 		}
 	}
 	triggered_planet_modifier = {
@@ -252,7 +252,16 @@ district_standard_cm_leisure = {
 			}
 		}
 		modifier = {
-			job_duelist_add = 2
+			job_duelist_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_culture_worker_add = 1
 		}
 	}
 	triggered_planet_modifier = {
@@ -287,6 +296,13 @@ district_standard_cm_leisure = {
 			}
 		}
 		text = job_duelist_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes}
+		}
+		text = job_culture_worker_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
