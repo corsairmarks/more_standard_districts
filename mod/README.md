@@ -128,6 +128,10 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Apply changes from the game's district types to my similar types (e.g. the new perks for the spiritualist federation affecting unity districts)
     * Support the megalopolis from Guilli's Planet Modifiers and Features
 * 5.1.0 Minor improvements to the Research Archive - disallowed on Crucible Worlds, T1 allowed without an upgraded capital
+* 6.0.0 Compatibility triggers
+    * Add a compatibility trigger for other mods to check whether this one is active
+    * Consume the compatibility triggers from other mods
+    * Remove old compatibility global flag
 
 ## Source Code
 
