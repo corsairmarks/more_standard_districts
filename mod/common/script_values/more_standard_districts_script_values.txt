@@ -400,7 +400,7 @@ msd_col_standard_cm_trade_weight_multiplier = {
 	}
 	modifier = {
 		add = 4
-		has_global_flag = planetary_modifier_enhancements_installed
+		has_planetary_modifier_enhancements_active = yes
 		has_modifier = pm_planetary_mechanocalibrator
 	}
 	modifier = { 
