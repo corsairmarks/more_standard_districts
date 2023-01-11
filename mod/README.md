@@ -132,7 +132,8 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Add a compatibility trigger for other mods to check whether this one is active
     * Consume the compatibility triggers from other mods
     * Remove old compatibility global flag
-    * Leisure Districts once again provide 1 entertainer and 1 culture worker
+    * Leisure Districts once again provide 1 Entertainer and 1 Culture Worker job
+* 6.1.0 Leisure Districts swap an Entertainer/Duelist job for a Culture Worker job only when [Leisure Districts for People of Culture]() is active
 
 ## Source Code
 
