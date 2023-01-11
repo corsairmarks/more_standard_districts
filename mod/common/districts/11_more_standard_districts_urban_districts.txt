@@ -245,6 +245,19 @@ district_standard_cm_leisure = {
 	}
 	triggered_planet_modifier = {
 		potential = {
+			has_district_leisure_cultural_active = no
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+		modifier = {
+			job_entertainer_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
 			owner = {
 				is_regular_empire = yes
@@ -257,6 +270,20 @@ district_standard_cm_leisure = {
 	}
 	triggered_planet_modifier = {
 		potential = {
+			has_district_leisure_cultural_active = no
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_valid_civic = civic_warrior_culture
+			}
+		}
+		modifier = {
+			job_duelist_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_district_leisure_cultural_active = yes
 			exists = owner
 			owner = { is_regular_empire = yes }
 		}
@@ -299,6 +326,7 @@ district_standard_cm_leisure = {
 	}
 	triggered_desc = {
 		trigger = {
+			has_district_leisure_cultural_active = yes
 			exists = owner
 			owner = { is_regular_empire = yes}
 		}
