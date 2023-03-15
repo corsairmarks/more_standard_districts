@@ -130,7 +130,7 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Consume the compatibility triggers from other mods
     * Remove old compatibility global flag
     * Leisure Districts once again provide 1 Entertainer and 1 Culture Worker job
-* 6.1.0 Leisure Districts swap an Entertainer/Duelist job for a Culture Worker job only when [Leisure Districts for People of Culture]() is active
+* 6.1.0 Leisure Districts swap an Entertainer/Duelist job for a Culture Worker job only when [Leisure Districts for People of Culture](https://steamcommunity.com/sharedfiles/filedetails/?id=2916289268) is active
 * 7.0.0 Update for Stellaris version 3.7 "Canis Minor"
     * Remove no-longer-necessary `planet_researchers` economic category override
     * Update colony designations with underlying game changes
