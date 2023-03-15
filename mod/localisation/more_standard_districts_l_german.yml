@@ -51,8 +51,6 @@
  district_standard_cm_hab_military_desc: "Militärische Kommando-/Kontrolleinrichtungen, die in den Überbau des Habitats selbst eingebaut sind. Verstärkte Schotten machen das Habitat widerstandsfähiger gegen Angriffe aus dem Weltraum und können mit $building_planetary_shield_generator$ Strukturen integriert werden, um die Schildstärke weiter zu erhöhen."
  mod_planet_built_speed_mult_suffix: "Baugeschwindigkeit"
  mod_planet_researchers_minerals_upkeep_add: "£minerals£ $minerals$ Unterhalt von £job_researcher£ [GetResearcherPlural]"
- mod_planet_researchers_consumer_goods_upkeep_add: "£consumer_goods£ $consumer_goods$ Unterhalt von £job_researcher£ [GetResearcherPlural]"
- mod_planet_researchers_energy_upkeep_add: "£energy£ $energy$ Unterhalt von £job_researcher£ [GetResearcherPlural]"
  mod_planet_district_standard_cm_commercial_build_speed_mult: "$district_standard_cm_commercial$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_district_standard_cm_leisure_build_speed_mult: "$district_standard_cm_leisure$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_district_standard_cm_science_build_speed_mult: "$district_standard_cm_science$ $mod_planet_built_speed_mult_suffix$"

@@ -51,8 +51,6 @@
  district_standard_cm_hab_military_desc: "Military command/control facilities built into the superstructure of the habitat itself. Redundant bulkheads make the habitat more resilient to attacks from space and can integrate with $building_planetary_shield_generator$ structures to further boost shield strength."
  mod_planet_built_speed_mult_suffix: "Скорость Строительства"
  mod_planet_researchers_minerals_upkeep_add: "£job_researcher£ [GetResearcherPlural] потребляют больше £minerals£ $minerals$"
- mod_planet_researchers_consumer_goods_upkeep_add: "£job_researcher£ [GetResearcherPlural] потребляют больше £consumer_goods£ $consumer_goods$"
- mod_planet_researchers_energy_upkeep_add: "£job_researcher£ [GetResearcherPlural] потребляют больше £energy£ $energy$"
  mod_planet_district_standard_cm_commercial_build_speed_mult: "$district_standard_cm_commercial$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_district_standard_cm_leisure_build_speed_mult: "$district_standard_cm_leisure$ $mod_planet_built_speed_mult_suffix$"
  mod_planet_district_standard_cm_science_build_speed_mult: "$district_standard_cm_science$ $mod_planet_built_speed_mult_suffix$"
