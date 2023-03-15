@@ -309,13 +309,6 @@ district_standard_cm_hab_military = {
 	}
 	resources = {
 		category = planet_districts
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_unyielding_resistance_is_frugal }
-			}
-			unity = 3
-		}
 		cost = {
 			minerals = @hab_cost
 		}
