@@ -1,14 +1,9 @@
-# variables duplicated from common/colony_types/00_colony_types.txt
-@free_districts_low_threshold = 5
-@free_districts_medium_threshold = 10
-@built_districts_low_threshold = 3
-@built_districts_medium_threshold = 4
+# variable duplicated from common/colony_types/00_colony_types.txt
+@stickiness = 10
 
 col_standard_cm_trade = {
 	icon = GFX_colony_type_urban_trade
 	potential = {
-		exists = owner
-		owner = { is_regular_empire = yes }
 		msd_uses_district_set_city_world = no
 		msd_uses_district_set_habitat = no
 		msd_uses_district_set_ring_world = no
@@ -19,6 +14,8 @@ col_standard_cm_trade = {
 		}
 		# intentionally allows PD special
 		is_special_colony_type = no
+		exists = owner
+		owner = { is_regular_empire = yes }
 	}
 	custom_tooltip = col_standard_cm_trade_custom
 	planet_modifier = {
@@ -53,8 +50,32 @@ col_standard_cm_trade = {
 		mult = value:msd_trade_colony_bonus_trade
 	}
 	weight_modifier = {
+		modifier = { 
+			add = @stickiness
+			has_designation = col_standard_cm_trade
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_standard_cm_commercial
+			}
+			mode = add
+			mult = 2 # same as minimg/farming/generator
+		}
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = merchant # merchant jobs act as a pretty decent proxy for "this is a trade planet"
+			}
+			mode = add
+			mult = 2
+		}
 		modifier = {
-			add = value:msd_col_standard_cm_trade_weight_multiplier
+			add = value:msd_trade_colony_building_weight_multiplier
+		}
+		modifier = { 
+			factor = 1.25
+			has_designation = col_city # intentionally tries to take over from col_city
 		}
 	}
 }
@@ -62,6 +83,8 @@ col_standard_cm_trade = {
 col_standard_cm_leisure = {
 	icon = GFX_colony_type_resort
 	potential = {
+		uses_district_set = standard
+		is_special_colony_type = no
 		exists = owner
 		owner = {
 			OR = {
@@ -69,8 +92,6 @@ col_standard_cm_leisure = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
-		uses_district_set = standard
-		is_special_colony_type = no
 	}
 	planet_modifier = {
 		pop_happiness = 0.10
@@ -115,30 +136,16 @@ col_standard_cm_leisure = {
 	}
 	weight_modifier = {
 		modifier = {
-			add = 1
-			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
-			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
-			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			num_free_districts = { type = district_standard_cm_leisure value >= @free_districts_low_threshold }
-		}
-		modifier = {
-			add = 3
-			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
-			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
-			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			num_free_districts = { type = district_standard_cm_leisure value >= @free_districts_medium_threshold }
-		}
-		modifier = {
-			add = 2
+			add = @stickiness
 			has_designation = col_standard_cm_leisure
 		}
-		modifier = {
-			add = 2
-			num_districts = { type = district_standard_cm_leisure value >= @built_districts_low_threshold }
-		}
-		modifier = {
-			add = 5
-			num_districts = { type = district_standard_cm_leisure value >= @built_districts_medium_threshold }
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_standard_cm_leisure
+			}
+			mode = add
+			mult = 2
 		}
 	}
 }
