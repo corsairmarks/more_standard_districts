@@ -31,13 +31,11 @@ All districts respond to changes in civics that alter jobs.  For example, Leisur
 
 Although the districts added by this mod seem similar to existing districts, they are created as new districts so as to not present a compatibility challenge by overwriting many of the district files.  The district changes should work with other mods that add or alter districts.
 
-To implement the new research support building (Planetary Archives) job bonuses, this mod overwrites the economic category for researchers (`planet_researchers`) in order to generate the `_add` modifiers for research production (previously only `_mult` was available).
-
 Also overwrites research world build automation to use the new Research Districts and include the new research support building.  Trade planet, unity planet, and fortress planet build automation is similarly overwritten.  Thus this mod is incompatible with other mods that also update these four build plans.  Whichever mod loads _last_ will use its version of these files.
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/workshop/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.  Compatible with Planetary Diversity and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.  Compatible with Planetary Diversity and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
 
 ### Not Included in "Subtle Polish"
 
@@ -49,10 +47,9 @@ In order to see and interact with the new district types, it is necessary to use
 
 ## Known Issues
 
-Overriding a game object causes the game to write a line to its error.log file, expect to see fourteen errors like these:
+Overriding a game object causes the game to write a line to its error.log file, expect to see thirteen errors like these:
 
 ```
-[00:09:59][game_singleobjectdatabase.h:165]: Object with key: planet_researchers already exists, using the one at  file: common/economic_categories/01_more_standard_districts_economic_category_overrides.txt line: 1
 [00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_research already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 6
 [00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_bureau already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 50
 [00:10:01][game_singleobjectdatabase.h:165]: Object with key: col_bureau_spiritualist already exists, using the one at  file: common/colony_types/01_more_standard_districts_colony_type_overrides.txt line: 120
@@ -134,6 +131,10 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Remove old compatibility global flag
     * Leisure Districts once again provide 1 Entertainer and 1 Culture Worker job
 * 6.1.0 Leisure Districts swap an Entertainer/Duelist job for a Culture Worker job only when [Leisure Districts for People of Culture]() is active
+* 7.0.0 Update for Stellaris version 3.7 "Canis Minor"
+    * Remove no-longer-necessary `planet_researchers` economic category override
+    * Update colony designations with underlying game changes
+    * Remove unity generation from military districts - should have been removed previously for Resistance Is Frugal changes
 
 ## Source Code
 
