@@ -154,10 +154,6 @@ msd_has_any_science_district_or_buildings = {
 		has_district = district_hab_science
 		has_district = district_rw_science
 		has_district = district_standard_cm_science
-		has_building = building_research_lab_1
-		has_building = building_research_lab_2
-		has_building = building_research_lab_3
-		has_building = building_institute
-		has_building = building_supercomputer
+		has_research_building = yes
 	}
 }
