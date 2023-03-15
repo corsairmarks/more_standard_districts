@@ -920,7 +920,10 @@ col_fortress = {
 		planet_building_stronghold_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
-		potential = { has_technology = tech_global_defense_grid }
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_global_defense_grid }
+		}
 		planet_building_fortress_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
@@ -976,7 +979,10 @@ col_habitat_fortress = {
 		planet_building_stronghold_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
-		potential = { has_technology = tech_global_defense_grid }
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_global_defense_grid }
+		}
 		planet_building_fortress_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
