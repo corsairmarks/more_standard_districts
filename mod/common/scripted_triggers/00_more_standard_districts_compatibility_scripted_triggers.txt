@@ -1,3 +1,5 @@
+# Irony this is a placeholder file please ignore it
+
 # supports features from my mod Leisure Districts for People of Culture
 # this = any
 has_district_leisure_cultural_active = {
