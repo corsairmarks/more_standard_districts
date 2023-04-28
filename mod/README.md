@@ -35,7 +35,7 @@ Also overwrites research world build automation to use the new Research District
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/workshop/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.  Compatible with [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835) and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.  Compatible with [Planetary Diversity](https://steamcommunity.com/workshop/filedetails/?id=819148835) and follows its exclusions for some colony types.  Compatible with [Gigastructural Engineering](https://steamcommunity.com/workshop/filedetails/?id=1121692237) and follows its exclusions for some colony types.
 
 ### Not Included in "Subtle Polish"
 
@@ -130,12 +130,12 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Consume the compatibility triggers from other mods
     * Remove old compatibility global flag
     * Leisure Districts once again provide 1 Entertainer and 1 Culture Worker job
-* 6.1.0 Leisure Districts swap an Entertainer/Duelist job for a Culture Worker job only when [Leisure Districts for People of Culture](https://steamcommunity.com/sharedfiles/filedetails/?id=2916289268) is active
+* 6.1.0 Leisure Districts swap an Entertainer/Duelist job for a Culture Worker job only when [Leisure Districts for People of Culture](https://steamcommunity.com/workshop/filedetails/?id=2916289268) is active
 * 7.0.0 Update for Stellaris version 3.7 "Canis Minor"
     * Remove no-longer-necessary `planet_researchers` economic category override
     * Update colony designations with underlying game changes
     * Remove unity generation from military districts - should have been removed previously for Resistance Is Frugal changes
-* 7.0.1 Improve built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835) (support warform planets)
+* 7.0.1 Improve built-in support for [Planetary Diversity](https://steamcommunity.com/workshop/filedetails/?id=819148835) (support warform planets)
 
 ## Source Code
 
