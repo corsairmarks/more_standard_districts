@@ -35,7 +35,7 @@ Also overwrites research world build automation to use the new Research District
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [Enhanced Trade Districts and Designations](https://steamcommunity.com/workshop/filedetails/?id=2641081470).  Enjoy building commercial enterprises on practically any world.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.  Compatible with Planetary Diversity and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.  Compatible with [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835) and follows its exclusions for some colony types.  Compatible with Gigastructural Engineering and follows its exclusions for some colony types.
 
 ### Not Included in "Subtle Polish"
 
@@ -135,6 +135,7 @@ Overriding a game object causes the game to write a line to its error.log file, 
     * Remove no-longer-necessary `planet_researchers` economic category override
     * Update colony designations with underlying game changes
     * Remove unity generation from military districts - should have been removed previously for Resistance Is Frugal changes
+* 7.0.1 Improve built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835) (support warform planets)
 
 ## Source Code
 
