@@ -14,8 +14,11 @@ col_standard_cm_trade = {
 		}
 		# intentionally allows PD special
 		is_special_colony_type = no
-		exists = owner
-		owner = { is_regular_empire = yes }
+		can_generate_trade_value = yes
+		NAND = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
 	}
 	custom_tooltip = col_standard_cm_trade_custom
 	planet_modifier = {
@@ -60,7 +63,7 @@ col_standard_cm_trade = {
 				type = district_standard_cm_commercial
 			}
 			mode = add
-			mult = 2 # same as minimg/farming/generator
+			mult = 2 # same as mining/farming/generator
 		}
 		complex_trigger_modifier = {
 			trigger = num_assigned_jobs
