@@ -9,6 +9,7 @@ col_research = {
 		msd_uses_district_set_habitat = no
 		msd_uses_district_set_ring_world = no
 		is_special_colony_type = no
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_building_research_lab_1_build_speed_mult = 0.25
@@ -92,6 +93,7 @@ col_bureau = {
 			is_spiritualist = no
 			has_make_spiritualist_perk = no
 		}
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
@@ -196,6 +198,7 @@ col_bureau_spiritualist = {
 				has_make_spiritualist_perk = yes
 			}
 		}
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
@@ -318,6 +321,7 @@ col_bureau_hive = {
 		is_special_colony_type = no
 		exists = owner
 		owner = { is_hive_empire = yes }
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
@@ -400,6 +404,7 @@ col_bureau_machine = {
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
 		}
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
@@ -478,6 +483,7 @@ col_trophy_machine = {
 		is_special_colony_type = no
 		exists = owner
 		owner = { has_valid_civic = civic_machine_servitor }
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_bio_trophies_produces_mult = 0.10
@@ -588,6 +594,7 @@ col_habitat_bureau = {
 			has_make_spiritualist_perk = no
 			is_spiritualist = no
 		}
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
@@ -671,6 +678,7 @@ col_habitat_bureau_spiritualist = {
 		}
 		msd_uses_district_set_habitat = yes
 		is_special_colony_type = no
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
@@ -772,6 +780,7 @@ col_habitat_bureau_hive = {
 		owner = { is_hive_empire = yes }
 		msd_uses_district_set_habitat = yes
 		is_special_colony_type = no
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
@@ -842,6 +851,7 @@ col_habitat_bureau_machine = {
 		owner = { is_machine_empire = yes }
 		msd_uses_district_set_habitat = yes
 		is_special_colony_type = no
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
@@ -913,6 +923,7 @@ col_fortress = {
 		msd_uses_district_set_habitat = no
 		msd_uses_district_set_ring_world = no
 		is_special_colony_type = no
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_orbital_bombardment_damage = -0.10
@@ -972,6 +983,7 @@ col_habitat_fortress = {
 	icon = GFX_colony_type_habitat_fortress
 	potential = {
 		msd_uses_district_set_habitat = yes
+		is_capital = no
 	}
 	planet_modifier = {
 		planet_orbital_bombardment_damage = -0.10

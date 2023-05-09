@@ -19,6 +19,7 @@ col_standard_cm_trade = {
 			exists = owner
 			owner = { is_gestalt = yes }
 		}
+		is_capital = no
 	}
 	custom_tooltip = col_standard_cm_trade_custom
 	planet_modifier = {
@@ -95,6 +96,7 @@ col_standard_cm_leisure = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
+		is_capital = no
 	}
 	planet_modifier = {
 		pop_happiness = 0.10
