@@ -45,7 +45,7 @@ automate_standard_cm_leisure_planet = {
 			available = {
 				owner = {
 					has_country_flag = artist_building_patron
-					NOT = { has_country_flag = built_one_ministry }
+					NOT = { any_owned_planet = { has_building = building_artist_patron } }
 				}
 			}
 		}
