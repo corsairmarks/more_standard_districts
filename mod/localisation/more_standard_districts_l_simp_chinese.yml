@@ -16,6 +16,7 @@
  district_standard_cm_leisure: "$district_hab_cultural$"
  district_standard_cm_leisure_plural: "$district_hab_cultural_plural$"
  district_standard_cm_leisure_desc: "大量土地会留作文化发展和休闲用途."
+ district_standard_cm_leisure_dystopian_desc: "Significant tracts of land have been set aside to provide enforcers with some well-deserved relief and entertainment."
  district_standard_cm_science: "$district_hab_science$"
  district_standard_cm_science_plural: "$district_hab_science_plural$"
  district_standard_cm_science_desc: "作为科研中心，这片区域聚集着来自各个研究领域最智慧的研究人员们。"

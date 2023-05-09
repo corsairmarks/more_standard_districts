@@ -16,6 +16,7 @@
  district_standard_cm_leisure: "$district_hab_cultural$"
  district_standard_cm_leisure_plural: "$district_hab_cultural_plural$"
  district_standard_cm_leisure_desc: "Znaczne połacie terenu zostały zarezerwowane dla dziedzictwa kulturowego i rekreacji."
+ district_standard_cm_leisure_dystopian_desc: "Significant tracts of land have been set aside to provide enforcers with some well-deserved relief and entertainment."
  district_standard_cm_science: "$district_hab_science$"
  district_standard_cm_science_plural: "$district_hab_science_plural$"
  district_standard_cm_science_desc: "Centra odkryć naukowych, te dzielnice skupiają badaczy z niezliczonych dziedzin nauki."
