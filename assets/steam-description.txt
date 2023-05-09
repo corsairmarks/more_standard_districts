@@ -32,7 +32,7 @@ Also overwrites research planet build automation to use the new Research Distric
 
 This mod adds a Commercial District which also has been built with compatibility for my mod [url=https://steamcommunity.com/workshop/filedetails/?id=2641081470]Enhanced Trade Districts and Designations[/url]. Enjoy building commercial enterprises on practically any world.
 
-Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements. Compatible with [url=https://steamcommunity.com/workshop/filedetails/?id=819148835]Planetary Diversity[/url] and follows its exclusions for some colony types. Compatible with [url=https://steamcommunity.com/workshop/filedetails/?id=1121692237]Gigastructural Engineering[/url] and follows its exclusions for some colony types.
+Built for Stellaris version 3.8 "Gemini." Not compatible with achievements. Compatible with [url=https://steamcommunity.com/workshop/filedetails/?id=819148835]Planetary Diversity[/url] and follows its exclusions for some colony types. Compatible with [url=https://steamcommunity.com/workshop/filedetails/?id=1121692237]Gigastructural Engineering[/url] and follows its exclusions for some colony types.
 
 [h3]Not Included in "Subtle Polish"[/h3]
 This mod is intentionally not included in my modpack [url=https://steamcommunity.com/workshop/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url]; however is fully compatible.
