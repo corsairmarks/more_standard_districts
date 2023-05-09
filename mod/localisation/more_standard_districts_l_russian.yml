@@ -12,7 +12,7 @@
  building_research_support_3_desc: "This facility is much more than just an archive or backup: teams of researcher-cataloguers perform experiments in parallel for promising projects, independently testing theories and providing huge experimental datasets on behalf of scientists conducting original research."
  district_standard_cm_commercial: "$district_hab_commercial$"
  district_standard_cm_commercial_plural: "$district_hab_commercial_plural$"
- district_standard_cm_commercial_desc: "Район офисных зданий и гражданских компаний.\n\nПредоставляет больше £job_merchant£ §Y$job_merchant_plural$§! когда специализация планеты §Y$col_standard_cm_trade$§!."
+ district_standard_cm_commercial_desc: "Район офисных зданий и гражданских компаний.\n\nПредоставляет больше £job_merchant£ §Y$job_merchant_plural$§! когда специализация планеты §Y$col_standard_cm_trade$§! или §Y$col_capital_trade$§!."
  district_standard_cm_leisure: "$district_hab_cultural$"
  district_standard_cm_leisure_plural: "$district_hab_cultural_plural$"
  district_standard_cm_leisure_desc: "Значительные участки земли были отведены для культурного наследия и использования в целях досуга."

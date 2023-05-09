@@ -54,7 +54,7 @@ district_standard_cm_commercial = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			colony_type = col_standard_cm_trade
+			has_trade_designation = yes
 			exists = owner
 			owner = { is_fallen_empire_spiritualist = no }
 		}
@@ -65,7 +65,7 @@ district_standard_cm_commercial = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			colony_type = col_standard_cm_trade
+			has_trade_designation = yes
 			exists = owner
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
@@ -131,7 +131,7 @@ district_standard_cm_commercial = {
 				owner = { is_fallen_empire_spiritualist = no }
 			}
 			OR = {
-				NOT = { colony_type = col_standard_cm_trade }
+				has_trade_designation = no
 				AND = {
 					exists = owner
 					owner = {
@@ -159,7 +159,7 @@ district_standard_cm_commercial = {
 		text = job_merchant_effect_desc
 		trigger = {
 			OR = {
-				colony_type = col_standard_cm_trade
+				has_trade_designation = yes
 				AND = {
 					exists = owner
 					owner = {
